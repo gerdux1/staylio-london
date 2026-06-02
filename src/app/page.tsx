@@ -40,27 +40,34 @@ export default function Home() {
     <>
       <JsonLd data={breadcrumb([{ name: "Home", url: "https://staylio.london" }])} />
 
-      <section className="relative isolate overflow-hidden bg-stone-100">
-        <div className="mx-auto max-w-7xl px-6 pt-24 pb-32 lg:pt-32 lg:pb-40">
+      <section className="relative isolate min-h-[85vh] overflow-hidden">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=2000&q=80"
+          alt="London skyline at dusk"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-stone-900/40 via-stone-900/30 to-stone-900/70" />
+        <div className="relative mx-auto flex min-h-[85vh] max-w-7xl flex-col justify-end px-6 pb-24 pt-32 text-white">
           <div className="max-w-3xl">
-            <p className="text-sm uppercase tracking-widest text-stone-500">London serviced apartments</p>
-            <h1 className="mt-4 font-serif text-5xl sm:text-6xl lg:text-7xl text-stone-900 leading-[1.05]">
+            <p className="text-sm uppercase tracking-widest text-stone-200">London serviced apartments</p>
+            <h1 className="mt-4 font-serif text-5xl sm:text-7xl lg:text-8xl leading-[1.02]">
               Live in London on your own terms.
             </h1>
-            <p className="mt-6 max-w-xl text-lg text-stone-700">
+            <p className="mt-8 max-w-xl text-lg text-stone-100">
               Fully equipped apartments with everything you need — whether you are here for a week, a
               month, or longer. More space than a hotel. More freedom than a rental.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link
                 href="/apartments"
-                className="inline-flex items-center rounded-full bg-stone-900 px-7 py-3 text-sm font-medium text-white hover:bg-stone-700 transition"
+                className="inline-flex items-center rounded-full bg-white px-7 py-3 text-sm font-medium text-stone-900 hover:bg-stone-100 transition"
               >
                 Browse apartments
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center rounded-full border border-stone-900 px-7 py-3 text-sm font-medium text-stone-900 hover:bg-stone-900 hover:text-white transition"
+                className="inline-flex items-center rounded-full border border-white px-7 py-3 text-sm font-medium text-white hover:bg-white hover:text-stone-900 transition"
               >
                 Enquire now
               </Link>
@@ -96,13 +103,18 @@ export default function Home() {
             </Link>
           </div>
           <div className="mt-12 grid gap-8 md:grid-cols-3">
-            {LISTINGS.map((l) => (
+            {LISTINGS.slice(0, 6).map((l) => (
               <Link
                 key={l.slug}
                 href={`/apartments/${l.slug}`}
                 className="group rounded-2xl overflow-hidden bg-white border border-stone-200 hover:shadow-lg transition"
               >
-                <div className="aspect-[4/3] bg-stone-200" aria-hidden />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={l.heroImage}
+                  alt={`${l.title} interior`}
+                  className="aspect-[4/3] w-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
+                />
                 <div className="p-6">
                   <p className="text-xs uppercase tracking-widest text-stone-500">{l.areaLabel}</p>
                   <h3 className="mt-2 font-serif text-2xl text-stone-900 group-hover:underline underline-offset-4">
@@ -110,7 +122,9 @@ export default function Home() {
                   </h3>
                   <p className="mt-2 text-sm text-stone-600">{l.shortDescription}</p>
                   <div className="mt-4 flex justify-between text-sm text-stone-700">
-                    <span>{l.bedrooms} bed · {l.bathrooms} bath · {l.sizeSqm} sqm</span>
+                    <span>
+                      {l.bedrooms > 0 ? `${l.bedrooms} bed` : "Studio"} · {l.bathrooms} bath · {l.sizeSqm} sqm
+                    </span>
                     <span className="font-medium">from £{l.fromGbpPerNight}/night</span>
                   </div>
                 </div>
@@ -128,13 +142,22 @@ export default function Home() {
             <Link
               key={loc.slug}
               href={`/locations/${loc.slug}`}
-              className="group rounded-2xl border border-stone-200 p-8 hover:bg-stone-100 transition"
+              className="group relative overflow-hidden rounded-2xl h-96"
             >
-              <h3 className="font-serif text-3xl text-stone-900">{loc.label}</h3>
-              <p className="mt-3 text-sm text-stone-600 leading-relaxed">{loc.description}</p>
-              <p className="mt-6 text-sm font-medium text-stone-900 underline underline-offset-4">
-                View {loc.label} apartments →
-              </p>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={loc.heroImage}
+                alt={loc.label}
+                className="absolute inset-0 h-full w-full object-cover group-hover:scale-[1.04] transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-stone-900/85 via-stone-900/30 to-transparent" />
+              <div className="relative flex h-full flex-col justify-end p-7 text-white">
+                <h3 className="font-serif text-3xl">{loc.label}</h3>
+                <p className="mt-2 text-sm text-stone-100 line-clamp-3">{loc.description}</p>
+                <p className="mt-4 text-sm font-medium underline underline-offset-4">
+                  View {loc.label} apartments →
+                </p>
+              </div>
             </Link>
           ))}
         </div>

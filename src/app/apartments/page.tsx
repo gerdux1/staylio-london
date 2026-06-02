@@ -34,7 +34,12 @@ export default function ApartmentsPage() {
               href={`/apartments/${l.slug}`}
               className="group rounded-2xl overflow-hidden bg-white border border-stone-200 hover:shadow-lg transition"
             >
-              <div className="aspect-[4/3] bg-stone-200" aria-hidden />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={l.heroImage}
+                alt={`${l.title} interior`}
+                className="aspect-[4/3] w-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
+              />
               <div className="p-6">
                 <p className="text-xs uppercase tracking-widest text-stone-500">{l.areaLabel}</p>
                 <h2 className="mt-2 font-serif text-2xl text-stone-900 group-hover:underline underline-offset-4">
@@ -43,7 +48,7 @@ export default function ApartmentsPage() {
                 <p className="mt-2 text-sm text-stone-600">{l.shortDescription}</p>
                 <div className="mt-4 flex justify-between text-sm text-stone-700">
                   <span>
-                    {l.bedrooms} bed · {l.bathrooms} bath · {l.sizeSqm} sqm
+                    {l.bedrooms > 0 ? `${l.bedrooms} bed` : "Studio"} · {l.bathrooms} bath · {l.sizeSqm} sqm
                   </span>
                   <span className="font-medium">from £{l.fromGbpPerNight}/night</span>
                 </div>

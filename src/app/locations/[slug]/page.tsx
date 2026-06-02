@@ -19,6 +19,12 @@ export async function generateMetadata({
   return {
     title: `${loc.label} apartments`,
     description: loc.description,
+    openGraph: {
+      title: `${loc.label} apartments · Staylio`,
+      description: loc.description,
+      images: [loc.heroImage],
+      url: `https://staylio.london/locations/${loc.slug}`,
+    },
   };
 }
 
@@ -45,12 +51,24 @@ export default async function LocationPage({
         ])}
       />
 
-      <section className="mx-auto max-w-7xl px-6 py-24">
-        <p className="text-sm uppercase tracking-widest text-stone-500">Location</p>
-        <h1 className="mt-3 font-serif text-5xl sm:text-6xl text-stone-900">{loc.label}</h1>
-        <p className="mt-6 max-w-2xl text-stone-700 leading-relaxed">{loc.description}</p>
+      {/* Hero with neighbourhood photo */}
+      <section className="relative h-[60vh] min-h-[420px] w-full overflow-hidden">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={loc.heroImage}
+          alt={loc.label}
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-stone-900/70 via-stone-900/20 to-transparent" />
+        <div className="relative mx-auto flex h-full max-w-7xl flex-col justify-end px-6 pb-14 text-white">
+          <p className="text-sm uppercase tracking-widest text-stone-200">Location</p>
+          <h1 className="mt-3 font-serif text-5xl sm:text-7xl leading-[1.05]">{loc.label}</h1>
+          <p className="mt-4 max-w-2xl text-stone-100">{loc.description}</p>
+        </div>
+      </section>
 
-        <h2 className="mt-20 font-serif text-3xl text-stone-900">
+      <section className="mx-auto max-w-7xl px-6 py-24">
+        <h2 className="font-serif text-3xl sm:text-4xl text-stone-900">
           Staylio apartments in {loc.label}
         </h2>
         {listings.length === 0 ? (
@@ -65,7 +83,12 @@ export default async function LocationPage({
                 href={`/apartments/${l.slug}`}
                 className="group rounded-2xl overflow-hidden bg-white border border-stone-200 hover:shadow-lg transition"
               >
-                <div className="aspect-[4/3] bg-stone-200" aria-hidden />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={l.heroImage}
+                  alt={`${l.title} interior`}
+                  className="aspect-[4/3] w-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
+                />
                 <div className="p-6">
                   <h3 className="font-serif text-2xl text-stone-900 group-hover:underline underline-offset-4">
                     {l.title}
@@ -73,7 +96,7 @@ export default async function LocationPage({
                   <p className="mt-2 text-sm text-stone-600">{l.shortDescription}</p>
                   <div className="mt-4 flex justify-between text-sm text-stone-700">
                     <span>
-                      {l.bedrooms} bed · {l.bathrooms} bath · {l.sizeSqm} sqm
+                      {l.bedrooms > 0 ? `${l.bedrooms} bed` : "Studio"} · {l.bathrooms} bath · {l.sizeSqm} sqm
                     </span>
                     <span className="font-medium">from £{l.fromGbpPerNight}/night</span>
                   </div>

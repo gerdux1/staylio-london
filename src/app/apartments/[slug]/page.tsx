@@ -22,6 +22,7 @@ export async function generateMetadata({
     openGraph: {
       title: `${listing.title} · Staylio`,
       description: listing.shortDescription,
+      images: [listing.heroImage],
       url: `https://staylio.london/apartments/${listing.slug}`,
       type: "website",
     },
@@ -58,14 +59,37 @@ export default async function ListingPage({
         <h1 className="mt-3 font-serif text-5xl sm:text-6xl text-stone-900">{listing.title}</h1>
 
         <div className="mt-6 flex flex-wrap gap-x-8 gap-y-2 text-sm text-stone-700">
-          <span>{listing.bedrooms} bedroom{listing.bedrooms > 1 ? "s" : ""}</span>
+          {listing.bedrooms > 0 ? (
+            <span>{listing.bedrooms} bedroom{listing.bedrooms > 1 ? "s" : ""}</span>
+          ) : (
+            <span>Studio</span>
+          )}
           <span>{listing.bathrooms} bathroom{listing.bathrooms > 1 ? "s" : ""}</span>
           <span>Sleeps {listing.maxGuests}</span>
           <span>{listing.sizeSqm} sqm</span>
           <span className="font-medium text-stone-900">From £{listing.fromGbpPerNight}/night</span>
         </div>
 
-        <div className="mt-10 aspect-[16/9] rounded-2xl bg-stone-200" aria-hidden />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={listing.heroImage}
+          alt={`${listing.title} interior`}
+          className="mt-10 aspect-[16/9] w-full rounded-2xl object-cover"
+        />
+
+        {listing.gallery.length > 1 && (
+          <div className="mt-4 grid grid-cols-3 gap-4">
+            {listing.gallery.slice(0, 3).map((src, i) => (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                key={i}
+                src={src}
+                alt={`${listing.title} ${i + 1}`}
+                className="aspect-[4/3] w-full rounded-xl object-cover"
+              />
+            ))}
+          </div>
+        )}
 
         <div className="mt-12 grid gap-12 lg:grid-cols-3">
           <div className="lg:col-span-2">
