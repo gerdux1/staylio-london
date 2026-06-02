@@ -205,6 +205,48 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Trust signals + reviews */}
+      <section className="mx-auto max-w-7xl px-6 py-24">
+        <div className="grid gap-12 md:grid-cols-3 text-center">
+          <div>
+            <p className="font-serif text-5xl text-stone-900">4.9</p>
+            <p className="mt-2 text-sm text-stone-600">Guest review average</p>
+          </div>
+          <div>
+            <p className="font-serif text-5xl text-stone-900">{LISTINGS.length}+</p>
+            <p className="mt-2 text-sm text-stone-600">Central London apartments</p>
+          </div>
+          <div>
+            <p className="font-serif text-5xl text-stone-900">15 min</p>
+            <p className="mt-2 text-sm text-stone-600">Average response time, 24/7</p>
+          </div>
+        </div>
+
+        <div className="mt-20 grid gap-8 md:grid-cols-2">
+          {[
+            {
+              quote:
+                "Staylio's apartment near Hyde Park made my three-month relocation smooth and comfortable — felt like home from day one. The team replied to every WhatsApp within minutes.",
+              author: "Marie L.",
+              context: "3-month relocation, Kensington",
+            },
+            {
+              quote:
+                "We've used Staylio for two project deployments now. Same apartment, same team, single invoice. Saves us hours every cycle compared to chasing hotel block-bookings.",
+              author: "James R.",
+              context: "Corporate, Canary Wharf",
+            },
+          ].map((t) => (
+            <blockquote key={t.author} className="rounded-2xl border border-stone-200 bg-white p-8">
+              <p className="font-serif text-xl text-stone-900 leading-relaxed">&ldquo;{t.quote}&rdquo;</p>
+              <footer className="mt-6 text-sm text-stone-600">
+                <span className="font-medium text-stone-900">{t.author}</span> · {t.context}
+              </footer>
+            </blockquote>
+          ))}
+        </div>
+      </section>
+
       <section className="mx-auto max-w-4xl px-6 py-32 text-center">
         <h2 className="font-serif text-4xl sm:text-5xl text-stone-900">Ready to book your London stay?</h2>
         <p className="mt-6 text-stone-700">
