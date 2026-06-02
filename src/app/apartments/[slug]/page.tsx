@@ -66,7 +66,7 @@ export default async function ListingPage({
           )}
           <span>{listing.bathrooms} bathroom{listing.bathrooms > 1 ? "s" : ""}</span>
           <span>Sleeps {listing.maxGuests}</span>
-          <span>{listing.sizeSqm} sqm</span>
+          {listing.sizeSqm > 0 && <span>{listing.sizeSqm} sqm</span>}
           <span className="font-medium text-stone-900">From £{listing.fromGbpPerNight}/night</span>
         </div>
 

@@ -138,7 +138,7 @@ export default async function LocationPage({
                   <p className="mt-2 text-sm text-stone-600">{l.shortDescription}</p>
                   <div className="mt-4 flex justify-between text-sm text-stone-700">
                     <span>
-                      {l.bedrooms > 0 ? `${l.bedrooms} bed` : "Studio"} · {l.bathrooms} bath · {l.sizeSqm} sqm
+                      {l.bedrooms > 0 ? `${l.bedrooms} bed` : "Studio"} · {l.bathrooms} bath{l.sizeSqm > 0 ? ` · ${l.sizeSqm} sqm` : ""}
                     </span>
                     <span className="font-medium">from £{l.fromGbpPerNight}/night</span>
                   </div>

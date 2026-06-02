@@ -1,7 +1,5 @@
 import Link from "next/link";
 
-// Top-level nav. Per locked decision_staylio_brochure_voice_14may.md:
-// section heading is "Strategic London Locations" — but in nav we condense to "Locations".
 const NAV = [
   { href: "/apartments", label: "Apartments" },
   { href: "/locations", label: "Locations" },
@@ -16,8 +14,13 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-stone-200 bg-white/95 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        <Link href="/" className="font-serif text-2xl tracking-tight text-stone-900">
-          Staylio
+        <Link href="/" className="flex items-center" aria-label="Staylio — home">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/brand/logo-main.png"
+            alt="Staylio"
+            className="h-10 w-auto"
+          />
         </Link>
         <nav className="hidden lg:flex items-center gap-7 text-sm text-stone-700">
           {NAV.map((n) => (
