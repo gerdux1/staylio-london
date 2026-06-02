@@ -43,8 +43,8 @@ export default function Home() {
       <section className="relative isolate min-h-[85vh] overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=2000&q=80"
-          alt="London skyline at dusk"
+          src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=2000&q=80"
+          alt="Tower Bridge, London at sunset"
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-stone-900/40 via-stone-900/30 to-stone-900/70" />
