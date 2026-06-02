@@ -126,6 +126,29 @@ export function breadcrumb(items: { name: string; url: string }[]) {
   };
 }
 
+// Curated neighbourhood guide → schema.org ItemList. Kept light on purpose:
+// name + description only, no fabricated addresses or geo for third-party venues.
+export function localGuideSchema(
+  areaLabel: string,
+  items: { type: "Restaurant" | "CafeOrCoffeeShop" | "TouristAttraction"; name: string; description: string }[],
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: `Local guide to ${areaLabel}`,
+    description: `Staylio's curated food, coffee and things to do near our ${areaLabel} apartments.`,
+    itemListElement: items.map((it, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      item: {
+        "@type": it.type,
+        name: it.name,
+        description: it.description,
+      },
+    })),
+  };
+}
+
 export function faqSchema(qa: { question: string; answer: string }[]) {
   return {
     "@context": "https://schema.org",

@@ -2,7 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LOCATIONS, listingsByArea, getLocation, type AreaSlug } from "@/lib/listings";
-import { JsonLd, breadcrumb } from "@/lib/schema";
+import { getLocalGuide } from "@/lib/local-recommendations";
+import { JsonLd, breadcrumb, localGuideSchema } from "@/lib/schema";
+
+const GUIDE_SECTIONS = [
+  { key: "eat", label: "Where to eat", kicker: "Food", schemaType: "Restaurant" },
+  { key: "coffee", label: "Where for coffee", kicker: "Coffee", schemaType: "CafeOrCoffeeShop" },
+  { key: "do", label: "Things to do", kicker: "Explore", schemaType: "TouristAttraction" },
+] as const;
 
 export async function generateStaticParams() {
   return LOCATIONS.map((l) => ({ slug: l.slug }));
@@ -37,15 +44,29 @@ export default async function LocationPage({
   const loc = getLocation(slug as AreaSlug);
   if (!loc) return notFound();
   const listings = listingsByArea(loc.slug);
+  const guide = getLocalGuide(loc.slug);
+
+  const guideSchemaItems = guide
+    ? GUIDE_SECTIONS.flatMap((s) =>
+        guide[s.key].map((r) => ({
+          type: s.schemaType,
+          name: r.name,
+          description: `${r.note} (${r.where}, near Staylio ${loc.shortLabel}.)`,
+        })),
+      )
+    : [];
 
   return (
     <>
       <JsonLd
-        data={breadcrumb([
-          { name: "Home", url: "https://staylio.london" },
-          { name: "Locations", url: "https://staylio.london/locations" },
-          { name: loc.label, url: `https://staylio.london/locations/${loc.slug}` },
-        ])}
+        data={[
+          breadcrumb([
+            { name: "Home", url: "https://staylio.london" },
+            { name: "Locations", url: "https://staylio.london/locations" },
+            { name: loc.label, url: `https://staylio.london/locations/${loc.slug}` },
+          ]),
+          ...(guideSchemaItems.length ? [localGuideSchema(loc.label, guideSchemaItems)] : []),
+        ]}
       />
 
       {/* Neighbourhood hero */}
@@ -106,8 +127,45 @@ export default async function LocationPage({
         </div>
       </section>
 
+      {/* Local guide — food, coffee, things to do */}
+      {guide && (
+        <section className="mx-auto max-w-7xl px-6 py-24">
+          <p className="text-sm uppercase tracking-widest text-stone-500">Local guide</p>
+          <h2 className="mt-3 font-serif text-3xl sm:text-4xl text-stone-900">
+            Eating, drinking &amp; exploring in {loc.shortLabel}
+          </h2>
+          <p className="mt-4 max-w-2xl text-stone-600">
+            A few places we send guests to — the spots we&rsquo;d point a friend towards if they
+            were staying for the week.
+          </p>
+
+          <div className="mt-12 grid gap-12 lg:grid-cols-3">
+            {GUIDE_SECTIONS.map((s) => (
+              <div key={s.key}>
+                <p className="text-sm uppercase tracking-widest text-stone-500">{s.kicker}</p>
+                <h3 className="mt-2 font-serif text-2xl text-stone-900">{s.label}</h3>
+                <ul className="mt-6 space-y-6">
+                  {guide[s.key].map((r) => (
+                    <li key={r.name}>
+                      <p className="font-medium text-stone-900">{r.name}</p>
+                      <p className="text-sm uppercase tracking-wide text-stone-400">{r.where}</p>
+                      <p className="mt-1 text-stone-700">{r.note}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <p className="mt-12 text-sm text-stone-500">
+            Staying with us and want a tailored recommendation? Just{" "}
+            <Link href="/contact" className="underline underline-offset-4">ask our team</Link>.
+          </p>
+        </section>
+      )}
+
       {/* Apartments here */}
-      <section className="mx-auto max-w-7xl px-6 py-24">
+      <section className="mx-auto max-w-7xl px-6 py-24 border-t border-stone-100">
         <h2 className="font-serif text-3xl sm:text-4xl text-stone-900">
           Staylio apartments in {loc.label}
         </h2>
