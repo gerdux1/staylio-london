@@ -20,6 +20,14 @@ const ORG_BASE = {
     postalCode: "NW8 8NQ",
     addressCountry: "GB",
   },
+  identifier: {
+    "@type": "PropertyValue",
+    propertyID: "Companies House",
+    value: "17012831",
+  },
+  sameAs: [
+    "https://find-and-update.company-information.service.gov.uk/company/17012831",
+  ],
   areaServed: [
     { "@type": "Place", name: "Regent's Park & Marylebone, London" },
     { "@type": "Place", name: "Old Street & Shoreditch, London" },
