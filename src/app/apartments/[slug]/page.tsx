@@ -114,17 +114,44 @@ export default async function ListingPage({
               <span className="text-base text-stone-500"> /night</span>
             </p>
             <p className="mt-2 text-xs text-stone-500">
-              All bills included. Longer stays priced down.
+              All bills included. Lower nightly rate for stays of one week or more.
             </p>
-            <Link
-              href={`/contact?listing=${listing.slug}`}
-              className="mt-6 inline-flex w-full justify-center rounded-full bg-stone-900 px-6 py-3 text-sm font-medium text-white hover:bg-stone-700 transition"
-            >
-              Enquire about this apartment
-            </Link>
+            {listing.bookingUrl ? (
+              <>
+                <a
+                  href={listing.bookingUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 inline-flex w-full justify-center rounded-full bg-stone-900 px-6 py-3 text-sm font-medium text-white hover:bg-stone-700 transition"
+                >
+                  Check availability &amp; book →
+                </a>
+                <Link
+                  href={`/contact?listing=${listing.slug}`}
+                  className="mt-3 inline-flex w-full justify-center rounded-full border border-stone-900 px-6 py-3 text-sm font-medium text-stone-900 hover:bg-stone-100 transition"
+                >
+                  Or enquire directly
+                </Link>
+                <p className="mt-3 text-xs text-stone-500 text-center">
+                  Booking secured via Stripe. Direct rate, no OTA fees.
+                </p>
+              </>
+            ) : (
+              <>
+                <Link
+                  href={`/contact?listing=${listing.slug}`}
+                  className="mt-6 inline-flex w-full justify-center rounded-full bg-stone-900 px-6 py-3 text-sm font-medium text-white hover:bg-stone-700 transition"
+                >
+                  Enquire about this apartment
+                </Link>
+                <p className="mt-3 text-xs text-stone-500 text-center">
+                  We&rsquo;ll come back with availability and your direct rate.
+                </p>
+              </>
+            )}
             <Link
               href="/apartments"
-              className="mt-3 inline-flex w-full justify-center text-sm text-stone-700 hover:text-stone-900 underline underline-offset-4"
+              className="mt-4 inline-flex w-full justify-center text-sm text-stone-700 hover:text-stone-900 underline underline-offset-4"
             >
               View all apartments
             </Link>

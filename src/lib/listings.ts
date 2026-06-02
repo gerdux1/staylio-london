@@ -1,8 +1,6 @@
 // AUTO-GENERATED from BOOM Provider API on 2 Jun 2026.
-// Source: tools/generate_listings_from_boom.py (in this repo) → BOOM /provider-api/listings
-// Regenerate when listings change. Until BOOM webhook integration lands, this is a snapshot.
-//
-// LOCATIONS canonical order locked in decision_staylio_brochure_voice_14may.md.
+// Regenerate: python3.12 scripts/regenerate-listings-from-boom.py
+// Schema: matches BOOM Provider API /provider-api/listings shape (+ derived bookingUrl from FAQs)
 
 export type AreaSlug =
   | "regents-park-marylebone"
@@ -32,6 +30,8 @@ export type Listing = {
   longitude?: number;
   postcode?: string;
   boomListingId?: string;
+  /** Live BOOM booking URL (https://nournestapartments.bookingsboom.com/listing/{numeric_id}) — drives the booking flow */
+  bookingUrl?: string;
 };
 
 export type Location = {
@@ -162,6 +162,7 @@ export const LISTINGS: Listing[] = [
     longitude: -0.0923599,
     postcode: "SE1 4AG",
     boomListingId: "e4e56230-34fb-4410-b6e0-de0dd06e51a3",
+    bookingUrl: "https://nournestapartments.bookingsboom.com/listing/13535",
   },
   {
     slug: "kensington-hammersmith-shepherds-bush-e90621",
@@ -182,6 +183,7 @@ export const LISTINGS: Listing[] = [
     longitude: -0.22142,
     postcode: "W14 0BL",
     boomListingId: "e90621e5-dfca-49e6-9124-773e638bb30c",
+    bookingUrl: "https://nournestapartments.bookingsboom.com/listing/14554",
   },
   {
     slug: "kensington-hammersmith-shepherds-bush-2-e058bd",
@@ -202,6 +204,7 @@ export const LISTINGS: Listing[] = [
     longitude: -0.2249824,
     postcode: "W6 7RN",
     boomListingId: "e058bd2e-92b3-43fd-a06d-a0ef42f80622",
+    bookingUrl: "https://nournestapartments.bookingsboom.com/listing/13542",
   },
   {
     slug: "regents-park-marylebone-regents-flat-n-146f40",
@@ -222,6 +225,7 @@ export const LISTINGS: Listing[] = [
     longitude: -0.1738172,
     postcode: "NW8 8NQ",
     boomListingId: "146f40ef-a1c0-4035-811a-c2ce40ac853e",
+    bookingUrl: "https://nournestapartments.bookingsboom.com/listing/14451",
   },
   {
     slug: "regents-park-marylebone-euston-1-83a49f",
@@ -242,6 +246,7 @@ export const LISTINGS: Listing[] = [
     longitude: -0.1242196,
     postcode: "WC1H 8BS",
     boomListingId: "83a49f21-c7f3-47ed-a4eb-e627a55f410f",
+    bookingUrl: "https://nournestapartments.bookingsboom.com/listing/15398",
   },
   {
     slug: "kensington-hammersmith-askew-road-f879fa",
@@ -262,6 +267,7 @@ export const LISTINGS: Listing[] = [
     longitude: -0.2432458,
     postcode: "W12 9BL",
     boomListingId: "f879facf-c275-4ac6-b692-132426b35f92",
+    bookingUrl: "https://nournestapartments.bookingsboom.com/listing/13517",
   },
   {
     slug: "regents-park-marylebone-regents-flat-m-8f6807",
@@ -322,6 +328,7 @@ export const LISTINGS: Listing[] = [
     longitude: -0.1126701,
     postcode: "N1 9FH",
     boomListingId: "2a32552d-fa34-4389-a5c2-0f9667e970eb",
+    bookingUrl: "https://nournestapartments.bookingsboom.com/listing/15409",
   },
   {
     slug: "little-venice-maida-vale-little-venice-2-1a62a5",
@@ -342,6 +349,7 @@ export const LISTINGS: Listing[] = [
     longitude: -0.1772032,
     postcode: "W2 1AT",
     boomListingId: "1a62a553-2ac0-4b47-baf2-3cc0421a00e5",
+    bookingUrl: "https://nournestapartments.bookingsboom.com/listing/13532",
   },
   {
     slug: "old-street-shoreditch-hoxton-flat-8-2977ca",
@@ -362,6 +370,7 @@ export const LISTINGS: Listing[] = [
     longitude: -0.086474,
     postcode: "N1 5EG",
     boomListingId: "2977ca03-86d5-4146-818b-23aa83087734",
+    bookingUrl: "https://nournestapartments.bookingsboom.com/listing/13527",
   },
   {
     slug: "kensington-hammersmith-hammersmith-815a55",
@@ -382,6 +391,7 @@ export const LISTINGS: Listing[] = [
     longitude: -0.2239988,
     postcode: "W6 9EZ",
     boomListingId: "815a55c6-2b3d-4b37-b88e-1ce3db0208ba",
+    bookingUrl: "https://nournestapartments.bookingsboom.com/listing/13525",
   },
   {
     slug: "borough-pimlico-vauxhall-6c8f54",
@@ -402,6 +412,7 @@ export const LISTINGS: Listing[] = [
     longitude: -0.1166707,
     postcode: "SW8 1NJ",
     boomListingId: "6c8f542f-5b1f-402a-88f1-02f7b46b66a5",
+    bookingUrl: "https://nournestapartments.bookingsboom.com/listing/13543",
   },
   {
     slug: "fitzrovia-mayfair-mayfair-2bed-449505",
@@ -462,6 +473,7 @@ export const LISTINGS: Listing[] = [
     longitude: -0.1779243,
     postcode: "W2 1AT",
     boomListingId: "ace09d7c-b36b-4987-9e67-6d3ab6083a73",
+    bookingUrl: "https://nournestapartments.bookingsboom.com/listing/13531",
   },
   {
     slug: "old-street-shoreditch-hackney-1b-bfb561",
@@ -482,6 +494,7 @@ export const LISTINGS: Listing[] = [
     longitude: -0.07689770000000001,
     postcode: "E2 7NX",
     boomListingId: "bfb561ed-c235-4ea5-84f0-5e002a10da28",
+    bookingUrl: "https://nournestapartments.bookingsboom.com/listing/13548",
   },
   {
     slug: "old-street-shoreditch-aldgate-1dd5c7",
@@ -502,6 +515,7 @@ export const LISTINGS: Listing[] = [
     longitude: -0.06432159999999999,
     postcode: "E1 1RS",
     boomListingId: "1dd5c7ba-c280-4469-8b1a-6127b1aa6cb8",
+    bookingUrl: "https://nournestapartments.bookingsboom.com/listing/13516",
   },
   {
     slug: "regents-park-marylebone-regents-flat-d-a385dd",
@@ -542,6 +556,7 @@ export const LISTINGS: Listing[] = [
     longitude: -0.08012989999999999,
     postcode: "EC1V 9LT",
     boomListingId: "1523cbce-f736-41e4-87d8-77516c606fc4",
+    bookingUrl: "https://nournestapartments.bookingsboom.com/listing/13540",
   },
   {
     slug: "borough-pimlico-pimlico-d0fc6e",
@@ -562,6 +577,7 @@ export const LISTINGS: Listing[] = [
     longitude: -0.1400843,
     postcode: "SW1V 3EQ",
     boomListingId: "d0fc6e0a-1130-480b-874a-e19c33939ff9",
+    bookingUrl: "https://nournestapartments.bookingsboom.com/listing/14449",
   },
   {
     slug: "old-street-shoreditch-liverpool-rd-4c5f09",
@@ -582,6 +598,7 @@ export const LISTINGS: Listing[] = [
     longitude: -0.1078811,
     postcode: "N1 1NP",
     boomListingId: "4c5f09e5-6625-48ca-a613-82360732e345",
+    bookingUrl: "https://nournestapartments.bookingsboom.com/listing/13533",
   },
   {
     slug: "kensington-hammersmith-queens-park-c71715",
@@ -622,6 +639,7 @@ export const LISTINGS: Listing[] = [
     longitude: -0.1738172,
     postcode: "NW8 8NQ",
     boomListingId: "f9b933d7-0ca5-45aa-96f7-c96cdd8d3f7f",
+    bookingUrl: "https://nournestapartments.bookingsboom.com/listing/14452",
   },
   {
     slug: "old-street-shoreditch-old-st-flat-1-7a92a4",
@@ -642,6 +660,7 @@ export const LISTINGS: Listing[] = [
     longitude: -0.08012989999999999,
     postcode: "EC1V 9LT",
     boomListingId: "7a92a4ad-75ea-4bc7-8f60-89b3de471ab2",
+    bookingUrl: "https://nournestapartments.bookingsboom.com/listing/13538",
   },
   {
     slug: "regents-park-marylebone-baker-st-2-94df29",
@@ -682,6 +701,7 @@ export const LISTINGS: Listing[] = [
     longitude: -0.0946062,
     postcode: "EC1V 8DL",
     boomListingId: "2d696f29-cdc9-4718-b553-971a4d0a602d",
+    bookingUrl: "https://nournestapartments.bookingsboom.com/listing/13524",
   },
   {
     slug: "kensington-hammersmith-kensington-72a8e2",
@@ -702,6 +722,7 @@ export const LISTINGS: Listing[] = [
     longitude: -0.2020823,
     postcode: "W14 8PS",
     boomListingId: "72a8e224-db7c-4d95-aa08-b5b373fd9b93",
+    bookingUrl: "https://nournestapartments.bookingsboom.com/listing/13530",
   },
   {
     slug: "old-street-shoreditch-63-kings-cross-41cee1",
@@ -742,6 +763,7 @@ export const LISTINGS: Listing[] = [
     longitude: -0.1740413,
     postcode: "NW8 8NQ",
     boomListingId: "cf71bf9f-da78-49cb-9a4f-9a576abe8a01",
+    bookingUrl: "https://nournestapartments.bookingsboom.com/listing/13541",
   },
   {
     slug: "regents-park-marylebone-regents-flat-l-99fa98",
@@ -762,6 +784,7 @@ export const LISTINGS: Listing[] = [
     longitude: -0.1738172,
     postcode: "NW8 8NQ",
     boomListingId: "99fa98f9-e04f-4b8f-8a53-71af94e3dbde",
+    bookingUrl: "https://nournestapartments.bookingsboom.com/listing/14450",
   },
   {
     slug: "little-venice-maida-vale-atholl-house-b5c1bc",
@@ -782,6 +805,7 @@ export const LISTINGS: Listing[] = [
     longitude: -0.182503,
     postcode: "W9 1UR",
     boomListingId: "b5c1bc99-6418-496c-9c8f-0b1feb7429b6",
+    bookingUrl: "https://nournestapartments.bookingsboom.com/listing/13518",
   },
   {
     slug: "little-venice-maida-vale-kilburn-4800a9",
@@ -802,6 +826,7 @@ export const LISTINGS: Listing[] = [
     longitude: -0.1975323325409,
     postcode: "NW6 2JS",
     boomListingId: "4800a991-dbb9-41dd-9088-5a5b219f5c58",
+    bookingUrl: "https://nournestapartments.bookingsboom.com/listing/13550",
   },
   {
     slug: "borough-pimlico-london-bridge-3c1664",
@@ -822,6 +847,7 @@ export const LISTINGS: Listing[] = [
     longitude: -0.08509100000000001,
     postcode: "SE1 3FZ",
     boomListingId: "3c166420-d12f-40fb-ab24-827495116c5a",
+    bookingUrl: "https://nournestapartments.bookingsboom.com/listing/15369",
   },
   {
     slug: "regents-park-marylebone-euston-2-56b9e5",
@@ -862,6 +888,7 @@ export const LISTINGS: Listing[] = [
     longitude: -0.0802534,
     postcode: "EC1V 9LT",
     boomListingId: "362ecb60-81a3-41ca-820c-4e24a63e229b",
+    bookingUrl: "https://nournestapartments.bookingsboom.com/listing/13539",
   },
   {
     slug: "regents-park-marylebone-regents-flat-w-18e0d6",
@@ -882,6 +909,7 @@ export const LISTINGS: Listing[] = [
     longitude: -0.1738172,
     postcode: "NW8 8NQ",
     boomListingId: "18e0d601-2d25-482e-aaa7-0d915a1876a4",
+    bookingUrl: "https://nournestapartments.bookingsboom.com/listing/14452",
   },
   {
     slug: "regents-park-marylebone-regents-flat-f-e493bc",
@@ -942,6 +970,7 @@ export const LISTINGS: Listing[] = [
     longitude: -0.086474,
     postcode: "N1 5EG",
     boomListingId: "3900c617-2282-4c59-9a4b-f05629b233ae",
+    bookingUrl: "https://nournestapartments.bookingsboom.com/listing/14447",
   },
   {
     slug: "old-street-shoreditch-old-st-basement-620fc3",
@@ -962,6 +991,7 @@ export const LISTINGS: Listing[] = [
     longitude: -0.0802534,
     postcode: "EC1V 9LT",
     boomListingId: "620fc3f0-1a2d-42c0-bfe1-631334a56d02",
+    bookingUrl: "https://nournestapartments.bookingsboom.com/listing/13537",
   },
   {
     slug: "regents-park-marylebone-maida-vale-496fd9",
@@ -982,6 +1012,7 @@ export const LISTINGS: Listing[] = [
     longitude: -0.1835459,
     postcode: "NW8 0JN",
     boomListingId: "496fd9b7-df60-450c-b7c2-b73255da9f7f",
+    bookingUrl: "https://nournestapartments.bookingsboom.com/listing/13546",
   },
   {
     slug: "little-venice-maida-vale-edgware-rd-cede2d",
@@ -1002,6 +1033,7 @@ export const LISTINGS: Listing[] = [
     longitude: -0.1631986,
     postcode: "W2 2JH",
     boomListingId: "cede2db5-1a4c-4c3f-be7b-e20c4f2dd45f",
+    bookingUrl: "https://nournestapartments.bookingsboom.com/listing/15366",
   },
 ];
 
