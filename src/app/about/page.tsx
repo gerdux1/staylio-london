@@ -37,7 +37,7 @@ export default function AboutPage() {
           { t: "Space matters", b: "A real kitchen, a proper desk, and a sofa to sprawl on aren't luxuries. They're the difference between surviving a long trip and enjoying one." },
           { t: "Bills should be simple", b: "One rate. Electricity, water, heating, Wi-Fi, council tax, all in. No surprise charges on departure." },
           { t: "Support means people", b: "Our guest team have names, faces, and WhatsApp. Every message gets a real human reply, usually within 15 minutes." },
-          { t: "Direct is better", b: "Our direct rates are always meaningfully lower than the same apartment listed on Booking.com or Airbnb, because we don't pay commission, we pass the saving back to you." },
+          { t: "Direct is better", b: "Our direct rates are always at least 10% lower than the same apartment listed on Booking.com or Airbnb, because we don't pay commission, we pass the saving back to you." },
         ].map((v) => (
           <div key={v.t}>
             <h3 className="font-serif text-xl text-stone-900">{v.t}</h3>

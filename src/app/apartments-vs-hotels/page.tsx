@@ -33,7 +33,7 @@ const FAQ = [
   {
     question: "Are Staylio direct rates lower than Booking.com and Airbnb?",
     answer:
-      "Yes. Our direct rates are always meaningfully lower than the same apartment listed on Booking.com or Airbnb, because we don't pay platform commission, we pass the saving back to you.",
+      "Yes. Our direct rates are always at least 10% lower than the same apartment listed on Booking.com or Airbnb, because we don't pay platform commission, we pass the saving back to you.",
   },
   {
     question: "Do Staylio apartments come with a kitchen?",
