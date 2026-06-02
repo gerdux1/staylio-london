@@ -1,6 +1,6 @@
 // AUTO-GENERATED from BOOM Provider API on 2 Jun 2026.
+// Prices: Aria nightly_at_75pct_occ (break-even floor) from ~/aria/data/cost_floors.json
 // Regenerate: python3.12 scripts/regenerate-listings-from-boom.py
-// Schema: matches BOOM Provider API /provider-api/listings shape (+ derived bookingUrl from FAQs)
 
 export type AreaSlug =
   | "regents-park-marylebone"
@@ -12,40 +12,19 @@ export type AreaSlug =
   | "little-venice-maida-vale";
 
 export type Listing = {
-  slug: string;
-  title: string;
-  area: AreaSlug;
-  areaLabel: string;
-  bedrooms: number;
-  bathrooms: number;
-  maxGuests: number;
-  sizeSqm: number;
-  fromGbpPerNight: number;
-  shortDescription: string;
-  longDescription: string;
-  amenities: string[];
-  heroImage: string;
-  gallery: string[];
-  latitude?: number;
-  longitude?: number;
-  postcode?: string;
-  boomListingId?: string;
-  /** Live BOOM booking URL (https://nournestapartments.bookingsboom.com/listing/{numeric_id}) — drives the booking flow */
-  bookingUrl?: string;
+  slug: string; title: string; area: AreaSlug; areaLabel: string;
+  bedrooms: number; bathrooms: number; maxGuests: number; sizeSqm: number;
+  fromGbpPerNight: number; shortDescription: string; longDescription: string;
+  amenities: string[]; heroImage: string; gallery: string[];
+  latitude?: number; longitude?: number; postcode?: string;
+  boomListingId?: string; bookingUrl?: string;
 };
 
 export type Location = {
-  slug: AreaSlug;
-  label: string;
-  shortLabel: string;
-  propertyCountApprox: number;
-  description: string;
-  whyStayHere: string;
-  nearbyHighlights: string[];
-  transport: string[];
-  latitude: number;
-  longitude: number;
-  heroImage: string;
+  slug: AreaSlug; label: string; shortLabel: string; propertyCountApprox: number;
+  description: string; whyStayHere: string;
+  nearbyHighlights: string[]; transport: string[];
+  latitude: number; longitude: number; heroImage: string;
 };
 
 export const LOCATIONS: Location[] = [
@@ -152,7 +131,7 @@ export const LISTINGS: Listing[] = [
     bathrooms: 1,
     maxGuests: 4,
     sizeSqm: 0,
-    fromGbpPerNight: 145,
+    fromGbpPerNight: 125,
     shortDescription: "A 1-bed apartment walkable to Borough Market, the Tate Modern, and the Thames.",
     longDescription: "A 1-bed apartment walkable to Borough Market, the Tate Modern, and the Thames.",
     amenities: ["Wi-Fi", "Smart TV", "Fitted kitchen", "Washer-dryer", "Smart lock", "Linen + towels", "Fortnightly housekeeping", "All bills included"],
@@ -173,7 +152,7 @@ export const LISTINGS: Listing[] = [
     bathrooms: 1,
     maxGuests: 6,
     sizeSqm: 0,
-    fromGbpPerNight: 195,
+    fromGbpPerNight: 165,
     shortDescription: "A 2-bed apartment walking distance to museums, parks, and the Piccadilly line.",
     longDescription: "A 2-bed apartment walking distance to museums, parks, and the Piccadilly line.",
     amenities: ["Wi-Fi", "Smart TV", "Fitted kitchen", "Washer-dryer", "Smart lock", "Linen + towels", "Fortnightly housekeeping", "All bills included"],
@@ -194,7 +173,7 @@ export const LISTINGS: Listing[] = [
     bathrooms: 1,
     maxGuests: 6,
     sizeSqm: 0,
-    fromGbpPerNight: 195,
+    fromGbpPerNight: 165,
     shortDescription: "A 2-bed apartment walking distance to museums, parks, and the Piccadilly line.",
     longDescription: "A 2-bed apartment walking distance to museums, parks, and the Piccadilly line.",
     amenities: ["Wi-Fi", "Smart TV", "Fitted kitchen", "Washer-dryer", "Smart lock", "Linen + towels", "Fortnightly housekeeping", "All bills included"],
@@ -215,7 +194,7 @@ export const LISTINGS: Listing[] = [
     bathrooms: 1,
     maxGuests: 4,
     sizeSqm: 0,
-    fromGbpPerNight: 145,
+    fromGbpPerNight: 150,
     shortDescription: "A 1-bed apartment in a quiet street between Marylebone Village and Regent's Park.",
     longDescription: "A 1-bed apartment in a quiet street between Marylebone Village and Regent's Park.",
     amenities: ["Wi-Fi", "Smart TV", "Fitted kitchen", "Washer-dryer", "Smart lock", "Linen + towels", "Fortnightly housekeeping", "All bills included"],
@@ -236,7 +215,7 @@ export const LISTINGS: Listing[] = [
     bathrooms: 1,
     maxGuests: 4,
     sizeSqm: 0,
-    fromGbpPerNight: 145,
+    fromGbpPerNight: 150,
     shortDescription: "A 1-bed apartment in a quiet street between Marylebone Village and Regent's Park.",
     longDescription: "A 1-bed apartment in a quiet street between Marylebone Village and Regent's Park.",
     amenities: ["Wi-Fi", "Smart TV", "Fitted kitchen", "Washer-dryer", "Smart lock", "Linen + towels", "Fortnightly housekeeping", "All bills included"],
@@ -257,7 +236,7 @@ export const LISTINGS: Listing[] = [
     bathrooms: 1,
     maxGuests: 7,
     sizeSqm: 0,
-    fromGbpPerNight: 195,
+    fromGbpPerNight: 170,
     shortDescription: "A 2-bed apartment walking distance to museums, parks, and the Piccadilly line.",
     longDescription: "A 2-bed apartment walking distance to museums, parks, and the Piccadilly line.",
     amenities: ["Wi-Fi", "Smart TV", "Fitted kitchen", "Washer-dryer", "Smart lock", "Linen + towels", "Fortnightly housekeeping", "All bills included"],
@@ -278,7 +257,7 @@ export const LISTINGS: Listing[] = [
     bathrooms: 1,
     maxGuests: 4,
     sizeSqm: 0,
-    fromGbpPerNight: 145,
+    fromGbpPerNight: 150,
     shortDescription: "A 1-bed apartment in a quiet street between Marylebone Village and Regent's Park.",
     longDescription: "A 1-bed apartment in a quiet street between Marylebone Village and Regent's Park.",
     amenities: ["Wi-Fi", "Smart TV", "Fitted kitchen", "Washer-dryer", "Smart lock", "Linen + towels", "Fortnightly housekeeping", "All bills included"],
@@ -298,7 +277,7 @@ export const LISTINGS: Listing[] = [
     bathrooms: 2,
     maxGuests: 6,
     sizeSqm: 0,
-    fromGbpPerNight: 195,
+    fromGbpPerNight: 255,
     shortDescription: "A 2-bed apartment minutes from Spitalfields Market, Old Street, and the City.",
     longDescription: "A 2-bed apartment minutes from Spitalfields Market, Old Street, and the City.",
     amenities: ["Wi-Fi", "Smart TV", "Fitted kitchen", "Washer-dryer", "Smart lock", "Linen + towels", "Fortnightly housekeeping", "All bills included"],
@@ -318,7 +297,7 @@ export const LISTINGS: Listing[] = [
     bathrooms: 2,
     maxGuests: 10,
     sizeSqm: 0,
-    fromGbpPerNight: 245,
+    fromGbpPerNight: 300,
     shortDescription: "A 3-bed apartment minutes from Spitalfields Market, Old Street, and the City.",
     longDescription: "A 3-bed apartment minutes from Spitalfields Market, Old Street, and the City.",
     amenities: ["Wi-Fi", "Smart TV", "Fitted kitchen", "Washer-dryer", "Smart lock", "Linen + towels", "Fortnightly housekeeping", "All bills included"],
@@ -360,7 +339,7 @@ export const LISTINGS: Listing[] = [
     bathrooms: 1,
     maxGuests: 8,
     sizeSqm: 0,
-    fromGbpPerNight: 245,
+    fromGbpPerNight: 310,
     shortDescription: "A 3-bed apartment minutes from Spitalfields Market, Old Street, and the City.",
     longDescription: "A 3-bed apartment minutes from Spitalfields Market, Old Street, and the City.",
     amenities: ["Wi-Fi", "Smart TV", "Fitted kitchen", "Washer-dryer", "Smart lock", "Linen + towels", "Fortnightly housekeeping", "All bills included"],
@@ -381,7 +360,7 @@ export const LISTINGS: Listing[] = [
     bathrooms: 2,
     maxGuests: 8,
     sizeSqm: 0,
-    fromGbpPerNight: 245,
+    fromGbpPerNight: 260,
     shortDescription: "A 3-bed apartment walking distance to museums, parks, and the Piccadilly line.",
     longDescription: "A 3-bed apartment walking distance to museums, parks, and the Piccadilly line.",
     amenities: ["Wi-Fi", "Smart TV", "Fitted kitchen", "Washer-dryer", "Smart lock", "Linen + towels", "Fortnightly housekeeping", "All bills included"],
@@ -402,7 +381,7 @@ export const LISTINGS: Listing[] = [
     bathrooms: 1,
     maxGuests: 6,
     sizeSqm: 0,
-    fromGbpPerNight: 195,
+    fromGbpPerNight: 225,
     shortDescription: "A 2-bed apartment walkable to Borough Market, the Tate Modern, and the Thames.",
     longDescription: "A 2-bed apartment walkable to Borough Market, the Tate Modern, and the Thames.",
     amenities: ["Wi-Fi", "Smart TV", "Fitted kitchen", "Washer-dryer", "Smart lock", "Linen + towels", "Fortnightly housekeeping", "All bills included"],
@@ -443,7 +422,7 @@ export const LISTINGS: Listing[] = [
     bathrooms: 2,
     maxGuests: 6,
     sizeSqm: 0,
-    fromGbpPerNight: 195,
+    fromGbpPerNight: 400,
     shortDescription: "A 2-bed apartment on a Georgian square minutes from the Barbican and Farringdon.",
     longDescription: "A 2-bed apartment on a Georgian square minutes from the Barbican and Farringdon.",
     amenities: ["Wi-Fi", "Smart TV", "Fitted kitchen", "Washer-dryer", "Smart lock", "Linen + towels", "Fortnightly housekeeping", "All bills included"],
@@ -484,7 +463,7 @@ export const LISTINGS: Listing[] = [
     bathrooms: 1,
     maxGuests: 4,
     sizeSqm: 0,
-    fromGbpPerNight: 145,
+    fromGbpPerNight: 125,
     shortDescription: "A 1-bed apartment minutes from Spitalfields Market, Old Street, and the City.",
     longDescription: "A 1-bed apartment minutes from Spitalfields Market, Old Street, and the City.",
     amenities: ["Wi-Fi", "Smart TV", "Fitted kitchen", "Washer-dryer", "Smart lock", "Linen + towels", "Fortnightly housekeeping", "All bills included"],
@@ -505,7 +484,7 @@ export const LISTINGS: Listing[] = [
     bathrooms: 1,
     maxGuests: 8,
     sizeSqm: 0,
-    fromGbpPerNight: 245,
+    fromGbpPerNight: 215,
     shortDescription: "A 3-bed apartment minutes from Spitalfields Market, Old Street, and the City.",
     longDescription: "A 3-bed apartment minutes from Spitalfields Market, Old Street, and the City.",
     amenities: ["Wi-Fi", "Smart TV", "Fitted kitchen", "Washer-dryer", "Smart lock", "Linen + towels", "Fortnightly housekeeping", "All bills included"],
@@ -526,7 +505,7 @@ export const LISTINGS: Listing[] = [
     bathrooms: 1,
     maxGuests: 4,
     sizeSqm: 0,
-    fromGbpPerNight: 145,
+    fromGbpPerNight: 150,
     shortDescription: "A 1-bed apartment in a quiet street between Marylebone Village and Regent's Park.",
     longDescription: "A 1-bed apartment in a quiet street between Marylebone Village and Regent's Park.",
     amenities: ["Wi-Fi", "Smart TV", "Fitted kitchen", "Washer-dryer", "Smart lock", "Linen + towels", "Fortnightly housekeeping", "All bills included"],
@@ -546,7 +525,7 @@ export const LISTINGS: Listing[] = [
     bathrooms: 1,
     maxGuests: 4,
     sizeSqm: 0,
-    fromGbpPerNight: 145,
+    fromGbpPerNight: 150,
     shortDescription: "A 1-bed apartment minutes from Spitalfields Market, Old Street, and the City.",
     longDescription: "A 1-bed apartment minutes from Spitalfields Market, Old Street, and the City.",
     amenities: ["Wi-Fi", "Smart TV", "Fitted kitchen", "Washer-dryer", "Smart lock", "Linen + towels", "Fortnightly housekeeping", "All bills included"],
@@ -567,7 +546,7 @@ export const LISTINGS: Listing[] = [
     bathrooms: 2,
     maxGuests: 8,
     sizeSqm: 0,
-    fromGbpPerNight: 245,
+    fromGbpPerNight: 385,
     shortDescription: "A 3-bed apartment walkable to Borough Market, the Tate Modern, and the Thames.",
     longDescription: "A 3-bed apartment walkable to Borough Market, the Tate Modern, and the Thames.",
     amenities: ["Wi-Fi", "Smart TV", "Fitted kitchen", "Washer-dryer", "Smart lock", "Linen + towels", "Fortnightly housekeeping", "All bills included"],
@@ -588,7 +567,7 @@ export const LISTINGS: Listing[] = [
     bathrooms: 1,
     maxGuests: 4,
     sizeSqm: 0,
-    fromGbpPerNight: 145,
+    fromGbpPerNight: 125,
     shortDescription: "A 1-bed apartment minutes from Spitalfields Market, Old Street, and the City.",
     longDescription: "A 1-bed apartment minutes from Spitalfields Market, Old Street, and the City.",
     amenities: ["Wi-Fi", "Smart TV", "Fitted kitchen", "Washer-dryer", "Smart lock", "Linen + towels", "Fortnightly housekeeping", "All bills included"],
@@ -609,7 +588,7 @@ export const LISTINGS: Listing[] = [
     bathrooms: 1,
     maxGuests: 5,
     sizeSqm: 0,
-    fromGbpPerNight: 145,
+    fromGbpPerNight: 175,
     shortDescription: "A 1-bed apartment walking distance to museums, parks, and the Piccadilly line.",
     longDescription: "A 1-bed apartment walking distance to museums, parks, and the Piccadilly line.",
     amenities: ["Wi-Fi", "Smart TV", "Fitted kitchen", "Washer-dryer", "Smart lock", "Linen + towels", "Fortnightly housekeeping", "All bills included"],
@@ -629,7 +608,7 @@ export const LISTINGS: Listing[] = [
     bathrooms: 1,
     maxGuests: 4,
     sizeSqm: 0,
-    fromGbpPerNight: 145,
+    fromGbpPerNight: 150,
     shortDescription: "A 1-bed apartment in a quiet street between Marylebone Village and Regent's Park.",
     longDescription: "A 1-bed apartment in a quiet street between Marylebone Village and Regent's Park.",
     amenities: ["Wi-Fi", "Smart TV", "Fitted kitchen", "Washer-dryer", "Smart lock", "Linen + towels", "Fortnightly housekeeping", "All bills included"],
@@ -650,7 +629,7 @@ export const LISTINGS: Listing[] = [
     bathrooms: 1,
     maxGuests: 4,
     sizeSqm: 0,
-    fromGbpPerNight: 145,
+    fromGbpPerNight: 150,
     shortDescription: "A 1-bed apartment minutes from Spitalfields Market, Old Street, and the City.",
     longDescription: "A 1-bed apartment minutes from Spitalfields Market, Old Street, and the City.",
     amenities: ["Wi-Fi", "Smart TV", "Fitted kitchen", "Washer-dryer", "Smart lock", "Linen + towels", "Fortnightly housekeeping", "All bills included"],
@@ -671,7 +650,7 @@ export const LISTINGS: Listing[] = [
     bathrooms: 3,
     maxGuests: 10,
     sizeSqm: 0,
-    fromGbpPerNight: 245,
+    fromGbpPerNight: 390,
     shortDescription: "A 3-bed apartment in a quiet street between Marylebone Village and Regent's Park.",
     longDescription: "A 3-bed apartment in a quiet street between Marylebone Village and Regent's Park.",
     amenities: ["Wi-Fi", "Smart TV", "Fitted kitchen", "Washer-dryer", "Smart lock", "Linen + towels", "Fortnightly housekeeping", "All bills included"],
@@ -691,7 +670,7 @@ export const LISTINGS: Listing[] = [
     bathrooms: 2,
     maxGuests: 8,
     sizeSqm: 0,
-    fromGbpPerNight: 195,
+    fromGbpPerNight: 265,
     shortDescription: "A 2-bed apartment minutes from Spitalfields Market, Old Street, and the City.",
     longDescription: "A 2-bed apartment minutes from Spitalfields Market, Old Street, and the City.",
     amenities: ["Wi-Fi", "Smart TV", "Fitted kitchen", "Washer-dryer", "Smart lock", "Linen + towels", "Fortnightly housekeeping", "All bills included"],
@@ -712,7 +691,7 @@ export const LISTINGS: Listing[] = [
     bathrooms: 2,
     maxGuests: 4,
     sizeSqm: 0,
-    fromGbpPerNight: 145,
+    fromGbpPerNight: 165,
     shortDescription: "A 1-bed apartment walking distance to museums, parks, and the Piccadilly line.",
     longDescription: "A 1-bed apartment walking distance to museums, parks, and the Piccadilly line.",
     amenities: ["Wi-Fi", "Smart TV", "Fitted kitchen", "Washer-dryer", "Smart lock", "Linen + towels", "Fortnightly housekeeping", "All bills included"],
@@ -733,7 +712,7 @@ export const LISTINGS: Listing[] = [
     bathrooms: 2,
     maxGuests: 8,
     sizeSqm: 0,
-    fromGbpPerNight: 245,
+    fromGbpPerNight: 300,
     shortDescription: "A 3-bed apartment minutes from Spitalfields Market, Old Street, and the City.",
     longDescription: "A 3-bed apartment minutes from Spitalfields Market, Old Street, and the City.",
     amenities: ["Wi-Fi", "Smart TV", "Fitted kitchen", "Washer-dryer", "Smart lock", "Linen + towels", "Fortnightly housekeeping", "All bills included"],
@@ -753,7 +732,7 @@ export const LISTINGS: Listing[] = [
     bathrooms: 2,
     maxGuests: 10,
     sizeSqm: 0,
-    fromGbpPerNight: 245,
+    fromGbpPerNight: 215,
     shortDescription: "A 3-bed apartment in a quiet street between Marylebone Village and Regent's Park.",
     longDescription: "A 3-bed apartment in a quiet street between Marylebone Village and Regent's Park.",
     amenities: ["Wi-Fi", "Smart TV", "Fitted kitchen", "Washer-dryer", "Smart lock", "Linen + towels", "Fortnightly housekeeping", "All bills included"],
@@ -774,7 +753,7 @@ export const LISTINGS: Listing[] = [
     bathrooms: 1,
     maxGuests: 4,
     sizeSqm: 0,
-    fromGbpPerNight: 145,
+    fromGbpPerNight: 150,
     shortDescription: "A 1-bed apartment in a quiet street between Marylebone Village and Regent's Park.",
     longDescription: "A 1-bed apartment in a quiet street between Marylebone Village and Regent's Park.",
     amenities: ["Wi-Fi", "Smart TV", "Fitted kitchen", "Washer-dryer", "Smart lock", "Linen + towels", "Fortnightly housekeeping", "All bills included"],
@@ -795,7 +774,7 @@ export const LISTINGS: Listing[] = [
     bathrooms: 3,
     maxGuests: 8,
     sizeSqm: 0,
-    fromGbpPerNight: 245,
+    fromGbpPerNight: 305,
     shortDescription: "A 3-bed apartment overlooking the Regent's Canal with Bakerloo line at the door.",
     longDescription: "A 3-bed apartment overlooking the Regent's Canal with Bakerloo line at the door.",
     amenities: ["Wi-Fi", "Smart TV", "Fitted kitchen", "Washer-dryer", "Smart lock", "Linen + towels", "Fortnightly housekeeping", "All bills included"],
@@ -837,7 +816,7 @@ export const LISTINGS: Listing[] = [
     bathrooms: 2,
     maxGuests: 10,
     sizeSqm: 0,
-    fromGbpPerNight: 245,
+    fromGbpPerNight: 285,
     shortDescription: "A 3-bed apartment walkable to Borough Market, the Tate Modern, and the Thames.",
     longDescription: "A 3-bed apartment walkable to Borough Market, the Tate Modern, and the Thames.",
     amenities: ["Wi-Fi", "Smart TV", "Fitted kitchen", "Washer-dryer", "Smart lock", "Linen + towels", "Fortnightly housekeeping", "All bills included"],
@@ -858,7 +837,7 @@ export const LISTINGS: Listing[] = [
     bathrooms: 1,
     maxGuests: 4,
     sizeSqm: 0,
-    fromGbpPerNight: 145,
+    fromGbpPerNight: 150,
     shortDescription: "A 1-bed apartment in a quiet street between Marylebone Village and Regent's Park.",
     longDescription: "A 1-bed apartment in a quiet street between Marylebone Village and Regent's Park.",
     amenities: ["Wi-Fi", "Smart TV", "Fitted kitchen", "Washer-dryer", "Smart lock", "Linen + towels", "Fortnightly housekeeping", "All bills included"],
@@ -878,7 +857,7 @@ export const LISTINGS: Listing[] = [
     bathrooms: 1,
     maxGuests: 4,
     sizeSqm: 0,
-    fromGbpPerNight: 145,
+    fromGbpPerNight: 150,
     shortDescription: "A 1-bed apartment minutes from Spitalfields Market, Old Street, and the City.",
     longDescription: "A 1-bed apartment minutes from Spitalfields Market, Old Street, and the City.",
     amenities: ["Wi-Fi", "Smart TV", "Fitted kitchen", "Washer-dryer", "Smart lock", "Linen + towels", "Fortnightly housekeeping", "All bills included"],
@@ -899,7 +878,7 @@ export const LISTINGS: Listing[] = [
     bathrooms: 1,
     maxGuests: 4,
     sizeSqm: 0,
-    fromGbpPerNight: 145,
+    fromGbpPerNight: 150,
     shortDescription: "A 1-bed apartment in a quiet street between Marylebone Village and Regent's Park.",
     longDescription: "A 1-bed apartment in a quiet street between Marylebone Village and Regent's Park.",
     amenities: ["Wi-Fi", "Smart TV", "Fitted kitchen", "Washer-dryer", "Smart lock", "Linen + towels", "Fortnightly housekeeping", "All bills included"],
@@ -920,7 +899,7 @@ export const LISTINGS: Listing[] = [
     bathrooms: 1,
     maxGuests: 4,
     sizeSqm: 0,
-    fromGbpPerNight: 145,
+    fromGbpPerNight: 150,
     shortDescription: "A 1-bed apartment in a quiet street between Marylebone Village and Regent's Park.",
     longDescription: "A 1-bed apartment in a quiet street between Marylebone Village and Regent's Park.",
     amenities: ["Wi-Fi", "Smart TV", "Fitted kitchen", "Washer-dryer", "Smart lock", "Linen + towels", "Fortnightly housekeeping", "All bills included"],
@@ -940,7 +919,7 @@ export const LISTINGS: Listing[] = [
     bathrooms: 3,
     maxGuests: 10,
     sizeSqm: 0,
-    fromGbpPerNight: 325,
+    fromGbpPerNight: 285,
     shortDescription: "A 4-bed apartment minutes from Spitalfields Market, Old Street, and the City.",
     longDescription: "A 4-bed apartment minutes from Spitalfields Market, Old Street, and the City.",
     amenities: ["Wi-Fi", "Smart TV", "Fitted kitchen", "Washer-dryer", "Smart lock", "Linen + towels", "Fortnightly housekeeping", "All bills included"],
@@ -960,7 +939,7 @@ export const LISTINGS: Listing[] = [
     bathrooms: 1,
     maxGuests: 8,
     sizeSqm: 0,
-    fromGbpPerNight: 245,
+    fromGbpPerNight: 315,
     shortDescription: "A 3-bed apartment minutes from Spitalfields Market, Old Street, and the City.",
     longDescription: "A 3-bed apartment minutes from Spitalfields Market, Old Street, and the City.",
     amenities: ["Wi-Fi", "Smart TV", "Fitted kitchen", "Washer-dryer", "Smart lock", "Linen + towels", "Fortnightly housekeeping", "All bills included"],
@@ -981,7 +960,7 @@ export const LISTINGS: Listing[] = [
     bathrooms: 1,
     maxGuests: 4,
     sizeSqm: 0,
-    fromGbpPerNight: 145,
+    fromGbpPerNight: 125,
     shortDescription: "A 1-bed apartment minutes from Spitalfields Market, Old Street, and the City.",
     longDescription: "A 1-bed apartment minutes from Spitalfields Market, Old Street, and the City.",
     amenities: ["Wi-Fi", "Smart TV", "Fitted kitchen", "Washer-dryer", "Smart lock", "Linen + towels", "Fortnightly housekeeping", "All bills included"],
@@ -1002,7 +981,7 @@ export const LISTINGS: Listing[] = [
     bathrooms: 1,
     maxGuests: 6,
     sizeSqm: 0,
-    fromGbpPerNight: 195,
+    fromGbpPerNight: 260,
     shortDescription: "A 2-bed apartment in a quiet street between Marylebone Village and Regent's Park.",
     longDescription: "A 2-bed apartment in a quiet street between Marylebone Village and Regent's Park.",
     amenities: ["Wi-Fi", "Smart TV", "Fitted kitchen", "Washer-dryer", "Smart lock", "Linen + towels", "Fortnightly housekeeping", "All bills included"],
@@ -1023,7 +1002,7 @@ export const LISTINGS: Listing[] = [
     bathrooms: 2,
     maxGuests: 12,
     sizeSqm: 0,
-    fromGbpPerNight: 325,
+    fromGbpPerNight: 455,
     shortDescription: "A 4-bed apartment overlooking the Regent's Canal with Bakerloo line at the door.",
     longDescription: "A 4-bed apartment overlooking the Regent's Canal with Bakerloo line at the door.",
     amenities: ["Wi-Fi", "Smart TV", "Fitted kitchen", "Washer-dryer", "Smart lock", "Linen + towels", "Fortnightly housekeeping", "All bills included"],
@@ -1037,14 +1016,6 @@ export const LISTINGS: Listing[] = [
   },
 ];
 
-export function listingsByArea(area: AreaSlug): Listing[] {
-  return LISTINGS.filter((l) => l.area === area);
-}
-
-export function getListing(slug: string): Listing | undefined {
-  return LISTINGS.find((l) => l.slug === slug);
-}
-
-export function getLocation(slug: AreaSlug): Location | undefined {
-  return LOCATIONS.find((l) => l.slug === slug);
-}
+export function listingsByArea(area: AreaSlug): Listing[] { return LISTINGS.filter((l) => l.area === area); }
+export function getListing(slug: string): Listing | undefined { return LISTINGS.find((l) => l.slug === slug); }
+export function getLocation(slug: AreaSlug): Location | undefined { return LOCATIONS.find((l) => l.slug === slug); }
