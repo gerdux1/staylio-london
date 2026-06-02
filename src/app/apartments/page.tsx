@@ -50,7 +50,7 @@ export default function ApartmentsPage() {
                   <span>
                     {l.bedrooms > 0 ? `${l.bedrooms} bed` : "Studio"} · {l.bathrooms} bath{l.sizeSqm > 0 ? ` · ${l.sizeSqm} sqm` : ""}
                   </span>
-                  <span className="font-medium">from £{l.fromGbpPerNight}/night</span>
+                  <span className="font-medium text-stone-900">Best direct rate →</span>
                 </div>
               </div>
             </Link>
