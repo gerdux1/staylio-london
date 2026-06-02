@@ -16,7 +16,7 @@ const ROWS: [string, string, string][] = [
   ["Family suitability", "Excellent, multi-bedroom", "Limited"],
   ["All bills included", "Yes", "Yes"],
   ["Self check-in", "Yes, smart lock", "Limited"],
-  ["Direct rate vs Booking.com / Airbnb", "Always meaningfully lower", "Identical, plus fees"],
+  ["Direct rate vs Booking.com / Airbnb", "Always 10% lower (no commission)", "Identical, plus fees"],
 ];
 
 const FAQ = [

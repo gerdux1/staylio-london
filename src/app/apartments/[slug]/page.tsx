@@ -110,12 +110,12 @@ export default async function ListingPage({
           <aside className="rounded-2xl border border-stone-200 p-6 h-fit bg-stone-50">
             <p className="text-sm text-stone-600">Direct rate</p>
             <p className="mt-1 font-serif text-2xl text-stone-900">
-              Always lower than Booking.com &amp; Airbnb
+              Save 10% vs Booking.com &amp; Airbnb
             </p>
             <p className="mt-3 text-sm text-stone-700">
-              From <span className="font-medium">£{listing.fromGbpPerNight}/night</span> indicative
-              for stays of one week or more. We tailor your rate to your dates and stay length, so
-              ask Ali for an exact quote.
+              Our direct rate is always at least 10% lower than the same apartment on Booking.com or
+              Airbnb, because we don&rsquo;t pay platform commission. Ask Ali for your exact quote
+              based on your dates and stay length.
             </p>
             <p className="mt-2 text-xs text-stone-500">
               All bills included. No commission, no OTA fees.

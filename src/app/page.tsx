@@ -125,7 +125,7 @@ export default function Home() {
                     <span>
                       {l.bedrooms > 0 ? `${l.bedrooms} bed` : "Studio"} · {l.bathrooms} bath{l.sizeSqm > 0 ? ` · ${l.sizeSqm} sqm` : ""}
                     </span>
-                    <span className="font-medium text-stone-900">Best direct rate →</span>
+                    <span className="font-medium text-stone-900">Save 10% vs OTAs →</span>
                   </div>
                 </div>
               </Link>
@@ -187,7 +187,7 @@ export default function Home() {
                   ["Cost for one-week-plus stay", "15–20% less", "Standard rate"],
                   ["Guest support", "Named team members", "Reception desk"],
                   ["Family suitability", "Excellent, multi-bedroom", "Limited"],
-                  ["Direct rate vs Booking.com / Airbnb", "Always lower (no commission)", "Same rate, plus fees"],
+                  ["Direct rate vs Booking.com / Airbnb", "Always 10% lower (no commission)", "Same rate, plus fees"],
                 ].map(([f, s, h]) => (
                   <tr key={f} className="border-b border-stone-800 last:border-0">
                     <td className="py-4 pr-6 text-stone-300">{f}</td>
