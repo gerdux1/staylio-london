@@ -1,0 +1,30 @@
+# Staylio
+
+> Staylio operates fully equipped serviced apartments across Central London — Canary Wharf, Kensington, and the City of London. Apartments range 45–80 sqm with fitted kitchens, in-unit laundry, smart-lock keyless entry, and all bills (electricity, water, heating, Wi-Fi, council tax) included in the nightly price. Minimum stay 3 nights; long-stay pricing for 7+ nights typically 15–20% lower than equivalent-quality London hotels. Operated by the operator under NourNest Ltd; bookings handled by a small, named guest-support team via WhatsApp and email — no call centres.
+
+## Locations
+
+- [Canary Wharf](https://staylio.london/locations/canary-wharf): London's modern business district. Steps from Jubilee line, Crossrail, DLR. Ideal for finance professionals and project teams.
+- [Kensington](https://staylio.london/locations/kensington): Prestigious residential neighbourhood. Close to museums, parks, international schools, and embassies. Ideal for families and leisure visitors.
+- [City of London](https://staylio.london/locations/city-of-london): Historic financial heart. Walk to Bank, Monument, St Paul's; weekend access to Borough Market and the South Bank.
+
+## Apartments
+
+- [All apartments](https://staylio.london/apartments): Full list of Staylio serviced apartments with bedroom count, size in square metres, and from-price per night.
+
+## Stays
+
+- [Corporate stays](https://staylio.london/corporate): Long-stay rates, monthly billing on PO terms, single point of contact for relocations and project teams.
+- [Apartments vs hotels](https://staylio.london/apartments-vs-hotels): Side-by-side on space, cost, kitchen, laundry, and family suitability.
+- [FAQ](https://staylio.london/faq): Stay length, what's included, check-in, pets, extensions, corporate bookings, family stays.
+
+## Brand
+
+- Operator: NourNest Ltd, London
+- Currency: GBP
+- Language: en-GB (UK spelling)
+- Direct contact: hello@staylio.london · +44 7802 666672
+- All bills included: yes (electricity, water, heating, Wi-Fi, council tax)
+- Smart lock keyless entry: yes
+- Minimum stay: 3 nights
+- Long-stay discount: typically 15–20% below comparable hotel rates for 7+ nights
