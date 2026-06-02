@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About Staylio",
   description:
-    "Staylio is an independent London serviced apartment operator. We blend hotel-grade comfort with the space and freedom of a real home.",
+    "Staylio Limited is an independent London serviced apartment operator. Boutique, curated, warm — fully equipped apartments across seven Central London neighbourhoods.",
 };
 
 export default function AboutPage() {
@@ -22,7 +22,8 @@ export default function AboutPage() {
         <p>
           Every apartment is set up so you can arrive, drop your bags, and start living from the
           moment you walk in — fitted kitchen, fast Wi-Fi, smart TV, fresh linens, full toiletries,
-          and all bills already paid. Smart locks let you check in whenever you land.
+          and all bills already paid. Smart locks let you check in whenever you land. Fortnightly
+          housekeeping is included; additional cleans are available on request.
         </p>
         <p>
           We&rsquo;re a small team of real people. When something needs sorting, you can WhatsApp
@@ -36,7 +37,7 @@ export default function AboutPage() {
           { t: "Space matters", b: "A real kitchen, a proper desk, and a sofa to sprawl on aren't luxuries — they're the difference between surviving a long trip and enjoying one." },
           { t: "Bills should be simple", b: "One rate. Electricity, water, heating, Wi-Fi, council tax — all in. No surprise charges on departure." },
           { t: "Support means people", b: "Our guest team have names, faces, and WhatsApp. Every message gets a real human reply, usually within 15 minutes." },
-          { t: "London is the point", b: "Our apartments are positioned in neighbourhoods we'd happily live in ourselves — Canary Wharf, Kensington, the City." },
+          { t: "Direct is better", b: "Our direct rates are always meaningfully lower than the same apartment listed on Booking.com or Airbnb — because we don't pay commission, we pass the saving back to you." },
         ].map((v) => (
           <div key={v.t}>
             <h3 className="font-serif text-xl text-stone-900">{v.t}</h3>
@@ -44,6 +45,26 @@ export default function AboutPage() {
           </div>
         ))}
       </div>
+
+      <h2 className="mt-20 font-serif text-3xl text-stone-900">Company information</h2>
+      <dl className="mt-8 grid gap-x-8 gap-y-4 sm:grid-cols-2 text-sm text-stone-700">
+        <div>
+          <dt className="font-medium text-stone-900">Legal entity</dt>
+          <dd>Staylio Limited</dd>
+        </div>
+        <div>
+          <dt className="font-medium text-stone-900">Companies House</dt>
+          <dd>17012831</dd>
+        </div>
+        <div>
+          <dt className="font-medium text-stone-900">Address</dt>
+          <dd>85 Frampton Street, London NW8 8NQ</dd>
+        </div>
+        <div>
+          <dt className="font-medium text-stone-900">Contact</dt>
+          <dd>hello@staylio.london</dd>
+        </div>
+      </dl>
 
       <div className="mt-16">
         <Link

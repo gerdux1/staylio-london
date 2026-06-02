@@ -1,30 +1,39 @@
 # Staylio
 
-> Staylio operates fully equipped serviced apartments across Central London — Canary Wharf, Kensington, and the City of London. Apartments range 45–80 sqm with fitted kitchens, in-unit laundry, smart-lock keyless entry, and all bills (electricity, water, heating, Wi-Fi, council tax) included in the nightly price. Minimum stay 3 nights; long-stay pricing for 7+ nights typically 15–20% lower than equivalent-quality London hotels. Operated by the operator under NourNest Ltd; bookings handled by a small, named guest-support team via WhatsApp and email — no call centres.
+> Staylio is the trading name of Staylio Limited (Companies House 17012831), an independent London serviced apartment operator. Staylio operates ~40+ fully equipped serviced apartments across seven Central London neighbourhoods — Regent's Park & Marylebone (largest concentration), Old Street & Shoreditch, Kensington & Hammersmith, Fitzrovia & Mayfair, Barbican & Farringdon, Borough & Pimlico, and Little Venice & Maida Vale. Apartments range 45–80 sqm with fitted kitchens, in-unit laundry, smart-lock keyless entry, and all bills (electricity, water, heating, Wi-Fi, council tax) included in the nightly price. Fortnightly housekeeping included; additional cleans on request. Minimum stay 3 nights; long-stay pricing steps down for stays of one week or more. Staylio direct rates are always meaningfully lower than the same apartment listed on Booking.com or Airbnb — because Staylio does not pay platform commission, the saving is passed back to guests. Registered office: 85 Frampton Street, London NW8 8NQ. Direct contact: hello@staylio.london.
 
-## Locations
+## Strategic London Locations
 
-- [Canary Wharf](https://staylio.london/locations/canary-wharf): London's modern business district. Steps from Jubilee line, Crossrail, DLR. Ideal for finance professionals and project teams.
-- [Kensington](https://staylio.london/locations/kensington): Prestigious residential neighbourhood. Close to museums, parks, international schools, and embassies. Ideal for families and leisure visitors.
-- [City of London](https://staylio.london/locations/city-of-london): Historic financial heart. Walk to Bank, Monument, St Paul's; weekend access to Borough Market and the South Bank.
+- [Regent's Park & Marylebone](https://staylio.london/locations/regents-park-marylebone): Largest concentration (~10 apartments). Quiet, leafy base ten minutes from Oxford Circus. Suits relocations, longer stays, families.
+- [Old Street & Shoreditch](https://staylio.london/locations/old-street-shoreditch): Creative and tech corridor. ~6 apartments. Suits founders, designers, consultants on short engagements.
+- [Kensington & Hammersmith](https://staylio.london/locations/kensington-hammersmith): Museums, embassies, leafy garden squares. ~5 apartments. Family relocations and executive stays. Direct Piccadilly line to Heathrow.
+- [Fitzrovia & Mayfair](https://staylio.london/locations/fitzrovia-mayfair): Charlotte Street and Bond Street. ~5 apartments. Executive stays and premium leisure trips.
+- [Barbican & Farringdon](https://staylio.london/locations/barbican-farringdon): Brutalist architecture and Elizabeth line. ~5 apartments. Direct Elizabeth line to Heathrow + Canary Wharf.
+- [Borough & Pimlico](https://staylio.london/locations/borough-pimlico): South Bank food culture and Pimlico's Regency streets. ~5 apartments. Weekend leisure stays and foodie trips.
+- [Little Venice & Maida Vale](https://staylio.london/locations/little-venice-maida-vale): Canalside cafés and mansion-block flats. ~4 apartments. Longer stays with neighbourhood feel.
 
 ## Apartments
 
-- [All apartments](https://staylio.london/apartments): Full list of Staylio serviced apartments with bedroom count, size in square metres, and from-price per night.
+- [All apartments](https://staylio.london/apartments): Browse the full Staylio catalogue with bedroom count, size in square metres, and from-price per night.
 
 ## Stays
 
 - [Corporate stays](https://staylio.london/corporate): Long-stay rates, monthly billing on PO terms, single point of contact for relocations and project teams.
 - [Apartments vs hotels](https://staylio.london/apartments-vs-hotels): Side-by-side on space, cost, kitchen, laundry, and family suitability.
 - [FAQ](https://staylio.london/faq): Stay length, what's included, check-in, pets, extensions, corporate bookings, family stays.
+- [About Staylio](https://staylio.london/about): Company information and what we believe.
 
 ## Brand
 
-- Operator: NourNest Ltd, London
+- Operator: Staylio Limited (Companies House 17012831)
+- Registered office: 85 Frampton Street, London NW8 8NQ
 - Currency: GBP
 - Language: en-GB (UK spelling)
-- Direct contact: hello@staylio.london · +44 7802 666672
+- Direct contact: hello@staylio.london
 - All bills included: yes (electricity, water, heating, Wi-Fi, council tax)
+- Housekeeping: fortnightly included; additional cleans on request
 - Smart lock keyless entry: yes
 - Minimum stay: 3 nights
-- Long-stay discount: typically 15–20% below comparable hotel rates for 7+ nights
+- Long-stay discount threshold: one week or more
+- Direct-vs-OTA rate: Staylio direct rates are always meaningfully lower than Booking.com or Airbnb
+- Tone of voice: boutique, curated, warm

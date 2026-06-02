@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { LOCATIONS, listingsByArea, getLocation, type Area } from "@/lib/listings";
+import { LOCATIONS, listingsByArea, getLocation, type AreaSlug } from "@/lib/listings";
 import { JsonLd, breadcrumb } from "@/lib/schema";
 
 export async function generateStaticParams() {
@@ -14,7 +14,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const loc = getLocation(slug as Area);
+  const loc = getLocation(slug as AreaSlug);
   if (!loc) return { title: "Location not found" };
   return {
     title: `${loc.label} apartments`,
@@ -34,7 +34,7 @@ export default async function LocationPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const loc = getLocation(slug as Area);
+  const loc = getLocation(slug as AreaSlug);
   if (!loc) return notFound();
   const listings = listingsByArea(loc.slug);
 
@@ -43,15 +43,12 @@ export default async function LocationPage({
       <JsonLd
         data={breadcrumb([
           { name: "Home", url: "https://staylio.london" },
-          { name: "Locations", url: "https://staylio.london/apartments" },
-          {
-            name: loc.label,
-            url: `https://staylio.london/locations/${loc.slug}`,
-          },
+          { name: "Locations", url: "https://staylio.london/locations" },
+          { name: loc.label, url: `https://staylio.london/locations/${loc.slug}` },
         ])}
       />
 
-      {/* Hero with neighbourhood photo */}
+      {/* Neighbourhood hero */}
       <section className="relative h-[60vh] min-h-[420px] w-full overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
@@ -59,21 +56,66 @@ export default async function LocationPage({
           alt={loc.label}
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-stone-900/70 via-stone-900/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-stone-900/75 via-stone-900/25 to-transparent" />
         <div className="relative mx-auto flex h-full max-w-7xl flex-col justify-end px-6 pb-14 text-white">
-          <p className="text-sm uppercase tracking-widest text-stone-200">Location</p>
+          <p className="text-sm uppercase tracking-widest text-stone-200">
+            Strategic London location · ~{loc.propertyCountApprox} apartments
+          </p>
           <h1 className="mt-3 font-serif text-5xl sm:text-7xl leading-[1.05]">{loc.label}</h1>
-          <p className="mt-4 max-w-2xl text-stone-100">{loc.description}</p>
+          <p className="mt-4 max-w-2xl text-stone-100 text-lg">{loc.description}</p>
         </div>
       </section>
 
+      {/* Why stay here */}
+      <section className="mx-auto max-w-4xl px-6 py-20">
+        <h2 className="font-serif text-3xl sm:text-4xl text-stone-900">Why stay in {loc.shortLabel}</h2>
+        <p className="mt-6 text-lg text-stone-700 leading-relaxed">{loc.whyStayHere}</p>
+      </section>
+
+      {/* Nearby + transport */}
+      <section className="bg-stone-100 py-20">
+        <div className="mx-auto max-w-7xl px-6 grid gap-12 lg:grid-cols-2">
+          <div>
+            <p className="text-sm uppercase tracking-widest text-stone-500">Nearby</p>
+            <h2 className="mt-3 font-serif text-3xl sm:text-4xl text-stone-900">
+              What&rsquo;s around the corner
+            </h2>
+            <ul className="mt-8 space-y-4">
+              {loc.nearbyHighlights.map((h) => (
+                <li key={h} className="flex items-start gap-3 text-stone-700">
+                  <span className="mt-1.5 inline-block h-1.5 w-1.5 rounded-full bg-stone-900" />
+                  <span>{h}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <p className="text-sm uppercase tracking-widest text-stone-500">Transport</p>
+            <h2 className="mt-3 font-serif text-3xl sm:text-4xl text-stone-900">
+              Getting around
+            </h2>
+            <ul className="mt-8 space-y-4">
+              {loc.transport.map((t) => (
+                <li key={t} className="flex items-start gap-3 text-stone-700">
+                  <span className="mt-1.5 inline-block h-1.5 w-1.5 rounded-full bg-stone-900" />
+                  <span>{t}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Apartments here */}
       <section className="mx-auto max-w-7xl px-6 py-24">
         <h2 className="font-serif text-3xl sm:text-4xl text-stone-900">
           Staylio apartments in {loc.label}
         </h2>
         {listings.length === 0 ? (
           <p className="mt-6 text-stone-600">
-            We&rsquo;re onboarding apartments here. <Link href="/contact" className="underline underline-offset-4">Enquire</Link> to be notified when they launch.
+            We&rsquo;re onboarding apartments here.{" "}
+            <Link href="/contact" className="underline underline-offset-4">Enquire</Link>{" "}
+            to be notified when they launch.
           </p>
         ) : (
           <div className="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3">

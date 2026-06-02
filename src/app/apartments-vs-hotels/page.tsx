@@ -11,23 +11,29 @@ const ROWS: [string, string, string][] = [
   ["Average living space", "45–80 sqm", "20–30 sqm"],
   ["Private kitchen", "Yes, fully equipped", "No"],
   ["In-unit laundry", "Yes", "No"],
-  ["Cost for 7+ night stay", "15–20% less", "Standard rate"],
+  ["Cost for one-week-plus stay", "15–20% less", "Standard rate"],
   ["Guest support", "Named team members", "Reception desk"],
   ["Family suitability", "Excellent — multi-bedroom", "Limited"],
   ["All bills included", "Yes", "Yes"],
   ["Self check-in", "Yes — smart lock", "Limited"],
+  ["Direct rate vs Booking.com / Airbnb", "Always meaningfully lower", "Identical, plus fees"],
 ];
 
 const FAQ = [
   {
     question: "Are Staylio apartments cheaper than a London hotel?",
     answer:
-      "For stays of seven nights or more, Staylio apartments are typically 15–20% cheaper than equivalent-quality London hotels, before factoring in food savings from having a full kitchen and on-site laundry.",
+      "For stays of one week or more, Staylio apartments are typically 15–20% cheaper than equivalent-quality London hotels, before factoring in food savings from having a full kitchen and on-site laundry.",
   },
   {
     question: "What's included in the price of a Staylio apartment?",
     answer:
-      "Every Staylio booking includes electricity, water, heating, Wi-Fi, council tax, fresh linens, and full toiletries. There are no surprise fees on top of the nightly rate.",
+      "Every Staylio booking includes electricity, water, heating, Wi-Fi, council tax, fresh linens, full toiletries, and fortnightly housekeeping. There are no surprise fees on top of the nightly rate.",
+  },
+  {
+    question: "Are Staylio direct rates lower than Booking.com and Airbnb?",
+    answer:
+      "Yes. Our direct rates are always meaningfully lower than the same apartment listed on Booking.com or Airbnb — because we don't pay platform commission, we pass the saving back to you.",
   },
   {
     question: "Do Staylio apartments come with a kitchen?",

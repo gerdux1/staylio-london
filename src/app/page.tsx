@@ -9,14 +9,14 @@ const USPS = [
       "Every apartment comes with a fitted kitchen, fast Wi-Fi, smart TV, fresh linens, and toiletries. Move in and start living straight away.",
   },
   {
-    title: "Locations across London",
+    title: "Strategic London locations",
     body:
-      "From Canary Wharf and the City to Kensington and beyond — positioned for easy commutes and weekend exploration.",
+      "From Regent's Park and Marylebone to Shoreditch, Kensington, and Little Venice — positioned for easy commutes and weekend exploration.",
   },
   {
-    title: "Adaptable stay lengths",
+    title: "Long-stay friendly",
     body:
-      "Book for three nights or three months. Our pricing adjusts for longer stays, and there are no penalties for extending.",
+      "Book for three nights or three months. Our pricing steps down for stays of one week or more, with no penalty for extending.",
   },
   {
     title: "Personal guest support",
@@ -135,8 +135,8 @@ export default function Home() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-24">
-        <p className="text-sm uppercase tracking-widest text-stone-500">Our London locations</p>
-        <h2 className="mt-3 font-serif text-4xl sm:text-5xl text-stone-900">Choose your neighbourhood.</h2>
+        <p className="text-sm uppercase tracking-widest text-stone-500">Strategic London locations</p>
+        <h2 className="mt-3 font-serif text-4xl sm:text-5xl text-stone-900">Seven neighbourhoods, one operator.</h2>
         <div className="mt-12 grid gap-8 md:grid-cols-3">
           {LOCATIONS.map((loc) => (
             <Link
@@ -152,10 +152,13 @@ export default function Home() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-stone-900/85 via-stone-900/30 to-transparent" />
               <div className="relative flex h-full flex-col justify-end p-7 text-white">
-                <h3 className="font-serif text-3xl">{loc.label}</h3>
+                <p className="text-xs uppercase tracking-widest text-stone-200">
+                  ~{loc.propertyCountApprox} apartments
+                </p>
+                <h3 className="mt-2 font-serif text-3xl">{loc.label}</h3>
                 <p className="mt-2 text-sm text-stone-100 line-clamp-3">{loc.description}</p>
                 <p className="mt-4 text-sm font-medium underline underline-offset-4">
-                  View {loc.label} apartments →
+                  Explore {loc.shortLabel} →
                 </p>
               </div>
             </Link>
@@ -181,9 +184,10 @@ export default function Home() {
                   ["Average living space", "45–80 sqm", "20–30 sqm"],
                   ["Private kitchen", "Yes, fully equipped", "No"],
                   ["In-unit laundry", "Yes", "No"],
-                  ["Cost for 7+ night stay", "15–20% less", "Standard rate"],
+                  ["Cost for one-week-plus stay", "15–20% less", "Standard rate"],
                   ["Guest support", "Named team members", "Reception desk"],
                   ["Family suitability", "Excellent — multi-bedroom", "Limited"],
+                  ["Direct rate vs Booking.com / Airbnb", "Always lower (no commission)", "Same rate, plus fees"],
                 ].map(([f, s, h]) => (
                   <tr key={f} className="border-b border-stone-800 last:border-0">
                     <td className="py-4 pr-6 text-stone-300">{f}</td>
@@ -213,7 +217,7 @@ export default function Home() {
             <p className="mt-2 text-sm text-stone-600">Guest review average</p>
           </div>
           <div>
-            <p className="font-serif text-5xl text-stone-900">{LISTINGS.length}+</p>
+            <p className="font-serif text-5xl text-stone-900">40+</p>
             <p className="mt-2 text-sm text-stone-600">Central London apartments</p>
           </div>
           <div>
@@ -226,15 +230,15 @@ export default function Home() {
           {[
             {
               quote:
-                "Staylio's apartment near Hyde Park made my three-month relocation smooth and comfortable — felt like home from day one. The team replied to every WhatsApp within minutes.",
+                "Staylio's apartment near Regent's Park made my three-month relocation smooth and comfortable — felt like home from day one. The team replied to every WhatsApp within minutes.",
               author: "Marie L.",
               context: "3-month relocation, Kensington",
             },
             {
               quote:
-                "We've used Staylio for two project deployments now. Same apartment, same team, single invoice. Saves us hours every cycle compared to chasing hotel block-bookings.",
+                "We've used Staylio for two project deployments now. Same operator, same team, single monthly invoice. Saves us hours every cycle compared to chasing hotel block-bookings.",
               author: "James R.",
-              context: "Corporate, Canary Wharf",
+              context: "Corporate, Old Street",
             },
           ].map((t) => (
             <blockquote key={t.author} className="rounded-2xl border border-stone-200 bg-white p-8">

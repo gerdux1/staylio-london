@@ -11,12 +11,12 @@ const FAQ = [
   {
     question: "How long can I stay?",
     answer:
-      "Minimum stay is three nights. Maximum is open-ended — many guests stay for three to six months, and a few have stayed for over a year. Pricing adjusts down for longer stays.",
+      "Minimum stay is three nights. Maximum is open-ended — many guests stay for three to six months, and a few have stayed for over a year. Pricing steps down for stays of one week or more.",
   },
   {
     question: "What's included in the price?",
     answer:
-      "Every booking includes electricity, water, heating, Wi-Fi, council tax, fresh linens, and full toiletries. There are no extra fees on top of the nightly rate.",
+      "Every booking includes electricity, water, heating, Wi-Fi, council tax, fresh linens, full toiletries, and fortnightly housekeeping. Additional cleans are available on request.",
   },
   {
     question: "How does check-in work?",
@@ -41,7 +41,17 @@ const FAQ = [
   {
     question: "Are children welcome?",
     answer:
-      "Of course. Our Kensington two-bed in particular is set up with family stays in mind — travel cot, high chair, and child-safe finishes are available on request.",
+      "Of course. Our two-bed and three-bed apartments in Regent's Park & Marylebone and Kensington are set up with family stays in mind — travel cot, high chair, and stair gates are available on request.",
+  },
+  {
+    question: "Where are your apartments located?",
+    answer:
+      "Staylio operates across seven Central London neighbourhoods: Regent's Park & Marylebone (our biggest concentration), Old Street & Shoreditch, Kensington & Hammersmith, Fitzrovia & Mayfair, Barbican & Farringdon, Borough & Pimlico, and Little Venice & Maida Vale.",
+  },
+  {
+    question: "Who is Staylio?",
+    answer:
+      "Staylio is the trading name of Staylio Limited, an independent London serviced apartment operator. Companies House number 17012831, registered at 85 Frampton Street, London NW8 8NQ. Part of an independent multi-entity London accommodation group.",
   },
 ];
 

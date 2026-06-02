@@ -1,10 +1,10 @@
 import Link from "next/link";
 
+// Top-level nav. Per locked decision_staylio_brochure_voice_14may.md:
+// section heading is "Strategic London Locations" — but in nav we condense to "Locations".
 const NAV = [
   { href: "/apartments", label: "Apartments" },
-  { href: "/locations/canary-wharf", label: "Canary Wharf" },
-  { href: "/locations/kensington", label: "Kensington" },
-  { href: "/locations/city-of-london", label: "City of London" },
+  { href: "/locations", label: "Locations" },
   { href: "/corporate", label: "Corporate" },
   { href: "/apartments-vs-hotels", label: "Apartments vs Hotels" },
   { href: "/about", label: "About" },
