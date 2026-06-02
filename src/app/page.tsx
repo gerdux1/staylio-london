@@ -125,7 +125,7 @@ export default function Home() {
                     <span>
                       {l.bedrooms > 0 ? `${l.bedrooms} bed` : "Studio"} · {l.bathrooms} bath{l.sizeSqm > 0 ? ` · ${l.sizeSqm} sqm` : ""}
                     </span>
-                    <span className="font-medium text-stone-900">Save 10% vs OTAs →</span>
+                    <span className="font-medium text-stone-900">Save 10% or more →</span>
                   </div>
                 </div>
               </Link>

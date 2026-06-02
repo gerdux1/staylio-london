@@ -110,7 +110,7 @@ export default async function ListingPage({
           <aside className="rounded-2xl border border-stone-200 p-6 h-fit bg-stone-50">
             <p className="text-sm text-stone-600">Direct rate</p>
             <p className="mt-1 font-serif text-2xl text-stone-900">
-              Save 10% vs Booking.com &amp; Airbnb
+              Save 10% or more vs Booking.com &amp; Airbnb
             </p>
             <p className="mt-3 text-sm text-stone-700">
               Our direct rate is always at least 10% lower than the same apartment on Booking.com or
