@@ -104,7 +104,7 @@ export const LOCATIONS: Location[] = [
 export const LISTINGS: Listing[] = [
   {
     slug: "borough-pimlico-163-new-kent-rd-e4e562",
-    title: "Borough 1-Bed 163 New Kent Rd",
+    title: "163 New Kent Road · 1-bed",
     area: "borough-pimlico",
     areaLabel: "Borough & Pimlico",
     bedrooms: 1,
@@ -125,7 +125,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     slug: "kensington-hammersmith-shepherds-bush-e90621",
-    title: "Kensington 2-Bed Shepherd's Bush",
+    title: "Shepherd's Bush · 2-bed",
     area: "kensington-hammersmith",
     areaLabel: "Kensington & Hammersmith",
     bedrooms: 2,
@@ -146,7 +146,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     slug: "kensington-hammersmith-shepherds-bush-2-e058bd",
-    title: "Kensington 2-Bed Shepherds Bush 2",
+    title: "Shepherd's Bush 2 · 2-bed",
     area: "kensington-hammersmith",
     areaLabel: "Kensington & Hammersmith",
     bedrooms: 2,
@@ -167,7 +167,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     slug: "regents-park-marylebone-regents-flat-n-146f40",
-    title: "Regent's Park 1-Bed Regents Flat N",
+    title: "Regents Flat N · 1-bed",
     area: "regents-park-marylebone",
     areaLabel: "Regent's Park & Marylebone",
     bedrooms: 1,
@@ -188,7 +188,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     slug: "regents-park-marylebone-euston-1-83a49f",
-    title: "Regent's Park 1-Bed Euston # 1",
+    title: "Euston · Flat 1 · 1-bed",
     area: "regents-park-marylebone",
     areaLabel: "Regent's Park & Marylebone",
     bedrooms: 1,
@@ -209,7 +209,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     slug: "kensington-hammersmith-askew-road-f879fa",
-    title: "Kensington 2-Bed Askew Road",
+    title: "Askew Road · 2-bed",
     area: "kensington-hammersmith",
     areaLabel: "Kensington & Hammersmith",
     bedrooms: 2,
@@ -230,7 +230,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     slug: "regents-park-marylebone-regents-flat-m-8f6807",
-    title: "Regent's Park 1-Bed Regents Flat M",
+    title: "Regents Flat M · 1-bed",
     area: "regents-park-marylebone",
     areaLabel: "Regent's Park & Marylebone",
     bedrooms: 1,
@@ -250,7 +250,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     slug: "old-street-shoreditch-tower-hill-494cb0",
-    title: "Old Street 2-Bed Tower Hill",
+    title: "Tower Hill · 2-bed",
     area: "old-street-shoreditch",
     areaLabel: "Old Street & Shoreditch",
     bedrooms: 2,
@@ -270,7 +270,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     slug: "old-street-shoreditch-kings-cross-2a3255",
-    title: "Old Street 3-Bed Kings Cross",
+    title: "King's Cross · 3-bed",
     area: "old-street-shoreditch",
     areaLabel: "Old Street & Shoreditch",
     bedrooms: 3,
@@ -291,7 +291,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     slug: "little-venice-maida-vale-little-venice-2-1a62a5",
-    title: "Little Venice 3-Bed Little Venice 2",
+    title: "Little Venice 2 · 3-bed",
     area: "little-venice-maida-vale",
     areaLabel: "Little Venice & Maida Vale",
     bedrooms: 3,
@@ -312,7 +312,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     slug: "old-street-shoreditch-hoxton-flat-8-2977ca",
-    title: "Old Street 3-Bed Hoxton Flat 8",
+    title: "Hoxton Flat 8 · 3-bed",
     area: "old-street-shoreditch",
     areaLabel: "Old Street & Shoreditch",
     bedrooms: 3,
@@ -333,7 +333,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     slug: "kensington-hammersmith-hammersmith-815a55",
-    title: "Kensington 3-Bed Hammersmith",
+    title: "Hammersmith · 3-bed",
     area: "kensington-hammersmith",
     areaLabel: "Kensington & Hammersmith",
     bedrooms: 3,
@@ -354,7 +354,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     slug: "borough-pimlico-vauxhall-6c8f54",
-    title: "Borough 2-Bed Vauxhall",
+    title: "Vauxhall · 2-bed",
     area: "borough-pimlico",
     areaLabel: "Borough & Pimlico",
     bedrooms: 2,
@@ -375,7 +375,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     slug: "fitzrovia-mayfair-mayfair-2bed-449505",
-    title: "Fitzrovia 2-Bed MAYFAIR 2BED",
+    title: "Mayfair · 2-bed",
     area: "fitzrovia-mayfair",
     areaLabel: "Fitzrovia & Mayfair",
     bedrooms: 2,
@@ -395,7 +395,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     slug: "barbican-farringdon-russell-square-flat-34-421231",
-    title: "Barbican 2-Bed Russell Square flat 34",
+    title: "Russell Square Flat 34 · 2-bed",
     area: "barbican-farringdon",
     areaLabel: "Barbican & Farringdon",
     bedrooms: 2,
@@ -415,7 +415,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     slug: "little-venice-maida-vale-little-venice-1-ace09d",
-    title: "Little Venice 4-Bed Little Venice 1",
+    title: "Little Venice 1 · 4-bed",
     area: "little-venice-maida-vale",
     areaLabel: "Little Venice & Maida Vale",
     bedrooms: 4,
@@ -436,7 +436,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     slug: "old-street-shoreditch-hackney-1b-bfb561",
-    title: "Old Street 1-Bed Hackney 1B",
+    title: "Hackney 1B · 1-bed",
     area: "old-street-shoreditch",
     areaLabel: "Old Street & Shoreditch",
     bedrooms: 1,
@@ -457,7 +457,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     slug: "old-street-shoreditch-aldgate-1dd5c7",
-    title: "Old Street 3-Bed Aldgate",
+    title: "Aldgate · 3-bed",
     area: "old-street-shoreditch",
     areaLabel: "Old Street & Shoreditch",
     bedrooms: 3,
@@ -478,7 +478,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     slug: "regents-park-marylebone-regents-flat-d-a385dd",
-    title: "Regent's Park 1-Bed Regents Flat D",
+    title: "Regents Flat D · 1-bed",
     area: "regents-park-marylebone",
     areaLabel: "Regent's Park & Marylebone",
     bedrooms: 1,
@@ -498,7 +498,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     slug: "old-street-shoreditch-old-st-flat-3-1523cb",
-    title: "Old Street 1-Bed Old St Flat 3",
+    title: "Old Street Flat 3 · 1-bed",
     area: "old-street-shoreditch",
     areaLabel: "Old Street & Shoreditch",
     bedrooms: 1,
@@ -519,7 +519,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     slug: "borough-pimlico-pimlico-d0fc6e",
-    title: "Borough 3-Bed Pimlico",
+    title: "Pimlico · 3-bed",
     area: "borough-pimlico",
     areaLabel: "Borough & Pimlico",
     bedrooms: 3,
@@ -540,7 +540,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     slug: "old-street-shoreditch-liverpool-rd-4c5f09",
-    title: "Old Street 1-Bed Liverpool Rd",
+    title: "Liverpool Road · 1-bed",
     area: "old-street-shoreditch",
     areaLabel: "Old Street & Shoreditch",
     bedrooms: 1,
@@ -561,7 +561,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     slug: "kensington-hammersmith-queens-park-c71715",
-    title: "Kensington 1-Bed Queens Park",
+    title: "Queens Park · 1-bed",
     area: "kensington-hammersmith",
     areaLabel: "Kensington & Hammersmith",
     bedrooms: 1,
@@ -581,7 +581,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     slug: "regents-park-marylebone-regents-flat-e-f9b933",
-    title: "Regent's Park 1-Bed Regents Flat E",
+    title: "Regents Flat E · 1-bed",
     area: "regents-park-marylebone",
     areaLabel: "Regent's Park & Marylebone",
     bedrooms: 1,
@@ -602,7 +602,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     slug: "old-street-shoreditch-old-st-flat-1-7a92a4",
-    title: "Old Street 1-Bed Old St Flat 1",
+    title: "Old Street Flat 1 · 1-bed",
     area: "old-street-shoreditch",
     areaLabel: "Old Street & Shoreditch",
     bedrooms: 1,
@@ -623,7 +623,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     slug: "regents-park-marylebone-baker-st-2-94df29",
-    title: "Regent's Park 3-Bed Baker St 2",
+    title: "Baker Street 2 · 3-bed",
     area: "regents-park-marylebone",
     areaLabel: "Regent's Park & Marylebone",
     bedrooms: 3,
@@ -643,7 +643,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     slug: "old-street-shoreditch-farringdon-2d696f",
-    title: "Old Street 2-Bed Farringdon",
+    title: "Farringdon · 2-bed",
     area: "old-street-shoreditch",
     areaLabel: "Old Street & Shoreditch",
     bedrooms: 2,
@@ -664,7 +664,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     slug: "kensington-hammersmith-kensington-72a8e2",
-    title: "Kensington 1-Bed Kensington",
+    title: "Kensington · 1-bed",
     area: "kensington-hammersmith",
     areaLabel: "Kensington & Hammersmith",
     bedrooms: 1,
@@ -685,7 +685,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     slug: "old-street-shoreditch-63-kings-cross-41cee1",
-    title: "Old Street 3-Bed 63 King's Cross",
+    title: "63 King's Cross · 3-bed",
     area: "old-street-shoreditch",
     areaLabel: "Old Street & Shoreditch",
     bedrooms: 3,
@@ -705,7 +705,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     slug: "regents-park-marylebone-regents-flat-3-cf71bf",
-    title: "Regent's Park 3-Bed Regents Flat 3",
+    title: "Regents Flat 3 · 3-bed",
     area: "regents-park-marylebone",
     areaLabel: "Regent's Park & Marylebone",
     bedrooms: 3,
@@ -726,7 +726,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     slug: "regents-park-marylebone-regents-flat-l-99fa98",
-    title: "Regent's Park 1-Bed Regents Flat L",
+    title: "Regents Flat L · 1-bed",
     area: "regents-park-marylebone",
     areaLabel: "Regent's Park & Marylebone",
     bedrooms: 1,
@@ -747,7 +747,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     slug: "little-venice-maida-vale-atholl-house-b5c1bc",
-    title: "Little Venice 3-Bed Atholl House",
+    title: "Atholl House · 3-bed",
     area: "little-venice-maida-vale",
     areaLabel: "Little Venice & Maida Vale",
     bedrooms: 3,
@@ -768,7 +768,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     slug: "little-venice-maida-vale-kilburn-4800a9",
-    title: "Little Venice 4-Bed Kilburn",
+    title: "Kilburn · 4-bed",
     area: "little-venice-maida-vale",
     areaLabel: "Little Venice & Maida Vale",
     bedrooms: 4,
@@ -789,7 +789,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     slug: "borough-pimlico-london-bridge-3c1664",
-    title: "Borough 3-Bed London Bridge",
+    title: "London Bridge · 3-bed",
     area: "borough-pimlico",
     areaLabel: "Borough & Pimlico",
     bedrooms: 3,
@@ -810,7 +810,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     slug: "regents-park-marylebone-euston-2-56b9e5",
-    title: "Regent's Park 1-Bed Euston #2",
+    title: "Euston · Flat 2 · 1-bed",
     area: "regents-park-marylebone",
     areaLabel: "Regent's Park & Marylebone",
     bedrooms: 1,
@@ -830,7 +830,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     slug: "old-street-shoreditch-old-st-flat-2-362ecb",
-    title: "Old Street 1-Bed Old St Flat 2",
+    title: "Old Street Flat 2 · 1-bed",
     area: "old-street-shoreditch",
     areaLabel: "Old Street & Shoreditch",
     bedrooms: 1,
@@ -851,7 +851,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     slug: "regents-park-marylebone-regents-flat-w-18e0d6",
-    title: "Regent's Park 1-Bed Regents Flat W",
+    title: "Regents Flat W · 1-bed",
     area: "regents-park-marylebone",
     areaLabel: "Regent's Park & Marylebone",
     bedrooms: 1,
@@ -872,7 +872,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     slug: "regents-park-marylebone-regents-flat-f-e493bc",
-    title: "Regent's Park 1-Bed Regents Flat F",
+    title: "Regents Flat F · 1-bed",
     area: "regents-park-marylebone",
     areaLabel: "Regent's Park & Marylebone",
     bedrooms: 1,
@@ -892,7 +892,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     slug: "old-street-shoreditch-shoreditch-flat-5-a820ac",
-    title: "Old Street 4-Bed Shoreditch flat 5",
+    title: "Shoreditch flat 5 · 4-bed",
     area: "old-street-shoreditch",
     areaLabel: "Old Street & Shoreditch",
     bedrooms: 4,
@@ -912,7 +912,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     slug: "old-street-shoreditch-hoxton-flat-6-3900c6",
-    title: "Old Street 3-Bed Hoxton Flat 6",
+    title: "Hoxton Flat 6 · 3-bed",
     area: "old-street-shoreditch",
     areaLabel: "Old Street & Shoreditch",
     bedrooms: 3,
@@ -933,7 +933,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     slug: "old-street-shoreditch-old-st-basement-620fc3",
-    title: "Old Street 1-Bed Old St Basement",
+    title: "Old Street Basement · 1-bed",
     area: "old-street-shoreditch",
     areaLabel: "Old Street & Shoreditch",
     bedrooms: 1,
@@ -954,7 +954,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     slug: "regents-park-marylebone-maida-vale-496fd9",
-    title: "Regent's Park 2-Bed Maida Vale",
+    title: "Maida Vale · 2-bed",
     area: "regents-park-marylebone",
     areaLabel: "Regent's Park & Marylebone",
     bedrooms: 2,
@@ -975,7 +975,7 @@ export const LISTINGS: Listing[] = [
   },
   {
     slug: "little-venice-maida-vale-edgware-rd-cede2d",
-    title: "Little Venice 4-Bed Edgware Rd",
+    title: "Edgware Road · 4-bed",
     area: "little-venice-maida-vale",
     areaLabel: "Little Venice & Maida Vale",
     bedrooms: 4,

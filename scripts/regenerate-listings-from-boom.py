@@ -102,6 +102,59 @@ def pricing_for(bedrooms: int) -> int:
     return {0: 115, 1: 145, 2: 195, 3: 245, 4: 325}.get(int(bedrooms or 0), 165)
 
 
+# London proper-noun fixups so BOOM names render correctly
+_PROPER_NOUN_FIXUPS = [
+    ("Shepherds Bush", "Shepherd's Bush"),
+    ("Kings Cross", "King's Cross"),
+    ("St Johns Wood", "St John's Wood"),
+    ("Earls Court", "Earl's Court"),
+    (" Rd", " Road"),
+    (" St ", " Street "),
+    (" Flat ", " Flat "),
+    ("2Bed", ""),
+    ("3Bed", ""),
+    ("1Bed", ""),
+    ("4Bed", ""),
+]
+
+
+def clean_property_name(raw: str) -> str:
+    """Take a BOOM listing name and produce a clean, human-readable property label.
+    Removes ALL-CAPS shouting, bedroom suffixes ('2BED'), normalises proper nouns.
+    """
+    import re
+    name = (raw or "").strip()
+    if not name:
+        return "Apartment"
+    # Title-case any ALL-CAPS run of letters longer than 2 (preserves single-letter flat IDs like "Flat N")
+    name = re.sub(
+        r"\b[A-Z]{3,}\b",
+        lambda m: m.group(0).title(),
+        name,
+    )
+    # Apply common London proper-noun fixups (case-sensitive after title-case)
+    for needle, repl in _PROPER_NOUN_FIXUPS:
+        name = name.replace(needle, repl)
+    # Collapse double spaces and trim
+    name = re.sub(r"\s+", " ", name).strip()
+    # Strip trailing standalone digit-only tokens that were "2BED" before cleanup,
+    # but keep numbered flat IDs like "Flat 8" or "163 New Kent Road"
+    return name
+
+
+def build_title(name: str, bedrooms: int) -> str:
+    """Compose a clean title: '{Property name} · {bedrooms}-bed' or 'Studio'.
+    The area label is shown separately as an eyebrow, so we do NOT prefix it here.
+    """
+    clean = clean_property_name(name)
+    suffix = f"{bedrooms}-bed" if bedrooms and bedrooms > 0 else "Studio"
+    # Avoid duplicate '· bed' if the BOOM name already ends with a bed descriptor
+    low = clean.lower()
+    if any(low.endswith(s) for s in ("-bed", " bed", "studio")):
+        return clean
+    return f"{clean} · {suffix}"
+
+
 async def main() -> None:
     raw = await get_listings(per_page=100, active_only=True)
     data = json.loads(raw)
@@ -119,11 +172,7 @@ async def main() -> None:
         bathrooms = int(entry.get("bathrooms") or 1)
         max_guests = int(entry.get("max_guests") or (bedrooms * 2 if bedrooms else 2))
         name = (entry.get("name") or "").split(" - ")[0].strip() or "Apartment"
-        title = (
-            f"{AREA_LABEL[area].split(' & ')[0]} {bedrooms}-Bed {name}"
-            if bedrooms > 0
-            else f"{AREA_LABEL[area].split(' & ')[0]} Studio {name}"
-        ).replace("  ", " ")[:80]
+        title = build_title(name, bedrooms)[:80]
         slug = slugify(f"{area} {name} {entry.get('id', '')[:6]}")
         picture = entry.get("picture") or ""
         short = (
