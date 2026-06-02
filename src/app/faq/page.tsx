@@ -11,7 +11,7 @@ const FAQ = [
   {
     question: "How long can I stay?",
     answer:
-      "Minimum stay is three nights. Maximum is open-ended — many guests stay for three to six months, and a few have stayed for over a year. Pricing steps down for stays of one week or more.",
+      "Minimum stay is three nights. Maximum is open-ended. Many guests stay for three to six months, and a few have stayed for over a year. Pricing steps down for stays of one week or more.",
   },
   {
     question: "What's included in the price?",
@@ -31,7 +31,7 @@ const FAQ = [
   {
     question: "Can I extend my stay?",
     answer:
-      "Yes — provided the apartment is available. Just message your guest support contact and we'll roll the dates forward without penalty.",
+      "Yes, provided the apartment is available. Just message your guest support contact and we'll roll the dates forward without penalty.",
   },
   {
     question: "Do you accept corporate bookings on PO terms?",
@@ -41,7 +41,7 @@ const FAQ = [
   {
     question: "Are children welcome?",
     answer:
-      "Of course. Our two-bed and three-bed apartments in Regent's Park & Marylebone and Kensington are set up with family stays in mind — travel cot, high chair, and stair gates are available on request.",
+      "Of course. Our two-bed and three-bed apartments in Regent's Park & Marylebone and Kensington are set up with family stays in mind. Travel cot, high chair, and stair gates are available on request.",
   },
   {
     question: "Where are your apartments located?",

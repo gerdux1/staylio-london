@@ -11,7 +11,7 @@ const USPS = [
   {
     title: "Strategic London locations",
     body:
-      "From Regent's Park and Marylebone to Shoreditch, Kensington, and Little Venice — positioned for easy commutes and weekend exploration.",
+      "From Regent's Park and Marylebone to Shoreditch, Kensington, and Little Venice. Positioned for easy commutes and weekend exploration.",
   },
   {
     title: "Long-stay friendly",
@@ -26,7 +26,7 @@ const USPS = [
   {
     title: "All bills included",
     body:
-      "Electricity, water, heating, Wi-Fi, council tax — it is all in the price. One simple rate with no surprise charges.",
+      "Electricity, water, heating, Wi-Fi, council tax. All in the price. One simple rate with no surprise charges.",
   },
   {
     title: "Self check-in",
@@ -55,7 +55,7 @@ export default function Home() {
               Live in London on your own terms.
             </h1>
             <p className="mt-8 max-w-xl text-lg text-stone-100">
-              Fully equipped apartments with everything you need — whether you are here for a week, a
+              Fully equipped apartments with everything you need, whether you are here for a week, a
               month, or longer. More space than a hotel. More freedom than a rental.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
@@ -186,7 +186,7 @@ export default function Home() {
                   ["In-unit laundry", "Yes", "No"],
                   ["Cost for one-week-plus stay", "15–20% less", "Standard rate"],
                   ["Guest support", "Named team members", "Reception desk"],
-                  ["Family suitability", "Excellent — multi-bedroom", "Limited"],
+                  ["Family suitability", "Excellent, multi-bedroom", "Limited"],
                   ["Direct rate vs Booking.com / Airbnb", "Always lower (no commission)", "Same rate, plus fees"],
                 ].map(([f, s, h]) => (
                   <tr key={f} className="border-b border-stone-800 last:border-0">
@@ -230,7 +230,7 @@ export default function Home() {
           {[
             {
               quote:
-                "Staylio's apartment near Regent's Park made my three-month relocation smooth and comfortable — felt like home from day one. The team replied to every WhatsApp within minutes.",
+                "Staylio's apartment near Regent's Park made my three-month relocation smooth and comfortable. Felt like home from day one. The team replied to every WhatsApp within minutes.",
               author: "Marie L.",
               context: "3-month relocation, Kensington",
             },
@@ -255,7 +255,7 @@ export default function Home() {
         <h2 className="font-serif text-4xl sm:text-5xl text-stone-900">Ready to book your London stay?</h2>
         <p className="mt-6 text-stone-700">
           Whether you are visiting for work, relocating your family, or simply need a comfortable base in
-          London — Staylio has an apartment that fits.
+          London, Staylio has an apartment that fits.
         </p>
         <div className="mt-10 flex justify-center gap-4 flex-wrap">
           <Link

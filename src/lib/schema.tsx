@@ -130,7 +130,7 @@ export function faqSchema(qa: { question: string; answer: string }[]) {
   };
 }
 
-// Render helper — drop into JSX:
+// Render helper · drop into JSX:
 //   <Json data={listingSchema(listing)} />
 export function JsonLd({ data }: { data: object | object[] }) {
   const json = Array.isArray(data) ? data : [data];

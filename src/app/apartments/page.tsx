@@ -24,7 +24,7 @@ export default function ApartmentsPage() {
         <p className="mt-6 max-w-2xl text-stone-700">
           Step inside our stylish apartments nestled in London&rsquo;s vibrant neighbourhoods. Every
           space is fully equipped, every bill is included, and every booking is supported by named team
-          members — not call centres.
+          members, not call centres.
         </p>
 
         <div className="mt-16 grid gap-10 md:grid-cols-2 lg:grid-cols-3">

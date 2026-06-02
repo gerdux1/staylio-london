@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact us",
   description:
-    "Get in touch with Staylio. WhatsApp Ali Hassan, our Direct Bookings lead, on +44 7375 621453 — real people, no call centres, no ticket numbers.",
+    "Get in touch with Staylio. WhatsApp Ali Hassan, our Direct Bookings lead, on +44 7375 621453. Real people, no call centres, no ticket numbers.",
 };
 
 export default function ContactPage() {
@@ -16,15 +16,15 @@ export default function ContactPage() {
         pricing for your dates, and any tailored recommendations.
       </p>
 
-      {/* Speak to Ali Hassan — primary fast contact */}
+      {/* Speak to Ali Hassan · primary fast contact */}
       <div className="mt-10 rounded-2xl border border-stone-200 bg-stone-50 p-6 sm:p-8">
         <p className="text-xs uppercase tracking-widest text-stone-500">Fastest way to reach us</p>
         <h2 className="mt-2 font-serif text-2xl sm:text-3xl text-stone-900">
-          Speak to Ali Hassan — our Direct Bookings sales lead.
+          Speak to Ali Hassan · our Direct Bookings sales lead.
         </h2>
         <p className="mt-3 text-stone-700">
           Ali handles direct booking enquiries for Staylio. WhatsApp him with your dates and
-          preferred location — he&rsquo;ll come back with availability and your direct rate,
+          preferred location, and he&rsquo;ll come back with availability and your direct rate,
           usually within 15 minutes during UK hours.
         </p>
         <div className="mt-5 flex flex-wrap items-center gap-3">

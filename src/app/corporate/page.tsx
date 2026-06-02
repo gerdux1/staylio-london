@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Corporate stays",
   description:
-    "Staylio for business — long-stay rates, monthly invoicing, single point of contact for relocation, project teams, and executive travel.",
+    "Staylio for business. Long-stay rates, monthly invoicing, single point of contact for relocation, project teams, and executive travel.",
 };
 
 export default function CorporatePage() {
@@ -20,7 +20,7 @@ export default function CorporatePage() {
         </p>
         <ul className="space-y-3 list-disc pl-5">
           <li>Long-stay rates with monthly billing on agreed PO terms.</li>
-          <li>Single point of contact across all bookings — no shifting CSMs.</li>
+          <li>Single point of contact across all bookings, with no shifting CSMs.</li>
           <li>Apartments grouped by team where possible for project deployments.</li>
           <li>Receipts and statements compatible with most expense systems.</li>
           <li>Family-friendly inventory in Kensington for relocations with dependants.</li>

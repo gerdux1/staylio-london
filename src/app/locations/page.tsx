@@ -6,7 +6,7 @@ import { JsonLd, breadcrumb } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Strategic London Locations",
   description:
-    "Staylio operates serviced apartments across seven Central London neighbourhoods — from Regent's Park and Marylebone to Old Street and Shoreditch.",
+    "Staylio operates serviced apartments across seven Central London neighbourhoods, from Regent's Park and Marylebone to Old Street and Shoreditch.",
 };
 
 export default function LocationsIndexPage() {
@@ -23,7 +23,7 @@ export default function LocationsIndexPage() {
         <p className="text-sm uppercase tracking-widest text-stone-500">Strategic London locations</p>
         <h1 className="mt-3 font-serif text-5xl sm:text-6xl text-stone-900">Where we live.</h1>
         <p className="mt-6 max-w-2xl text-stone-700">
-          Staylio operates apartments across seven neighbourhoods in Central London — each chosen
+          Staylio operates apartments across seven neighbourhoods in Central London, each chosen
           because we&rsquo;d happily live there ourselves. Pick the location that fits your stay.
         </p>
 

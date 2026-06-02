@@ -13,9 +13,9 @@ const ROWS: [string, string, string][] = [
   ["In-unit laundry", "Yes", "No"],
   ["Cost for one-week-plus stay", "15–20% less", "Standard rate"],
   ["Guest support", "Named team members", "Reception desk"],
-  ["Family suitability", "Excellent — multi-bedroom", "Limited"],
+  ["Family suitability", "Excellent, multi-bedroom", "Limited"],
   ["All bills included", "Yes", "Yes"],
-  ["Self check-in", "Yes — smart lock", "Limited"],
+  ["Self check-in", "Yes, smart lock", "Limited"],
   ["Direct rate vs Booking.com / Airbnb", "Always meaningfully lower", "Identical, plus fees"],
 ];
 
@@ -33,12 +33,12 @@ const FAQ = [
   {
     question: "Are Staylio direct rates lower than Booking.com and Airbnb?",
     answer:
-      "Yes. Our direct rates are always meaningfully lower than the same apartment listed on Booking.com or Airbnb — because we don't pay platform commission, we pass the saving back to you.",
+      "Yes. Our direct rates are always meaningfully lower than the same apartment listed on Booking.com or Airbnb, because we don't pay platform commission, we pass the saving back to you.",
   },
   {
     question: "Do Staylio apartments come with a kitchen?",
     answer:
-      "Yes — every Staylio apartment has a fully equipped kitchen with induction hob, full-size fridge, dishwasher, oven, microwave, kettle, toaster, and cookware. Most include a coffee machine.",
+      "Yes. Every Staylio apartment has a fully equipped kitchen with induction hob, full-size fridge, dishwasher, oven, microwave, kettle, toaster, and cookware. Most include a coffee machine.",
   },
 ];
 

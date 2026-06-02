@@ -19,13 +19,13 @@ const sans = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://staylio.london"),
   title: {
-    default: "Staylio — Serviced Apartments Across London",
+    default: "Staylio · Serviced Apartments Across London",
     template: "%s · Staylio",
   },
   description:
     "Fully equipped serviced apartments in Canary Wharf, Kensington, and the City of London. All bills included, flexible stay lengths, real personal support.",
   openGraph: {
-    title: "Staylio — Serviced Apartments Across London",
+    title: "Staylio · Serviced Apartments Across London",
     description:
       "Fully equipped serviced apartments in Canary Wharf, Kensington, and the City of London.",
     url: "https://staylio.london",

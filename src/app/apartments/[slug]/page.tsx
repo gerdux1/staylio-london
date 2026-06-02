@@ -67,7 +67,7 @@ export default async function ListingPage({
           <span>{listing.bathrooms} bathroom{listing.bathrooms > 1 ? "s" : ""}</span>
           <span>Sleeps {listing.maxGuests}</span>
           {listing.sizeSqm > 0 && <span>{listing.sizeSqm} sqm</span>}
-          <span className="font-medium text-stone-900">From £{listing.fromGbpPerNight}/night</span>
+          <span className="font-medium text-stone-900">Best direct rate available</span>
         </div>
 
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -108,13 +108,17 @@ export default async function ListingPage({
           </div>
 
           <aside className="rounded-2xl border border-stone-200 p-6 h-fit bg-stone-50">
-            <p className="text-sm text-stone-600">From</p>
-            <p className="mt-1 font-serif text-3xl text-stone-900">
-              £{listing.fromGbpPerNight}
-              <span className="text-base text-stone-500"> /night</span>
+            <p className="text-sm text-stone-600">Direct rate</p>
+            <p className="mt-1 font-serif text-2xl text-stone-900">
+              Always lower than Booking.com &amp; Airbnb
+            </p>
+            <p className="mt-3 text-sm text-stone-700">
+              From <span className="font-medium">£{listing.fromGbpPerNight}/night</span> indicative
+              for stays of one week or more. We tailor your rate to your dates and stay length, so
+              ask Ali for an exact quote.
             </p>
             <p className="mt-2 text-xs text-stone-500">
-              All bills included. Lower nightly rate for stays of one week or more.
+              All bills included. No commission, no OTA fees.
             </p>
             {listing.bookingUrl ? (
               <>

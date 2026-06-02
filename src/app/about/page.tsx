@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About Staylio",
   description:
-    "Staylio Limited is an independent London serviced apartment operator. Boutique, curated, warm — fully equipped apartments across seven Central London neighbourhoods.",
+    "Staylio Limited is an independent London serviced apartment operator. Boutique, curated, warm. Fully equipped apartments across seven Central London neighbourhoods.",
 };
 
 export default function AboutPage() {
@@ -21,7 +21,7 @@ export default function AboutPage() {
         </p>
         <p>
           Every apartment is set up so you can arrive, drop your bags, and start living from the
-          moment you walk in — fitted kitchen, fast Wi-Fi, smart TV, fresh linens, full toiletries,
+          moment you walk in. Fitted kitchen, fast Wi-Fi, smart TV, fresh linens, full toiletries,
           and all bills already paid. Smart locks let you check in whenever you land. Fortnightly
           housekeeping is included; additional cleans are available on request.
         </p>
@@ -34,10 +34,10 @@ export default function AboutPage() {
       <h2 className="mt-20 font-serif text-3xl text-stone-900">What we believe</h2>
       <div className="mt-8 grid gap-8 sm:grid-cols-2">
         {[
-          { t: "Space matters", b: "A real kitchen, a proper desk, and a sofa to sprawl on aren't luxuries — they're the difference between surviving a long trip and enjoying one." },
-          { t: "Bills should be simple", b: "One rate. Electricity, water, heating, Wi-Fi, council tax — all in. No surprise charges on departure." },
+          { t: "Space matters", b: "A real kitchen, a proper desk, and a sofa to sprawl on aren't luxuries. They're the difference between surviving a long trip and enjoying one." },
+          { t: "Bills should be simple", b: "One rate. Electricity, water, heating, Wi-Fi, council tax, all in. No surprise charges on departure." },
           { t: "Support means people", b: "Our guest team have names, faces, and WhatsApp. Every message gets a real human reply, usually within 15 minutes." },
-          { t: "Direct is better", b: "Our direct rates are always meaningfully lower than the same apartment listed on Booking.com or Airbnb — because we don't pay commission, we pass the saving back to you." },
+          { t: "Direct is better", b: "Our direct rates are always meaningfully lower than the same apartment listed on Booking.com or Airbnb, because we don't pay commission, we pass the saving back to you." },
         ].map((v) => (
           <div key={v.t}>
             <h3 className="font-serif text-xl text-stone-900">{v.t}</h3>
