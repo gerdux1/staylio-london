@@ -19,6 +19,8 @@
 ## Stays
 
 - [Corporate stays](https://staylio.london/corporate): Long-stay rates, monthly billing on PO terms, single point of contact for relocations and project teams.
+- [Insurance ALE (Additional Living Expenses)](https://staylio.london/insurance): Insurance-grade temporary accommodation for displaced policyholders during home insurance claims. Direct insurer invoicing, written SLAs, single point of contact for claims handlers, loss adjusters, ALE specialists, and self-insured corporates.
+- [Full content as markdown for AI crawlers](https://staylio.london/llms-full.txt): Token-efficient single-URL markdown export of the whole site.
 - [Apartments vs hotels](https://staylio.london/apartments-vs-hotels): Side-by-side on space, cost, kitchen, laundry, and family suitability.
 - [FAQ](https://staylio.london/faq): Stay length, what's included, check-in, pets, extensions, corporate bookings, family stays.
 - [About Staylio](https://staylio.london/about): Company information and what we believe.

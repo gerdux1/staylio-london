@@ -33,6 +33,7 @@ export function Footer() {
             <ul className="mt-3 space-y-2 text-sm text-stone-600">
               <li><Link href="/apartments" className="hover:text-stone-900">All apartments</Link></li>
               <li><Link href="/corporate" className="hover:text-stone-900">Corporate stays</Link></li>
+              <li><Link href="/insurance" className="hover:text-stone-900">Insurance ALE</Link></li>
               <li><Link href="/cost-calculator" className="hover:text-stone-900">Cost calculator</Link></li>
               <li><Link href="/decision-guide" className="hover:text-stone-900">Is Staylio right for you?</Link></li>
               <li><Link href="/standard" className="hover:text-stone-900">The Staylio Standard</Link></li>
