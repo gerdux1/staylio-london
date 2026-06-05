@@ -47,6 +47,19 @@ const ORG_BASE = {
     "All bills included",
     "24/7 guest support",
   ],
+  inLanguage: "en-GB",
+  // Concrete service-area boundary — GeoCircle around Central London (a 6 km radius
+  // from Marylebone covers all seven Staylio neighbourhoods). Gives AI engines a
+  // crisp geographic answer to "do you have apartments in {London neighbourhood}?".
+  serviceArea: {
+    "@type": "GeoCircle",
+    geoMidpoint: {
+      "@type": "GeoCoordinates",
+      latitude: 51.5236, // Marylebone
+      longitude: -0.1591,
+    },
+    geoRadius: "6000", // metres
+  },
 };
 
 export function organizationSchema() {
@@ -394,6 +407,23 @@ export function locationFAQs(
       answer: `Yes. The Staylio direct rate is always at least 10% lower than Booking.com or Airbnb because there is no platform commission. WhatsApp Ali Hassan on +44 7375 621453 for availability and your direct rate.`,
     },
   ];
+}
+
+// Speakable schema — tells voice assistants (Siri, Google Assistant, Alexa)
+// which parts of a page are good to read aloud. Marks our FAQ summary blocks
+// + the listing summary chips. Pairs with FAQPage and HowTo for voice queries
+// like "Hey Siri, how do I book a London serviced apartment?".
+export function speakableSchema(url: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    url,
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: [".speakable", "summary", "h1", "h2"],
+    },
+    inLanguage: "en-GB",
+  };
 }
 
 export function faqSchema(qa: { question: string; answer: string }[]) {

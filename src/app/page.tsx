@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { LISTINGS, LOCATIONS } from "@/lib/listings";
-import { JsonLd, breadcrumb, faqSchema, bookDirectHowToSchema } from "@/lib/schema";
+import { JsonLd, breadcrumb, faqSchema, bookDirectHowToSchema, speakableSchema } from "@/lib/schema";
 
 // Common pre-booking concerns answered above the fold (audit feedback).
 // Renders to both visible accordion AND FAQPage Schema.org for AI search citation.
@@ -78,6 +78,7 @@ export default function Home() {
           breadcrumb([{ name: "Home", url: "https://staylio.london" }]),
           faqSchema([...HOMEPAGE_FAQS]),
           bookDirectHowToSchema(),
+          speakableSchema("https://staylio.london"),
         ]}
       />
 
