@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ContactForm } from "./ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact us",
@@ -15,6 +16,15 @@ export default function ContactPage() {
         Tell us where you want to stay and for how long. We&rsquo;ll come back with availability,
         pricing for your dates, and any tailored recommendations.
       </p>
+
+      {/* Trust strip — Companies House + response time */}
+      <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-xs text-stone-500">
+        <span>Staylio Limited · Company No. 17012831</span>
+        <span aria-hidden="true">·</span>
+        <span>85 Frampton Street, London NW8 8NQ</span>
+        <span aria-hidden="true">·</span>
+        <span>Average response time: under 15 minutes during UK hours</span>
+      </div>
 
       {/* Speak to Ali Hassan · primary fast contact */}
       <div className="mt-10 rounded-2xl border border-stone-200 bg-stone-50 p-6 sm:p-8">
@@ -59,67 +69,7 @@ export default function ContactPage() {
       </div>
 
       <p className="mt-10 text-sm uppercase tracking-widest text-stone-500">Or use the form</p>
-      <form
-        className="mt-4 grid gap-6"
-        action="https://formspree.io/f/REPLACE_WITH_FORM_ID"
-        method="POST"
-      >
-        <div>
-          <label className="text-sm font-medium text-stone-900" htmlFor="name">Name</label>
-          <input
-            id="name"
-            name="name"
-            required
-            className="mt-2 w-full rounded-lg border border-stone-300 bg-white px-4 py-3 text-stone-900 focus:border-stone-900 focus:outline-none"
-          />
-        </div>
-        <div>
-          <label className="text-sm font-medium text-stone-900" htmlFor="email">Email</label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            required
-            className="mt-2 w-full rounded-lg border border-stone-300 bg-white px-4 py-3 text-stone-900 focus:border-stone-900 focus:outline-none"
-          />
-        </div>
-        <div className="grid gap-6 sm:grid-cols-2">
-          <div>
-            <label className="text-sm font-medium text-stone-900" htmlFor="checkin">Check in</label>
-            <input
-              id="checkin"
-              name="checkin"
-              type="date"
-              className="mt-2 w-full rounded-lg border border-stone-300 bg-white px-4 py-3 text-stone-900 focus:border-stone-900 focus:outline-none"
-            />
-          </div>
-          <div>
-            <label className="text-sm font-medium text-stone-900" htmlFor="checkout">Check out</label>
-            <input
-              id="checkout"
-              name="checkout"
-              type="date"
-              className="mt-2 w-full rounded-lg border border-stone-300 bg-white px-4 py-3 text-stone-900 focus:border-stone-900 focus:outline-none"
-            />
-          </div>
-        </div>
-        <div>
-          <label className="text-sm font-medium text-stone-900" htmlFor="message">Tell us a bit more</label>
-          <textarea
-            id="message"
-            name="message"
-            rows={5}
-            className="mt-2 w-full rounded-lg border border-stone-300 bg-white px-4 py-3 text-stone-900 focus:border-stone-900 focus:outline-none"
-          />
-        </div>
-        <button
-          type="submit"
-          className="rounded-full bg-stone-900 px-6 py-3 text-sm font-medium text-white hover:bg-stone-700 transition justify-self-start"
-        >
-          Send enquiry
-        </button>
-      </form>
-
+      <ContactForm />
     </section>
   );
 }

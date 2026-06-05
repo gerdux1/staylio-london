@@ -1,6 +1,41 @@
 import Link from "next/link";
 import { LISTINGS, LOCATIONS } from "@/lib/listings";
-import { JsonLd, breadcrumb } from "@/lib/schema";
+import { JsonLd, breadcrumb, faqSchema } from "@/lib/schema";
+
+// Common pre-booking concerns answered above the fold (audit feedback).
+// Renders to both visible accordion AND FAQPage Schema.org for AI search citation.
+const HOMEPAGE_FAQS = [
+  {
+    question: "How long can I stay?",
+    answer:
+      "Minimum stay is 3 nights. There is no maximum — we host weekly stays, month-long projects, and multi-month relocations. Pricing steps down for stays of one week or more.",
+  },
+  {
+    question: "What is included in the price?",
+    answer:
+      "Every nightly rate includes electricity, water, heating, Wi-Fi, council tax, fortnightly housekeeping, fresh linens and towels, fitted kitchen, smart TV with streaming, and smart-lock keyless entry. No surprise charges on departure.",
+  },
+  {
+    question: "How does check-in work?",
+    answer:
+      "Self check-in via smart lock. You receive your access code by WhatsApp before arrival, so you can arrive at any hour — no front desk, no waiting.",
+  },
+  {
+    question: "Are families and groups welcome?",
+    answer:
+      "Yes. Several Staylio apartments have two or more bedrooms and sleep up to nine guests. Cots and high chairs available on request when you book.",
+  },
+  {
+    question: "Why book direct instead of Booking.com or Airbnb?",
+    answer:
+      "Our direct rate is always at least 10% lower than the same apartment on Booking.com or Airbnb, because we don't pay platform commission. You also get a real person on WhatsApp for the whole stay, not a platform support queue.",
+  },
+  {
+    question: "Can I extend my stay?",
+    answer:
+      "Yes, subject to availability. Message Ali on WhatsApp at any point during your stay and we will check the calendar. Long-stay pricing applies automatically once your stay crosses one week.",
+  },
+] as const;
 
 const USPS = [
   {
@@ -38,7 +73,12 @@ const USPS = [
 export default function Home() {
   return (
     <>
-      <JsonLd data={breadcrumb([{ name: "Home", url: "https://staylio.london" }])} />
+      <JsonLd
+        data={[
+          breadcrumb([{ name: "Home", url: "https://staylio.london" }]),
+          faqSchema([...HOMEPAGE_FAQS]),
+        ]}
+      />
 
       <section className="relative isolate min-h-[85vh] overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -248,6 +288,51 @@ export default function Home() {
               </footer>
             </blockquote>
           ))}
+        </div>
+      </section>
+
+      {/* Homepage FAQ — answers common pre-booking objections above the fold (audit feedback) */}
+      <section className="bg-stone-50 py-24">
+        <div className="mx-auto max-w-4xl px-6">
+          <p className="text-sm uppercase tracking-widest text-stone-500">Frequently asked</p>
+          <h2 className="mt-3 font-serif text-4xl sm:text-5xl text-stone-900">
+            Quick answers, before you enquire.
+          </h2>
+          <div className="mt-12 divide-y divide-stone-200 rounded-2xl border border-stone-200 bg-white">
+            {HOMEPAGE_FAQS.map((f, i) => (
+              <details key={i} className="group p-6 sm:p-7">
+                <summary className="flex cursor-pointer items-start justify-between gap-6 list-none">
+                  <span className="font-serif text-lg sm:text-xl text-stone-900">{f.question}</span>
+                  <span
+                    className="mt-1 inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border border-stone-300 text-stone-700 transition group-open:rotate-45"
+                    aria-hidden="true"
+                  >
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+                      <line x1="12" y1="5" x2="12" y2="19" />
+                      <line x1="5" y1="12" x2="19" y2="12" />
+                    </svg>
+                  </span>
+                </summary>
+                <p className="mt-4 text-stone-700 leading-relaxed">{f.answer}</p>
+              </details>
+            ))}
+          </div>
+          <p className="mt-8 text-center text-sm text-stone-600">
+            More on the{" "}
+            <Link href="/faq" className="font-medium text-stone-900 underline underline-offset-4">
+              full FAQ page
+            </Link>
+            , or WhatsApp Ali on{" "}
+            <a
+              href="https://wa.me/447375621453"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-stone-900 underline underline-offset-4"
+            >
+              +44 7375 621453
+            </a>
+            .
+          </p>
         </div>
       </section>
 
