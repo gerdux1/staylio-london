@@ -34,6 +34,7 @@ export function Footer() {
               <li><Link href="/apartments" className="hover:text-stone-900">All apartments</Link></li>
               <li><Link href="/corporate" className="hover:text-stone-900">Corporate stays</Link></li>
               <li><Link href="/apartments-vs-hotels" className="hover:text-stone-900">Apartments vs hotels</Link></li>
+              <li><Link href="/guides" className="hover:text-stone-900">Guides</Link></li>
               <li><Link href="/faq" className="hover:text-stone-900">FAQ</Link></li>
             </ul>
           </div>

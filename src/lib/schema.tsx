@@ -300,6 +300,44 @@ export function listingArticleSchema(listing: import("./listings").Listing) {
   };
 }
 
+// guideArticleSchema — long-form authority content in `/guides/*`. Each cornerstone
+// piece carries Ali Hassan as named author for E-E-A-T accountability + a
+// real datePublished (not BUILD_DATE) so AI engines can age the content correctly.
+// Keywords array helps Google + Bing match to query intent without keyword-stuffing
+// the body copy.
+export function guideArticleSchema(opts: {
+  slug: string;
+  headline: string;
+  description: string;
+  datePublished: string;
+  dateModified?: string;
+  keywords?: string[];
+  about?: string;
+}) {
+  const url = `https://staylio.london/guides/${opts.slug}`;
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": `${url}#article`,
+    headline: opts.headline,
+    description: opts.description,
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    datePublished: opts.datePublished,
+    dateModified: opts.dateModified ?? BUILD_DATE,
+    keywords: opts.keywords?.join(", "),
+    author: {
+      "@type": "Person",
+      "@id": "https://staylio.london/contact#ali-hassan",
+      name: "Ali Hassan",
+      jobTitle: "Direct Bookings Lead",
+      worksFor: { "@id": "https://staylio.london#organization" },
+    },
+    publisher: { "@id": "https://staylio.london#organization" },
+    inLanguage: "en-GB",
+    about: opts.about,
+  };
+}
+
 export function locationArticleSchema(loc: import("./listings").Location) {
   const url = `https://staylio.london/locations/${loc.slug}`;
   return {

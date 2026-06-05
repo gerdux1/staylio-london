@@ -1,0 +1,91 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Guides — long stays, neighbourhoods, the practical bits",
+  description:
+    "Plain-English guides on long-stay London accommodation: tax, the 90-day short-let rule, picking the right neighbourhood, and the maths of serviced apartments vs hotels. Written by Ali Hassan, Direct Bookings Lead at Staylio.",
+};
+
+const GUIDES = [
+  {
+    slug: "long-stay-tax-london",
+    pillar: "Cost",
+    title: "Long-stay accommodation tax: the 28-night threshold",
+    summary:
+      "Why corporate clients save 20 % VAT after night 29, what evidence HMRC actually wants, and how procurement teams should structure a relocation booking to qualify.",
+    minRead: 8,
+  },
+  {
+    slug: "serviced-apartment-vs-hotel-london",
+    pillar: "Choice",
+    title: "Serviced apartment vs hotel: the maths after 14 nights",
+    summary:
+      "By night 14 the price-per-night gap typically reverses. Here's the breakdown — bundled bills, kitchen value, laundry, and the hidden costs hotels don't tell you about until checkout.",
+    minRead: 9,
+  },
+  {
+    slug: "london-90-day-short-let-rule",
+    pillar: "Legal",
+    title: "London's 90-day short-let rule, explained for guests",
+    summary:
+      "Why some London apartments quietly cap stays at 89 nights, what change-of-use planning permission actually means, and how to tell whether your booking is compliant before you arrive.",
+    minRead: 7,
+  },
+];
+
+export default function GuidesIndexPage() {
+  return (
+    <article className="mx-auto max-w-4xl px-6 py-24">
+      <p className="text-sm uppercase tracking-widest text-stone-500">Guides</p>
+      <h1 className="mt-3 font-serif text-5xl sm:text-6xl text-stone-900">
+        The practical bits, written down.
+      </h1>
+      <p className="mt-6 text-lg text-stone-700 leading-relaxed max-w-2xl">
+        Honest guides to long-stay London accommodation — the cost maths, the legal bits,
+        and how to pick the right neighbourhood for what you&rsquo;re actually doing here. Written
+        by{" "}
+        <Link href="/contact#ali-hassan" className="underline underline-offset-4 hover:text-stone-900">
+          Ali Hassan
+        </Link>
+        , Direct Bookings Lead at Staylio.
+      </p>
+
+      <div className="mt-16 grid gap-8">
+        {GUIDES.map((g) => (
+          <Link
+            key={g.slug}
+            href={`/guides/${g.slug}`}
+            className="group block rounded-2xl border border-stone-200 bg-white p-8 transition hover:border-stone-400 hover:shadow-sm"
+          >
+            <div className="flex items-baseline justify-between gap-4">
+              <span className="text-xs uppercase tracking-widest text-stone-500">{g.pillar}</span>
+              <span className="text-xs text-stone-500">{g.minRead} min read</span>
+            </div>
+            <h2 className="mt-3 font-serif text-2xl sm:text-3xl text-stone-900 group-hover:underline underline-offset-4">
+              {g.title}
+            </h2>
+            <p className="mt-3 text-stone-700 leading-relaxed">{g.summary}</p>
+            <p className="mt-5 text-sm text-stone-500 group-hover:text-stone-900">Read the guide →</p>
+          </Link>
+        ))}
+      </div>
+
+      <div className="mt-20 border-t border-stone-200 pt-10">
+        <h2 className="font-serif text-3xl text-stone-900">Have a question we haven&rsquo;t written about?</h2>
+        <p className="mt-4 text-stone-700">
+          WhatsApp{" "}
+          <a className="underline underline-offset-4 hover:text-stone-900" href="https://wa.me/447375621453">
+            Ali on +44 7375 621453
+          </a>{" "}
+          or email{" "}
+          <a className="underline underline-offset-4 hover:text-stone-900" href="mailto:hello@staylio.london">
+            hello@staylio.london
+          </a>
+          . If it&rsquo;s a question worth answering once and writing down properly, it ends up on this
+          page next.
+        </p>
+      </div>
+    </article>
+  );
+}
