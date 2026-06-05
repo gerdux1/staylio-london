@@ -43,47 +43,50 @@ BRIEFS = [
         "repo": "staylio",
         "slug": "regents-park-marylebone",
         "prompt": (
-            "A real Marylebone London townhouse facade in golden-hour late-afternoon sunlight. "
-            "Wisteria vines drape over the white stucco wall, traditional black iron railings, "
-            "white sash windows in proper Georgian proportions, ornate door surround. "
-            "Quiet residential side street, not the tourist high street. Long warm shadows. "
-            "Reference real architecture around Devonshire Street, Marylebone Lane, Wimpole Mews."
-            + STYLE_COMMON
+            "The real Regent's Park boating lake in central London at golden-hour late afternoon. "
+            "A small classic wooden rowing boat moored empty at the lake's edge, reflections of mature "
+            "plane trees and weeping willows on the calm water, a pair of swans drifting in the middle "
+            "distance. Through the trees on the far side, Regency-era white-stucco terraces are "
+            "softly glimpsed (the iconic Nash terraces of Regent's Park). Soft warm late-afternoon "
+            "golden light, instantly recognisable London park scene. " + STYLE_COMMON
         ),
     },
     {
         "repo": "staylio",
         "slug": "old-street-shoreditch",
         "prompt": (
-            "A real Shoreditch London converted-warehouse loft interior at blue hour. "
-            "Authentic exposed dark-red brick wall, large industrial black steel-framed Crittall windows "
-            "looking out onto an urban dusk cityscape with soft amber street lights in the distance. "
-            "Moody but warm interior glow from a single brass desk lamp, polished concrete floor, "
-            "minimal styling. Reference real warehouses like the Tea Building or Boundary Estate." + STYLE_COMMON
+            "A real Shoreditch / Spitalfields London side-street at golden-hour dusk. "
+            "Tall Victorian red-brick warehouse walls framing the view on both sides, with arched windows "
+            "above, cast-iron Victorian street lamps casting amber pools onto wet cobbles. "
+            "At the end of the street, the iconic tall red-brick chimney of the Old Truman Brewery "
+            "rises clearly and prominently against a warm golden sky — the recognisable Shoreditch silhouette. "
+            "A glimpse of modern City of London glass skyscrapers beyond the chimney in the misty far distance. "
+            "Layered foreground / mid / background depth. " + STYLE_COMMON
         ),
     },
     {
         "repo": "staylio",
         "slug": "kensington-hammersmith",
         "prompt": (
-            "A real Kensington London white-stucco Italianate terrace facade. "
-            "Polished black iron railings, columned porticos with painted black-and-white detailing, "
-            "large planters with topiary at the front door, mature plane tree branches in the foreground "
-            "filtering soft morning light into dappled patches on the pavement. "
-            "Embassy-quiet residential street, no traffic, no shop fronts. "
-            "Reference real streets like Cornwall Gardens or Stanhope Gardens — NOT tourist Knightsbridge." + STYLE_COMMON
+            "The real Royal Albert Hall in Kensington London at golden-hour late afternoon. "
+            "The iconic Victorian terracotta-red-brick round concert hall with its glass-and-iron dome "
+            "catching warm golden light, recognisable cultural landmark, soft pink-gold sky behind. "
+            "In the foreground, mature plane trees softly frame the view and the green grass of Hyde "
+            "Park / Kensington Gardens spreads out softly. The gilded spire of the Albert Memorial just "
+            "visible at the left edge of the frame catching a glint of sun. " + STYLE_COMMON
         ),
     },
     {
         "repo": "staylio",
         "slug": "fitzrovia-mayfair",
         "prompt": (
-            "Close-mid shot of a real Fitzrovia or Mayfair London Georgian facade detail. "
-            "A wrought-iron lantern hangs beside an immaculately painted dark-green panelled door with "
-            "polished brass knocker and door furniture; warm-stucco or red-brick wall around it, sash "
-            "windows visible above. Late-afternoon golden raking light from the side casting long shadows "
-            "across the brickwork. Reserved, refined, not flashy. "
-            "Reference real Charlotte Street, Fitzroy Square or South Audley Street architecture." + STYLE_COMMON
+            "A real Fitzrovia London Georgian side-street at golden-hour dusk. "
+            "Red-brick and warm-stucco Georgian townhouses with sash windows and iron railings line both "
+            "sides of a quiet street. At the end of the street, the iconic BT Tower (Tottenham Court "
+            "Tower) rises clearly against the warm golden sky — the recognisable cylindrical concrete-and-glass "
+            "communications tower with a soft glow of its restaurant ring near the top. Reserved boutique "
+            "atmosphere, layered foreground / mid / background. Reference real Fitzrovia streets like "
+            "Fitzroy Square, Whitfield Street or Cleveland Street." + STYLE_COMMON
         ),
     },
     {
@@ -102,12 +105,14 @@ BRIEFS = [
         "repo": "staylio",
         "slug": "borough-pimlico",
         "prompt": (
-            "A real Borough London cobbled side-street scene at early morning. "
-            "Wet cobblestones glisten after rain, a Victorian red-brick industrial chimney suggestive of the "
-            "Bankside / Tate Modern silhouette in the misty background, narrow Victorian terraced shopfronts "
-            "with closed shutters, soft golden-pink sunrise light catching the brick. Empty of people, "
-            "foodie/cultural early-morning mood. Reference real Bedale Street, Stoney Street or Park Street "
-            "around Borough Market." + STYLE_COMMON
+            "The real Borough Market in London at very early morning before opening — interior atmosphere. "
+            "Victorian wrought-iron market hall structure with an arched glass roof above, brick walls beyond, "
+            "polished green-painted iron columns, hanging brass pendant lamps glowing softly, neatly empty "
+            "wooden stalls with crates and produce boxes (no labels or visible writing). "
+            "Soft early-morning sunlight slanting through the glass roof and brick archways, slight mist, "
+            "a warm golden glow. A distant glimpse of the Shard skyscraper silhouetted in the misty distance "
+            "through one archway opening at the far end. Layered foreground / mid / background, "
+            "foodie / cultural mood. Reference the real Borough Market Victorian architecture." + STYLE_COMMON
         ),
     },
     {
@@ -125,22 +130,29 @@ BRIEFS = [
         "repo": "nournest",
         "slug": "old-street-shoreditch",
         "prompt": (
-            "A real Shoreditch London converted-warehouse loft interior at blue hour, warm and inviting. "
-            "Authentic exposed dark-red brick interior wall, large industrial black steel-framed Crittall "
-            "windows. Warm amber interior glow from a brass floor lamp, soft fairy lights strung casually "
-            "along one wall, a vintage rug, a single open book on a side table, a steaming mug. "
-            "Inviting home-away-from-home feel." + STYLE_NN
+            "A real Shoreditch / Spitalfields London side-street at golden-hour dusk, warm welcoming "
+            "home-away-from-home feel. Victorian red-brick walls, cast-iron Victorian street lamps "
+            "glowing amber on wet cobbles, soft strings of warm fairy lights crisscrossing overhead "
+            "between buildings. At the end of the street, the iconic tall red-brick chimney of the "
+            "Old Truman Brewery rises clearly against a warm pink-gold sky — recognisable Shoreditch "
+            "silhouette. The warm window glow of a curated home-style café with potted plants and small "
+            "ceramics on the sill (no readable signage). A vintage bicycle leaning against an iron post. "
+            "Sage-green / cream / tan / soft-amber palette." + STYLE_NN
         ),
     },
     {
         "repo": "nournest",
         "slug": "borough-pimlico",
         "prompt": (
-            "A real Borough or Pimlico London residential terraced house front-door scene. "
-            "A glossy sage-green panelled door with polished brass furniture and a brass house number on a "
-            "brick or pale-stucco facade. A row of terracotta herb planters on the step (rosemary, thyme, "
-            "basil). Warm soft golden morning light from the side. Welcoming home-away-from-home mood. "
-            "Reference real Pimlico Regency terraces like Lupus Street or Sussex Street." + STYLE_NN
+            "A real Pimlico Regency terraced street in London at twilight. "
+            "A row of pastel-coloured Regency stucco facades (soft cream and pale-blue painted houses), "
+            "a corner house with a glowing bay window in warm amber lamplight visible from outside, "
+            "curtains slightly open hinting at an interior shelf within, wrought-iron railings, brass house "
+            "numbers, a low row of terracotta herb planters along the step (rosemary, thyme, basil). "
+            "Soft twilight blue sky, gas-lamp style street lamps casting warm pools onto a clean pavement, "
+            "slight mist softening the distance. Welcoming home-away-from-home, cosy, layered depth. "
+            "Cream / sage-green / tan / lime-yellow palette. "
+            "Reference real Pimlico Regency terraces like Lupus Street, Sussex Street or Warwick Square." + STYLE_NN
         ),
     },
 ]

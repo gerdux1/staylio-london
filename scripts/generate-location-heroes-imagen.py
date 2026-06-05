@@ -70,8 +70,12 @@ def main() -> int:
     ap.add_argument("--only", help="comma-separated repo:slug filter")
     ap.add_argument("--candidates", type=int, default=4)
     args = ap.parse_args()
+    # Prefer the paid business-project key (image gen) over the personal grounded-search key
+    if "GEMINI_IMAGE_API_TOKEN" in os.environ:
+        os.environ["GEMINI_API_TOKEN"] = os.environ["GEMINI_IMAGE_API_TOKEN"]
     if "GEMINI_API_TOKEN" not in os.environ:
-        print("GEMINI_API_TOKEN not set. source ~/.zshrc first.", file=sys.stderr)
+        print("GEMINI_IMAGE_API_TOKEN (or GEMINI_API_TOKEN) not set. source ~/shared/.env first.",
+              file=sys.stderr)
         return 2
     model_id = MODEL_MAP[args.model]
     only = set(args.only.split(",")) if args.only else None
@@ -93,7 +97,19 @@ def main() -> int:
                 continue
             print(f"[{key} c{n}] {model_id}...", flush=True)
             t0 = time.time()
-            result = generate(brief["prompt"], out, model_id)
+            # Retry transient capacity errors with backoff
+            for attempt in range(5):
+                result = generate(brief["prompt"], out, model_id)
+                if "error" not in result:
+                    break
+                body = result.get("body", "")
+                if "RESOURCE_EXHAUSTED" in body or "temporarily out of capacity" in body or "Resource exhausted" in body:
+                    delay = 5 * (2 ** attempt)
+                    print(f"  retry {attempt+1}/5 after {delay}s (capacity)", flush=True)
+                    time.sleep(delay)
+                    continue
+                break
+            time.sleep(2)  # gentle pacing between successful calls
             dt = time.time() - t0
             meta.write_text(json.dumps({
                 "prompt": brief["prompt"],

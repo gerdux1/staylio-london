@@ -19,7 +19,7 @@ export const LOCATIONS: Location[] = [
     transport: ["Marylebone (Bakerloo, Chiltern Rail to Birmingham/Oxford)", "Baker Street (Bakerloo, Circle, H&C, Jubilee, Metropolitan)", "St John's Wood (Jubilee)", "Edgware Road (Bakerloo, Circle, District, H&C)"],
     latitude: 51.5234,
     longitude: -0.166,
-    heroImage: "https://images.unsplash.com/photo-1543226798-9b00f5b53ddf?w=1600&q=80",
+    heroImage: "/locations/regents-park-marylebone.jpg",
   },
   {
     slug: "old-street-shoreditch",
@@ -32,7 +32,7 @@ export const LOCATIONS: Location[] = [
     transport: ["Old Street (Northern)", "Liverpool Street (Central, Circle, Elizabeth, H&C, Metropolitan, National Rail)", "Shoreditch High Street (Overground)", "Hoxton (Overground)"],
     latitude: 51.5253,
     longitude: -0.0801,
-    heroImage: "https://images.unsplash.com/photo-1533929736458-ca588d08c8be?w=1600&q=80",
+    heroImage: "/locations/old-street-shoreditch.jpg",
   },
   {
     slug: "kensington-hammersmith",
@@ -45,7 +45,7 @@ export const LOCATIONS: Location[] = [
     transport: ["South Kensington (Circle, District, Piccadilly)", "High Street Kensington (Circle, District)", "Hammersmith (Circle, District, H&C, Piccadilly)", "Direct Piccadilly line to Heathrow"],
     latitude: 51.4988,
     longitude: -0.1749,
-    heroImage: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
+    heroImage: "/locations/kensington-hammersmith.jpg",
   },
   {
     slug: "fitzrovia-mayfair",
@@ -58,7 +58,7 @@ export const LOCATIONS: Location[] = [
     transport: ["Bond Street (Central, Jubilee, Elizabeth)", "Oxford Circus (Bakerloo, Central, Victoria)", "Tottenham Court Road (Central, Northern, Elizabeth)", "Green Park (Jubilee, Piccadilly, Victoria)"],
     latitude: 51.5141,
     longitude: -0.1413,
-    heroImage: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1600&q=80",
+    heroImage: "/locations/fitzrovia-mayfair.jpg",
   },
   {
     slug: "barbican-farringdon",
@@ -71,7 +71,7 @@ export const LOCATIONS: Location[] = [
     transport: ["Barbican (Circle, H&C, Metropolitan)", "Farringdon (Circle, H&C, Metropolitan, Elizabeth, Thameslink)", "Direct Elizabeth line to Heathrow + Canary Wharf", "Direct Thameslink to Gatwick + Luton"],
     latitude: 51.5208,
     longitude: -0.101,
-    heroImage: "https://images.unsplash.com/photo-1520637836862-4d197d17c43a?w=1600&q=80",
+    heroImage: "/locations/barbican-farringdon.jpg",
   },
   {
     slug: "borough-pimlico",
@@ -84,7 +84,7 @@ export const LOCATIONS: Location[] = [
     transport: ["Borough (Northern)", "London Bridge (Jubilee, Northern, National Rail)", "Pimlico (Victoria)", "Vauxhall (Victoria, National Rail)"],
     latitude: 51.497,
     longitude: -0.1057,
-    heroImage: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1600&q=80",
+    heroImage: "/locations/borough-pimlico.jpg",
   },
   {
     slug: "little-venice-maida-vale",
@@ -97,7 +97,7 @@ export const LOCATIONS: Location[] = [
     transport: ["Warwick Avenue (Bakerloo)", "Maida Vale (Bakerloo)", "Paddington (Bakerloo, Circle, District, H&C, Elizabeth, Heathrow Express)", "Edgware Road (Bakerloo, Circle, District, H&C)"],
     latitude: 51.5236,
     longitude: -0.1827,
-    heroImage: "https://images.unsplash.com/photo-1572297870735-d04ec150e0d2?w=1600&q=80",
+    heroImage: "/locations/little-venice-maida-vale.jpg",
   },
 ];
 

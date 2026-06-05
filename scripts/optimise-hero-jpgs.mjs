@@ -60,7 +60,7 @@ for (const { repo, slug } of items) {
       position: "centre",
       kernel: "mitchell",
     })
-    .jpeg({ quality: 85, mozjpeg: true, progressive: true })
+    .jpeg({ quality: 78, mozjpeg: true, progressive: true })
     .toBuffer();
   await fs.writeFile(dst, buf);
   const kb = (buf.length / 1024).toFixed(0);
