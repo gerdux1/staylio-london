@@ -23,6 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/faq`,                   lastModified: FAQ_REVIEW,       changeFrequency: "monthly", priority: 0.75 },
     { url: `${base}/about`,                 lastModified: ABOUT_REVIEW,     changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/contact`,               lastModified: buildTime,        changeFrequency: "monthly", priority: 0.85 },
+    { url: `${base}/preferred-source`,      lastModified: SITE_LAUNCH,      changeFrequency: "monthly", priority: 0.6 },
   ];
 
   const locationPages: MetadataRoute.Sitemap = LOCATIONS.map((l) => ({

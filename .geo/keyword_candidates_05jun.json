@@ -1190,14 +1190,14 @@
     "DataForSEO_MSV": "",
     "DataForSEO_competition": "",
     "SERP_top3_live": "DECISION GATE: Staylio pet policy unclear in current FAQ \u2014 needs the operator confirmation before writing. If yes-some-units, list which. If no, skip this keyword.",
-    "Content_angle": "/guides/pet-friendly-apartments-london",
+    "Content_angle": "Select Staylio units accept dogs \u2014 list the specific units (currently TBC per the operator's per-unit confirmation), \u00a340 per-stay surcharge for additional cleaning. Honest: not all units; specify which.",
     "Target_route": "BLOCKED (needs policy decision)",
-    "Page_status": "WhatsApp Ali +44 7375 621453",
+    "Page_status": "NEW",
     "Primary_CTA": "/apartments?pets=1, /faq#pets",
     "Internal_links": "FAQPage, Article",
     "Schema_additions": "CANDIDATE \u00b7 BLOCKED",
-    "Status": "BLOCKED on the operator pet policy decision",
-    "Notes": ""
+    "Status": "CANDIDATE \u00b7 PENDING_DATAFORSEO \u00b7 awaiting per-unit list",
+    "Notes": "POLICY CONFIRMED 5 Jun: select units only, with surcharge. Per-unit list TBC from the operator \u2192 Operations/Iris."
   },
   {
     "#": "61",
@@ -1210,14 +1210,14 @@
     "DataForSEO_MSV": "",
     "DataForSEO_competition": "",
     "SERP_top3_live": "Same blocker as above. If yes-some: schema-friendly Q&A 'Yes, in select Staylio units \u2014 currently 2 in Borough, 1 in Marylebone \u2014 \u00a340 cleaning supplement'.",
-    "Content_angle": "/faq/dogs",
+    "Content_angle": "Schema-friendly Q&A: 'Yes, in select Staylio units \u2014 currently [TBC] units \u2014 with a \u00a340 cleaning supplement per stay.' Link to /guides/pet-friendly-apartments-london for the per-unit list.",
     "Target_route": "BLOCKED (needs policy decision)",
-    "Page_status": "WhatsApp Ali +44 7375 621453",
+    "Page_status": "NEW (FAQPage subsection)",
     "Primary_CTA": "/apartments?pets=1, /faq",
     "Internal_links": "FAQPage, Article",
     "Schema_additions": "CANDIDATE \u00b7 BLOCKED",
-    "Status": "BLOCKED on the operator pet policy decision",
-    "Notes": ""
+    "Status": "CANDIDATE \u00b7 PENDING_DATAFORSEO \u00b7 awaiting per-unit list",
+    "Notes": "POLICY CONFIRMED 5 Jun: select units + \u00a340 surcharge. Cross-link to B60."
   },
   {
     "#": "62",
@@ -1517,7 +1517,7 @@
     "Internal_links": "Article, FAQPage",
     "Schema_additions": "CANDIDATE \u00b7 PENDING_DATAFORSEO",
     "Status": "",
-    "Notes": ""
+    "Notes": "DECISION 5 Jun: standalone page (higher MSV bucket). Folds rest of C7-C12 into /vs/london-serviced-apartments aggregator below."
   },
   {
     "#": "77",
@@ -1572,12 +1572,12 @@
     "SERP_top3_live": "Native is the dominant search-competitor. Don't try to rank for their branded term head-on \u2014 write a 'Staylio vs Native: same neighbourhoods, different rate card' angle.",
     "Content_angle": "/vs/native-vs-staylio",
     "Target_route": "NEW (careful with branded-term policy)",
-    "Page_status": "WhatsApp Ali +44 7375 621453",
+    "Page_status": "NEW (standalone \u2014 branded-term approach: 'Staylio vs Native')",
     "Primary_CTA": "/apartments, /corporate, /about, /locations",
     "Internal_links": "Article, FAQPage",
     "Schema_additions": "CANDIDATE \u00b7 NEEDS OPERATIONS DECISION",
     "Status": "Branded-term targeting \u2014 Operations needs to approve. UK common practice; Sonder/Native both do it.",
-    "Notes": ""
+    "Notes": "DECISION 5 Jun: standalone page. Brand-comparison angle, not branded-term-hijacking. Same template as Sonder page."
   },
   {
     "#": "80",
@@ -1631,13 +1631,13 @@
     "DataForSEO_competition": "",
     "SERP_top3_live": "Very low MSV but ultra-hot. Fold into /vs/sonder-london as a section.",
     "Content_angle": "/vs/sonder-london",
-    "Target_route": "FOLD INTO C1",
-    "Page_status": "WhatsApp Ali +44 7375 621453",
+    "Target_route": "/vs/london-serviced-apartments",
+    "Page_status": "FOLD INTO bundled /vs/ aggregator",
     "Primary_CTA": "/apartments, /corporate, /about, /locations",
     "Internal_links": "Article, FAQPage",
     "Schema_additions": "CANDIDATE \u00b7 PENDING_DATAFORSEO",
     "Status": "",
-    "Notes": ""
+    "Notes": "DECISION 5 Jun: confirmed bundle into single comparison-table page (Cheval, Native Places, Locke, SACO, Edyn, sub-Sonder comp)."
   },
   {
     "#": "83",
@@ -1651,13 +1651,13 @@
     "DataForSEO_competition": "",
     "SERP_top3_live": "Locke is aparthotel category (smaller units + bar). Different positioning. Fold into a Locke comp section in a bundled /vs/ page.",
     "Content_angle": "/vs/london-serviced-apartments",
-    "Target_route": "FOLD INTO C13",
-    "Page_status": "WhatsApp Ali +44 7375 621453",
+    "Target_route": "/vs/london-serviced-apartments",
+    "Page_status": "FOLD INTO bundled /vs/ aggregator",
     "Primary_CTA": "/apartments, /corporate, /about, /locations",
     "Internal_links": "Article, FAQPage",
     "Schema_additions": "CANDIDATE \u00b7 PENDING_DATAFORSEO",
     "Status": "",
-    "Notes": ""
+    "Notes": "DECISION 5 Jun: confirmed bundle into single comparison-table page (Cheval, Native Places, Locke, SACO, Edyn, sub-Sonder comp)."
   },
   {
     "#": "84",
@@ -1671,13 +1671,13 @@
     "DataForSEO_competition": "",
     "SERP_top3_live": "Same as C8.",
     "Content_angle": "/vs/london-serviced-apartments",
-    "Target_route": "FOLD INTO C13",
-    "Page_status": "WhatsApp Ali +44 7375 621453",
+    "Target_route": "/vs/london-serviced-apartments",
+    "Page_status": "FOLD INTO bundled /vs/ aggregator",
     "Primary_CTA": "/apartments, /corporate, /about, /locations",
     "Internal_links": "Article, FAQPage",
     "Schema_additions": "CANDIDATE \u00b7 PENDING_DATAFORSEO",
     "Status": "",
-    "Notes": ""
+    "Notes": "DECISION 5 Jun: confirmed bundle into single comparison-table page (Cheval, Native Places, Locke, SACO, Edyn, sub-Sonder comp)."
   },
   {
     "#": "85",
@@ -1691,13 +1691,13 @@
     "DataForSEO_competition": "",
     "SERP_top3_live": "Cheval is luxury (\u00a3500+). ICP mismatch \u2014 Staylio is mid-market. Mention but don't pursue as primary.",
     "Content_angle": "/vs/london-serviced-apartments",
-    "Target_route": "FOLD INTO C13 (with disclaimer)",
-    "Page_status": "WhatsApp Ali +44 7375 621453",
+    "Target_route": "/vs/london-serviced-apartments",
+    "Page_status": "FOLD INTO bundled /vs/ aggregator",
     "Primary_CTA": "/apartments, /corporate, /about, /locations",
     "Internal_links": "Article, FAQPage",
     "Schema_additions": "CANDIDATE \u00b7 PENDING_DATAFORSEO",
     "Status": "",
-    "Notes": ""
+    "Notes": "DECISION 5 Jun: confirmed bundle into single comparison-table page (Cheval, Native Places, Locke, SACO, Edyn, sub-Sonder comp)."
   },
   {
     "#": "86",
@@ -1711,13 +1711,13 @@
     "DataForSEO_competition": "",
     "SERP_top3_live": "SACO/Edyn is corporate-broker scale. Fold.",
     "Content_angle": "/vs/london-serviced-apartments",
-    "Target_route": "FOLD INTO C13",
-    "Page_status": "WhatsApp Ali +44 7375 621453",
+    "Target_route": "/vs/london-serviced-apartments",
+    "Page_status": "FOLD INTO bundled /vs/ aggregator",
     "Primary_CTA": "/apartments, /corporate, /about, /locations",
     "Internal_links": "Article, FAQPage",
     "Schema_additions": "CANDIDATE \u00b7 PENDING_DATAFORSEO",
     "Status": "",
-    "Notes": ""
+    "Notes": "DECISION 5 Jun: confirmed bundle into single comparison-table page (Cheval, Native Places, Locke, SACO, Edyn, sub-Sonder comp)."
   },
   {
     "#": "87",
@@ -1731,13 +1731,13 @@
     "DataForSEO_competition": "",
     "SERP_top3_live": "Same as C11.",
     "Content_angle": "/vs/london-serviced-apartments",
-    "Target_route": "FOLD INTO C13",
-    "Page_status": "WhatsApp Ali +44 7375 621453",
+    "Target_route": "/vs/london-serviced-apartments",
+    "Page_status": "FOLD INTO bundled /vs/ aggregator",
     "Primary_CTA": "/apartments, /corporate, /about, /locations",
     "Internal_links": "Article, FAQPage",
     "Schema_additions": "CANDIDATE \u00b7 PENDING_DATAFORSEO",
     "Status": "",
-    "Notes": ""
+    "Notes": "DECISION 5 Jun: confirmed bundle into single comparison-table page (Cheval, Native Places, Locke, SACO, Edyn, sub-Sonder comp)."
   },
   {
     "#": "88",
@@ -1798,5 +1798,25 @@
     "Schema_additions": "CANDIDATE \u00b7 PENDING_DATAFORSEO",
     "Status": "HIGH PRIORITY \u2014 strongest brand fit",
     "Notes": ""
+  },
+  {
+    "#": "91",
+    "Keyword": "[aggregator: london serviced apartment alternatives]",
+    "Bucket": "C vs/alternative (aggregator)",
+    "Intent": "commercial",
+    "Est_MSV_band_claude": "n/a (aggregator)",
+    "Likely_competition": "n/a",
+    "AI_Overview_likely": "N",
+    "DataForSEO_MSV": "",
+    "DataForSEO_competition": "",
+    "SERP_top3_live": "",
+    "Content_angle": "Single comparison-table page covering 6 London SA operators (SilverDoor as B2B broker, Cheval as luxury, Native Places as boutique chain, Locke as aparthotel, SACO/Edyn as corporate-broker). Plus 'cheaper than Sonder' sub-section. Honest scoring across price, stay length, area coverage, contact model, audience fit. Staylio's row goes at the bottom \u2014 credibility.",
+    "Target_route": "/vs/london-serviced-apartments",
+    "Page_status": "NEW (aggregator for C82-C87)",
+    "Primary_CTA": "WhatsApp Ali +44 7375 621453",
+    "Internal_links": "/apartments, /corporate, /about, /vs/sonder-london, /vs/native-vs-staylio, all 7x /locations/[slug]",
+    "Schema_additions": "Article, FAQPage, ItemList (operators ranked), ComparativeContent (custom)",
+    "Status": "CANDIDATE \u00b7 PENDING_DATAFORSEO",
+    "Notes": "DECISION 5 Jun (the operator): bundle 6 low-MSV operator comps here instead of 6 thin pages. Sonder + Native get standalones (higher MSV)."
   }
 ]

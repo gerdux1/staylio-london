@@ -48,7 +48,11 @@ export function Footer() {
         </div>
         <div className="mt-12 border-t border-stone-200 pt-6 flex flex-col sm:flex-row justify-between gap-2 text-xs text-stone-500">
           <p>&copy; {new Date().getFullYear()} Staylio Limited. All rights reserved.</p>
-          <p>Boutique serviced apartments, fully equipped, all bills included.</p>
+          <p>
+            <Link href="/preferred-source" className="hover:text-stone-900 underline-offset-2 hover:underline">
+              Tell Google to show Staylio first
+            </Link>
+          </p>
         </div>
       </div>
     </footer>
