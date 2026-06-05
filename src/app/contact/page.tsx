@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ContactForm } from "./ContactForm";
+import { JsonLd, aliPersonSchema, breadcrumb } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Contact us",
@@ -10,6 +11,15 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <section className="mx-auto max-w-3xl px-6 py-24">
+      <JsonLd
+        data={[
+          breadcrumb([
+            { name: "Home", url: "https://staylio.london" },
+            { name: "Contact", url: "https://staylio.london/contact" },
+          ]),
+          aliPersonSchema(),
+        ]}
+      />
       <p className="text-sm uppercase tracking-widest text-stone-500">Contact us</p>
       <h1 className="mt-3 font-serif text-5xl text-stone-900">Talk to a real person.</h1>
       <p className="mt-6 text-stone-700">

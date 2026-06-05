@@ -6,6 +6,7 @@ import type { Listing } from "./listings";
 const ORG_BASE = {
   "@context": "https://schema.org",
   "@type": "LodgingBusiness",
+  "@id": "https://staylio.london#organization",
   name: "Staylio",
   legalName: "Staylio Limited",
   description:
@@ -50,6 +51,188 @@ const ORG_BASE = {
 
 export function organizationSchema() {
   return ORG_BASE;
+}
+
+// WebSite + SearchAction at root layout — tells search + AI engines our site is
+// searchable as an entity. Earns the sitelink-searchbox feature in Google SERPs
+// and signals to AI Overviews that we have a structured catalog.
+export function websiteSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://staylio.london#website",
+    name: "Staylio",
+    alternateName: "Staylio London Serviced Apartments",
+    url: "https://staylio.london",
+    inLanguage: "en-GB",
+    publisher: { "@id": "https://staylio.london#organization" },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: "https://staylio.london/apartments?q={search_term_string}",
+      },
+      "query-input": "required name=search_term_string",
+    },
+  };
+}
+
+// Service schemas — Staylio offers 4 distinct stay services. AI engines route
+// queries like "corporate apartments London" to the right page when each service
+// is declared as a Service entity with structured offer + audience data.
+export function serviceSchemas() {
+  const base = "https://staylio.london";
+  const provider = { "@id": `${base}#organization` };
+  const areaServed = ORG_BASE.areaServed;
+
+  return [
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": `${base}/corporate#service`,
+      name: "Corporate serviced apartments in Central London",
+      description:
+        "Long-stay rates, monthly billing on PO terms, single point of contact for relocations and project teams. Suitable for 28-night stays and longer with reduced VAT exposure.",
+      serviceType: "Corporate Housing",
+      provider,
+      areaServed,
+      audience: { "@type": "BusinessAudience", name: "Corporate clients, relocation firms" },
+      offers: {
+        "@type": "Offer",
+        url: `${base}/corporate`,
+        availability: "https://schema.org/InStock",
+      },
+      url: `${base}/corporate`,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": `${base}/short-stays#service`,
+      name: "Short-break serviced apartments in Central London",
+      description:
+        "3–7 night stays in fully equipped Central London serviced apartments. Smart-lock keyless entry, all bills included, fortnightly housekeeping. Best direct rate, at least 10% lower than Booking.com or Airbnb.",
+      serviceType: "Short-Stay Accommodation",
+      provider,
+      areaServed,
+      offers: {
+        "@type": "Offer",
+        url: `${base}/apartments`,
+        availability: "https://schema.org/InStock",
+      },
+      url: `${base}/apartments`,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": `${base}/long-stays#service`,
+      name: "Long-stay serviced apartments in London (weekly and monthly)",
+      description:
+        "Stays of one week or longer with discounted weekly and monthly pricing. Mid-term (28+ night) stays qualify for the 80% VAT reduction under HMRC rules. Full kitchen, in-unit laundry, real workspace.",
+      serviceType: "Long-Stay Accommodation",
+      provider,
+      areaServed,
+      offers: {
+        "@type": "Offer",
+        url: `${base}/apartments`,
+        availability: "https://schema.org/InStock",
+      },
+      url: `${base}/apartments`,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": `${base}/relocation#service`,
+      name: "Relocation serviced apartments in Central London",
+      description:
+        "Furnished, fully equipped Central London apartments for relocations of one month or longer. Single point of contact, monthly billing, easy extension. Suits family relocations, executive transfers, and project teams.",
+      serviceType: "Relocation Housing",
+      provider,
+      areaServed,
+      audience: { "@type": "PeopleAudience", name: "Relocating professionals and families" },
+      offers: {
+        "@type": "Offer",
+        url: `${base}/corporate`,
+        availability: "https://schema.org/InStock",
+      },
+      url: `${base}/corporate`,
+    },
+  ];
+}
+
+// HowTo — high-leverage for AI Overviews. AI engines lift HowTo steps into
+// step-by-step answers when users ask "how do I book a serviced apartment in London?"
+export function bookDirectHowToSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "How to book direct with Staylio (and save 10% or more)",
+    description:
+      "Direct bookings with Staylio save at least 10% vs Booking.com or Airbnb because there is no platform commission. Booking takes under 15 minutes via WhatsApp.",
+    estimatedCost: { "@type": "MonetaryAmount", currency: "GBP", value: "0" },
+    totalTime: "PT15M",
+    tool: [
+      { "@type": "HowToTool", name: "Phone or computer" },
+      { "@type": "HowToTool", name: "WhatsApp (or email)" },
+    ],
+    step: [
+      {
+        "@type": "HowToStep",
+        position: 1,
+        name: "Browse apartments",
+        text: "Visit staylio.london/apartments and pick a Central London neighbourhood that suits your stay (Marylebone, Shoreditch, Kensington, Mayfair, Farringdon, Pimlico, or Maida Vale).",
+        url: "https://staylio.london/apartments",
+      },
+      {
+        "@type": "HowToStep",
+        position: 2,
+        name: "WhatsApp Ali Hassan with dates",
+        text: "Send Ali a WhatsApp message on +44 7375 621453 with your apartment shortlist, check-in and check-out dates, and number of guests. Ali is Staylio's Direct Bookings sales lead.",
+        url: "https://wa.me/447375621453",
+      },
+      {
+        "@type": "HowToStep",
+        position: 3,
+        name: "Get your direct quote",
+        text: "Ali confirms availability and sends your direct rate — always at least 10% lower than the same apartment on Booking.com or Airbnb. Usually replies within 15 minutes during UK hours.",
+      },
+      {
+        "@type": "HowToStep",
+        position: 4,
+        name: "Pay securely via Stripe",
+        text: "Confirm by paying through the secure Stripe link Ali sends. No deposit padding, no platform commission, no surprise charges on departure.",
+      },
+      {
+        "@type": "HowToStep",
+        position: 5,
+        name: "Receive smart-lock code by WhatsApp",
+        text: "Closer to check-in, Ali sends your smart-lock access code by WhatsApp. Arrive at any hour, day or night — no front desk, no waiting.",
+      },
+    ],
+  };
+}
+
+// Person schema for Ali Hassan — named E-E-A-T accountability on /contact.
+// AI engines treat named, contactable humans as a stronger trust signal than
+// generic "contact us" pages.
+export function aliPersonSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://staylio.london/contact#ali-hassan",
+    name: "Ali Hassan",
+    jobTitle: "Direct Bookings Lead",
+    worksFor: { "@id": "https://staylio.london#organization" },
+    telephone: "+44 7375 621453",
+    email: "hello@staylio.london",
+    knowsLanguage: ["en-GB", "en"],
+    knowsAbout: [
+      "Central London serviced apartments",
+      "Corporate housing",
+      "Long-stay relocations",
+      "Direct booking discounts",
+    ],
+    availableLanguage: ["English"],
+  };
 }
 
 export function listingSchema(listing: Listing) {

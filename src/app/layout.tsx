@@ -4,7 +4,7 @@ import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import { JsonLd, organizationSchema } from "@/lib/schema";
+import { JsonLd, organizationSchema, websiteSchema, serviceSchemas } from "@/lib/schema";
 
 const serif = Cormorant_Garamond({
   variable: "--font-serif",
@@ -44,7 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en-GB" className={`${serif.variable} ${sans.variable}`}>
       <body className="font-sans antialiased text-stone-900 bg-stone-50">
-        <JsonLd data={organizationSchema()} />
+        <JsonLd data={[organizationSchema(), websiteSchema(), ...serviceSchemas()]} />
         <Header />
         <main>{children}</main>
         <Footer />

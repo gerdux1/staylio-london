@@ -1,47 +1,73 @@
-# Staylio Instagram setup — runbook
+# Staylio Instagram — claim + rebrand runbook
 
-_Built 5 Jun 2026. Same pattern as `KRIS_REVIEW_SETUP.md` — the operator or Kris does the signup, everything else is paste-ready._
+_Built 5 Jun 2026. **Updated after finding the account already exists** — don't create a new one._
 
-## Owner
-- **Account creation**: Kris or the operator-as-Operations (~5 min)
-- **Content**: TBD — Arianne / Mark Erquiza / external if hired; agent option = a content-writer skill loop later
-- **Email for account**: `stayliolondon@gmail.com` (same shared inbox pattern as GBP — survives staff turnover, never use a personal account)
+## What's there already (verified live 5 Jun via Chrome)
 
-## Phase 1 — Handle (pick one before signing up)
+| Property | Value |
+|---|---|
+| Handle | **`@staylio.london`** — exact match to domain, well chosen |
+| Display name | `Staylio London` |
+| URL | https://www.instagram.com/staylio.london/ |
+| Posts | **12** |
+| Followers | 5 (incl. `krzysiekkamas` Kris and `abuzaralizafri`) |
+| Following | 0 |
+| Profile photo | Staylio door-mark logo (already on-brand — same mark as site favicon) |
+| Bio (current) | `London serviced apartments for flexible stays / For travellers, corporate guests & families / Comfort of home...` |
+| Bio link | Unknown (truncated on read — verify on login) |
+| Account type | Unknown (likely Personal — needs Professional switch) |
 
-Priority order, claim the first that's free:
+### Login (best guess, verify on first attempt)
+- Email: `stayliolondon@gmail.com` (per Drive Login doc `1H8Yon…tJq_EU`)
+- Password: probably `Property2021!` (same as Gmail; standard pattern for the shared Staylio accounts)
+- Backup auth: Apple ID `staylio.london@gmail.com` / `Leader2028!` (Account name: krzysztofkamasinski) — Drive Login doc confirms Apple sign-in is set up for the brand
+- ⚠️ If neither works, the account was set up with Kris's personal email or a VA's email — ask Kris.
 
-| # | Handle | Notes |
+### Posts already published (top grid, observed)
+1. "Why Do You Visit London? Share it with us in the comments!" (purple sunset)
+2. "WHAT MAKES A LONDON STAY FEEL MEMORABLE FOR THE RIGHT REASONS?" (Big Ben + checkmarks: comfortable, exploring, easy and stress-free)
+3. "Relocation stays — The in-between chapter" (Big Ben sunset)
+4. "QUESTION — What do you think should a smooth stay feel like?" (pink desk flatlay)
+5. "Things people forget to think about before a London stay — Read captions" (woman near building entrance)
+6. Quote: "The right stay makes family travel feel lighter." (peach quote graphic)
+7-12. Not yet inspected — verify on login.
+
+## Brand-voice + aesthetic mismatch (must fix)
+
+The 12 existing posts are **off-brand** vs the locked Staylio identity:
+
+| Locked voice / palette | Current IG | Verdict |
 |---|---|---|
-| 1 | `@staylio.london` | Matches the domain exactly. Periods allowed in IG handles. |
-| 2 | `@staylio_london` | Backup if `.london` taken. |
-| 3 | `@staylio.uk` | Shorter; only if both above taken. |
-| 4 | `@staylio.stays` | Last resort — slightly off-brand from `.london`. |
+| Boutique, curated, warm | Engagement-bait question posts | ❌ Mismatch |
+| Cream / stone-900 palette (per site) | Purple / pink / peach | ❌ Mismatch |
+| `decision_staylio_brochure_voice_14may.md` forbids "flexible" | Bio says "flexible stays" | ❌ Direct rule violation |
+| Long-stay threshold = "one week or more" | Not stated | n/a |
+| 50% apartment interiors, 25% neighbourhood, 15% guest stories, 10% BTS | 0% apartments, 0% real London places, 100% engagement-bait | ❌ Mismatch |
+| Direct booking USP "10% lower than Booking.com / Airbnb" | Absent | ❌ Missed |
+| Cormorant Garamond serif | Serif present ✓ | ✅ Match |
+| Logo door-mark | Logo door-mark ✓ | ✅ Match |
 
-⚠️ Avoid `@staylio` alone — likely taken. Confusable competitors exist (per Google search 5 Jun): `Stayo Kensington`, `Stayo`, `Stayio`. Don't claim anything that lets a guest land on a competitor by mistype.
+5 followers = no audience to disrupt. **Safe to rebrand the voice + visual direction now.**
 
-Check availability at https://www.instagram.com/<handle>/ before signing up (404 = free).
+## Step 1 — Take over the account (5 min)
 
-## Phase 2 — Account creation (Kris or the operator, ~5 min)
+1. Open https://www.instagram.com/accounts/login/
+2. Try `stayliolondon@gmail.com` + `Property2021!`. If that fails, try the Apple ID flow (`staylio.london@gmail.com` + `Leader2028!`).
+3. If both fail: from Instagram → Get help logging in → enter `stayliolondon@gmail.com` → password reset link arrives in Gmail (which you/the operations team can access). Save the new password into the Drive Login doc.
+4. **Find out who has been managing it.** Settings → Account → Personal information → check the connected phone + 2FA device. Add `+44 7304 353 640` and the operations team's authenticator app as backup so the account doesn't get locked behind one person.
 
-1. Open https://www.instagram.com/accounts/emailsignup/
-2. Email: `stayliolondon@gmail.com`
-3. Full name: `Staylio`
-4. Username: from Phase 1 list above
-5. Password: store in 1Password / Staylio Drive Login doc (folder `1jcU7EGITlg_PjGzv0FcVdkLOjISzuQnX`)
-6. Confirm email link from inbox
-7. **Switch to Professional account** → "I am a business" → Category: `Holiday & Travel` / `Vacation Home Rental` (Instagram doesn't have a "Serviced Apartments" tag — `Vacation Home Rental` is the closest, alternatively `Hotel & Resort`)
-8. Skip phone (or add `+44 7304 353 640` only if comfortable — public-visible on the profile)
+## Step 2 — Switch to Professional / Business account
 
-## Phase 3 — Profile configuration (paste-ready)
+Settings → Account type → Switch to Professional → Business → Category: `Vacation Home Rental` (no "Serviced Apartments" category exists in Instagram's taxonomy).
 
-### Profile photo
-Staylio logo PNG from Drive folder `1ICCgGv-qkQnJS1NhaXirgcx05tFqOE5b`. Use a square crop on a cream / off-white background. Avoid the wordmark on a busy photo — at 110x110px display, only the mark / symbol reads.
+This unlocks:
+- Contact buttons (Email / WhatsApp / Directions)
+- Insights tab
+- Promote button
+- Link to Facebook Page (skip for now if no Facebook Page exists)
 
-### Display name
-`Staylio · London Serviced Apartments`
+## Step 3 — Fix the bio (paste-ready, 149 chars)
 
-### Bio (148 chars, fits the 150 limit)
 ```
 Independent London serviced apartments.
 40+ flats · 7 neighbourhoods.
@@ -49,84 +75,58 @@ All bills in. Boutique, curated, warm.
 Book direct → 10% off OTAs
 ```
 
-Alt voice (longer, more direct):
-```
-London serviced apartments, lived in properly.
-45–80 sqm with kitchen, laundry, all bills in.
-3 nights to 3 months.
-WhatsApp Ali for direct rates.
-```
+Replaces:
+- `London serviced apartments for flexible stays` — ❌ "flexible" forbidden
+- `For travellers, corporate guests & families` — fine but vague, replaced by the more specific 40+ flats / 7 neighbourhoods
+- `Comfort of home...` — vague, dropped
 
-### Website / link
-`https://staylio.london` — direct, no Linktree.
+### Bio link
+`https://staylio.london` (no Linktree).
 
-(If you ever need multiple links, add Beacons or Stan Store later — but a single clean link first to keep attribution clean to Vercel analytics.)
+### Contact buttons (Professional account → Edit profile → Public business information)
+- Email: `hello@staylio.london`
+- WhatsApp: `+44 7304 353 640` (locked line per `reference_staylio_brand_identity.md` — NOT the old `7375 621453` that's still scattered across the site)
+- Address: `85 Frampton Street, London NW8 8NQ`
+- Category: `Vacation Home Rental`
 
-### Contact options (Professional account)
-- Email button: `hello@staylio.london`
-- WhatsApp button: `+44 7304 353 640` (locked brand line)
-- Address: 85 Frampton Street, London NW8 8NQ
+### Display name
+Keep `Staylio London` (already on-brand) OR refine to `Staylio · London Serviced Apartments` (better discovery via "London serviced apartments" search).
 
-### Category
-- Primary: `Vacation Home Rental`
-- Show category on profile: YES
+## Step 4 — Handle the existing 12 posts
 
-## Phase 4 — Link to Facebook Page (optional but recommended)
+Three options. Recommend Option B.
 
-For Meta Ads + cross-posting + better insights, create a matching Facebook Page:
+**Option A — Archive all 12 + restart.** Instagram supports archiving (post hidden from public but kept in account history). Profile resets to 0 visible posts; first new wave defines the grid.
 
-1. https://www.facebook.com/pages/create → "Business or brand"
-2. Page name: `Staylio`
-3. Category: `Vacation Home Rental`
-4. Address + phone same as above
-5. Link to Instagram via Meta Business Suite → Settings → Linked accounts
+**Option B (recommended) — Archive the 6 most off-brand, keep the on-brand ones (if any), post 9 new cornerstone tiles.** Archiving the engagement-bait question posts and the peach quote tile gets rid of the worst voice/palette mismatch without losing the door-mark consistency entirely.
 
-Skip if not running ads in the next 90 days — Instagram Business now works standalone for organic posting + DMs.
+**Option C — Leave them, push 9 new cornerstone tiles on top.** Grid scroll fixes itself after 3-4 weeks of new content. Lowest effort but the bad tiles stay live.
 
-## Phase 5 — First 9 grid posts (cornerstone aesthetic)
+To archive: open post → ··· → Archive. Reversible — un-archive any time.
 
-Audience opens a new profile and judges by the top 9 in 2 seconds. Goal: instant read of "boutique London serviced apartments". Posting cadence: 1 per day for the first 9 days, then 3-4× per week.
+## Step 5 — First 9 new grid tiles (cornerstone, paste-ready)
 
-| # | Post | Content | Caption seed |
+Audience opens a new profile and judges by the top 9 in 2 seconds. Push these in week 1 (1 per day for 9 days). Visual brief: cream / stone-900 / serif (Cormorant Garamond), same palette as staylio.london.
+
+| # | Post | Visual brief | Caption seed |
 |---|---|---|---|
-| 1 | Hero brand statement | Cream background, Cormorant Garamond serif text on image: **"Live in London on your own terms."** | "Welcome to Staylio. 40+ serviced apartments across 7 Central London neighbourhoods. Lived in properly." |
-| 2 | Apartment hero #1 (Marylebone) | Wide interior shot of the best Marylebone listing | "Near Regent's Park. 10 min to Oxford Circus. Fitted kitchen, all bills in." |
-| 3 | The map | Simple stone-coloured London map with 7 dots marked | "Where we live: 7 neighbourhoods. Marylebone. Shoreditch. Kensington. Fitzrovia. Farringdon. Borough. Little Venice." |
-| 4 | Apartment hero #2 (Shoreditch) | Wide interior shot, contrasting palette | "Old Street tech corridor. Walk to Spitalfields. 4 nights or 4 months." |
-| 5 | What's included | Text-on-image graphic: "Electricity. Water. Heating. Wi-Fi. Council tax. All in." | "One rate. No surprises on departure. No exit fees." |
-| 6 | Apartment hero #3 (Little Venice) | Canalside, soft light | "Little Venice. Canal at the door. 4 mansion-block flats." |
-| 7 | Booking direct USP | Simple text-on-image: "Direct is always 10% lower than Booking.com or Airbnb." | "We don't pay platform commission. We pass it back." |
-| 8 | Apartment hero #4 (Kensington) | Wide interior | "Kensington. Museum mile. Direct Piccadilly to Heathrow." |
-| 9 | Real human | Ali on WhatsApp (or Operations + Kris) candid shot | "Real people. WhatsApp Ali for direct rates and answers — average reply 15 minutes." |
+| 1 | Hero brand statement | Cream background, big serif: **"Live in London on your own terms."** | "Welcome to Staylio. 40+ serviced apartments across 7 Central London neighbourhoods. Lived in properly." |
+| 2 | Apartment hero (Marylebone) | Wide interior shot from best Marylebone listing — daylight, no people | "Near Regent's Park. 10 min to Oxford Circus. Fitted kitchen, all bills in." |
+| 3 | The map | Stone-coloured London map, 7 dots marked | "Where we live: Marylebone. Shoreditch. Kensington. Fitzrovia. Farringdon. Borough. Little Venice." |
+| 4 | Apartment hero (Shoreditch) | Wide interior, contrasting palette to #2 | "Old Street tech corridor. Walk to Spitalfields. 4 nights or 4 months." |
+| 5 | What's included | Text-on-image: "Electricity. Water. Heating. Wi-Fi. Council tax. All in." | "One rate. No surprises on departure. No exit fees." |
+| 6 | Apartment hero (Little Venice) | Canalside, soft light | "Little Venice. Canal at the door. 4 mansion-block flats." |
+| 7 | Direct rate USP | Text-on-image: "Direct is always 10% lower than Booking.com or Airbnb." | "We don't pay platform commission. We pass it back." |
+| 8 | Apartment hero (Kensington) | Wide interior | "Kensington. Museum mile. Direct Piccadilly to Heathrow." |
+| 9 | Real person | Ali on WhatsApp (or Operations + Kris) candid shot | "Real people. WhatsApp Ali for direct rates and answers — average reply 15 minutes." |
 
-After grid #9, mix:
-- **50% apartment interiors** (rotation across all 43 listings, longest-stay properties priority)
-- **25% London neighbourhood content** (walks, cafés, hidden gems — reuse `src/lib/local-recommendations.ts` curated venues)
-- **15% guest stories** (anonymised, with permission — quote + photo if shared)
-- **10% behind-the-scenes** (housekeeping standard, smart-lock setup, WhatsApp threads censored)
+Then mix: 50% apartment interiors (rotate the 43 listings) · 25% neighbourhood content (reuse `src/lib/local-recommendations.ts` curated venues) · 15% guest stories (anonymised + permission) · 10% behind-the-scenes.
 
-Reels: 1-2 per week. Best-performing format for SA brands = walking tour through a neighbourhood ending at an apartment door (under 30 sec, no talking head needed — overlay text + ambient sound).
+Reels 1-2/week: 30-sec neighbourhood walking tour ending at an apartment door, overlay text only, ambient sound.
 
-## Phase 6 — Caption + hashtag pack
+## Step 6 — Captions + hashtags
 
-### Hashtag set (rotate, max 10 per post to avoid shadow-ban signals)
-
-**Core (always):**
-`#staylio #londonserviced #servicedapartmentslondon #londonstays`
-
-**Discovery (rotate by neighbourhood):**
-- Marylebone: `#marylebone #regentspark #marylebonelife`
-- Shoreditch: `#shoreditch #oldstreet #eastlondon`
-- Kensington: `#kensington #southkensington #notinghill` (if cross-pollinating)
-- Fitzrovia: `#fitzrovia #mayfair #charlottestreet`
-- Farringdon: `#farringdon #barbican #clerkenwell`
-- Borough: `#boroughmarket #bermondsey #southbank`
-- Little Venice: `#littlevenice #maidavale #regentscanal`
-
-**Audience (rotate sparingly):**
-`#londonrelocation #expatlondon #corporatehousing #longstaylondon #monthlyrentals #digitalnomadlondon`
-
-### Default caption skeleton (boutique, curated, warm)
+### Default caption skeleton
 ```
 {Specific apartment / neighbourhood hook · one short sentence}.
 
@@ -134,72 +134,87 @@ Reels: 1-2 per week. Best-performing format for SA brands = walking tour through
 
 {Soft CTA — never pushy. e.g. "Direct rates via the link in bio." or "WhatsApp Ali to enquire."}
 
-#staylio #londonserviced + 6-8 from the rotate set
+#staylio #londonserviced + 6-8 from rotate set
 ```
 
 Voice rules (per `decision_staylio_brochure_voice_14may.md`):
-- UK spelling everywhere
-- "Fortnightly housekeeping" (never weekly or bi-weekly)
-- "Long-stay" threshold = "one week or more"
-- No "flexible" wording
-- The OTA-comparison line: "Direct is always at least 10% lower than Booking.com or Airbnb" — that's the locked phrasing.
+- UK spelling
+- "Fortnightly housekeeping" (never weekly / bi-weekly)
+- Long-stay = "one week or more"
+- **No "flexible"** (the existing bio violates this)
+- OTA-comparison line: "Direct is always at least 10% lower than Booking.com or Airbnb"
 
-## Phase 7 — Cross-link on staylio.london (site code, gated on account live)
+### Hashtag rotation (max 10 per post)
 
-Add Instagram URL to:
+**Core (always):** `#staylio #londonserviced #servicedapartmentslondon #londonstays`
 
-1. `src/lib/schema.tsx` Organization `sameAs` (already pending Trustpilot/GBP additions per `KRIS_REVIEW_SETUP.md`):
+**Rotate by neighbourhood:**
+- Marylebone: `#marylebone #regentspark #marylebonelife`
+- Shoreditch: `#shoreditch #oldstreet #eastlondon`
+- Kensington: `#kensington #southkensington #nottinghill`
+- Fitzrovia: `#fitzrovia #mayfair #charlottestreet`
+- Farringdon: `#farringdon #barbican #clerkenwell`
+- Borough: `#boroughmarket #bermondsey #southbank`
+- Little Venice: `#littlevenice #maidavale #regentscanal`
+
+**Audience (rotate sparingly):** `#londonrelocation #expatlondon #corporatehousing #longstaylondon #monthlyrentals`
+
+## Step 7 — Cross-link on staylio.london (site code, gated on rebrand done)
+
+Once bio + 9 cornerstone tiles live, add Instagram URL to:
+
+1. `src/lib/schema.tsx` Organization `sameAs` (sits alongside Trustpilot per `KRIS_REVIEW_SETUP.md`):
 ```ts
 sameAs: [
   "https://find-and-update.company-information.service.gov.uk/company/17012831",
   "https://uk.trustpilot.com/review/staylio.london",
-  "https://www.instagram.com/<handle>/",
+  "https://www.instagram.com/staylio.london/",
 ],
 ```
 
-2. Site footer (`src/components/Footer.tsx` if exists, otherwise wherever the social row lives) — add Instagram icon link.
+2. Footer (`src/components/Footer.tsx` if exists) — add Instagram icon link.
 
-3. `public/llms.txt` — append to `## Brand`:
+3. `public/llms.txt` under `## Brand`:
 ```
-- Instagram: https://www.instagram.com/<handle>/
+- Instagram: https://www.instagram.com/staylio.london/
 ```
 
-## Phase 8 — Ongoing posting
+## Step 8 — Posting owner
 
-Decision Operations needs to make: **who runs the account?**
+Open question — **who built the existing 12 posts?** Likely candidates:
+- **Elaine Venus** (Marketing VA, U058G3ZHTDE) — owns Asana Staylio Marketing project, possible original poster.
+- **Mark Erquiza** — existing paid capacity per the Next.js rebuild memory.
+- **Kris** — followed the account from his personal `krzysiekkamas`, but unlikely to be the creator.
 
-Options:
-1. **Arianne** — already in ops, knows the brand. Probably 30 min/post too expensive given her load.
-2. **Mark Erquiza** — existing paid capacity per `project_staylio_london_nextjs_rebuild_02jun.md` "redirected to Staylio.london WP-side maintenance tasks within his wheelhouse" — could expand to content.
-3. **VA in Pakistan / Philippines** with content brief — cheapest, needs tight brand-voice guardrails.
-4. **Content-writer agent loop** (deferred) — Leo or new agent drafts from `decision_staylio_brochure_voice_14may.md` voice + apartments data + Local Guide; human approves; posts via Meta Graph API. This is buildable but needs an Instagram Business API access token (separate Meta app review).
+Action: ask in next session "who has been posting on @staylio.london?" before re-assigning. If Elaine, give her the new content brief + rebrand the bio with her; she keeps continuity.
 
-Recommend Option 2 or 3 with a 4-week trial, then evaluate. Skip the agent loop until volume justifies it.
+If no clear owner, recommend Mark Erquiza with a 4-week trial on the new brief, then evaluate volume + brand-voice match.
 
-## Risks + decisions Operations needs to make
+## Decisions Operations needs to make
 
-1. **Handle choice** — pick from Phase 1 list before signup. If `@staylio.london` is free, take it without further deliberation.
-2. **Account email** — use `stayliolondon@gmail.com` (shared) not personal.
-3. **Facebook Page** — create alongside Instagram or skip. Recommend: create the Page, even if not advertising yet. 5 extra minutes, future-proofs ads.
-4. **Profile photo** — confirm Staylio logo in Drive folder `1ICCgGv-qkQnJS1NhaXirgcx05tFqOE5b` works at 110x110px or commission a square-format mark from the brand pack.
-5. **Posting owner + cadence** — Phase 8 above.
+1. **Approve voice/aesthetic rebrand** (cream/stone palette, locked brand voice, drop "flexible") → bio rewrite + grid pivot.
+2. **Posts handling**: Archive all 12 (Option A) / archive the worst 6 (Option B, recommended) / leave them (Option C).
+3. **Posting owner**: confirm who currently posts, decide whether to keep them or rotate.
+4. **Login storage**: once recovered, add Instagram credentials to Drive Login doc `1H8Yon…tJq_EU` (currently absent from that doc).
 
 ## Done criteria
 
-- [ ] Handle claimed
-- [ ] Account switched to Professional / Business
-- [ ] Bio + link + profile photo set
-- [ ] Email + WhatsApp + address contact buttons populated
-- [ ] (Optional) Facebook Page created + linked
-- [ ] First 9 grid posts scheduled / posted
-- [ ] Instagram URL added to `src/lib/schema.tsx` sameAs + `public/llms.txt`
-- [ ] Footer link added to staylio.london (TBD whether footer has social row)
+- [ ] Logged into `@staylio.london`
+- [ ] Switched to Professional account, Vacation Home Rental category
+- [ ] Bio rewritten (drops "flexible", adds 40+ flats / 7 neighbourhoods / direct-10% USP)
+- [ ] WhatsApp button updated to `+44 7304 353 640` (locked line)
+- [ ] Existing 12 posts triaged per chosen option (A/B/C)
+- [ ] 9 cornerstone tiles posted (week 1)
+- [ ] Schema.org `sameAs` updated
+- [ ] llms.txt updated
+- [ ] Footer social link added
 - [ ] Posting owner assigned
 
 ## Cross-references
 
-- `~/staylio-london/KRIS_REVIEW_SETUP.md` — Trustpilot + GBP setup (companion runbook)
-- `~/.claude/projects/-Users-<owner>/memory/decision_staylio_brochure_voice_14may.md` — locked brand voice
-- `~/.claude/projects/-Users-<owner>/memory/reference_staylio_brand_identity.md` — locked phone + email
-- `~/.claude/projects/-Users-<owner>/memory/project_staylio_london_nextjs_rebuild_02jun.md` — site code paths
-- `~/staylio-london/src/lib/local-recommendations.ts` — reusable venue content for neighbourhood posts
+- `~/staylio-london/KRIS_REVIEW_SETUP.md` — Trustpilot + GBP runbook
+- `decision_staylio_brochure_voice_14may.md` — locked brand voice (the "flexible" forbidden word)
+- `reference_staylio_brand_identity.md` — locked phone `7304 353 640`
+- `project_staylio_london_nextjs_rebuild_02jun.md` — site palette + Vercel deploy
+- Drive Login doc — `1H8Yonlt59j0BJh86kGW6ijbp3XlfBjTWOzbL8tJq_EU`
+- Drive Staylio root — `1jcU7EGITlg_PjGzv0FcVdkLOjISzuQnX`
