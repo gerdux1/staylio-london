@@ -12,7 +12,7 @@ const ORG_BASE = {
   description:
     "Serviced apartments across Central London. Fully equipped, all bills included, fortnightly housekeeping. Boutique, curated, warm.",
   url: "https://staylio.london",
-  telephone: "+44 7304 353 640",
+  telephone: "+44 7375 621453",
   email: "hello@staylio.london",
   address: {
     "@type": "PostalAddress",
@@ -199,8 +199,8 @@ export function bookDirectHowToSchema() {
         "@type": "HowToStep",
         position: 2,
         name: "WhatsApp Ali Hassan with dates",
-        text: "Send Ali a WhatsApp message on +44 7304 353 640 with your apartment shortlist, check-in and check-out dates, and number of guests. Ali is Staylio's Direct Bookings sales lead.",
-        url: "https://wa.me/447304353640",
+        text: "Send Ali a WhatsApp message on +44 7375 621453 with your apartment shortlist, check-in and check-out dates, and number of guests. Ali is Staylio's Direct Bookings sales lead.",
+        url: "https://wa.me/447375621453",
       },
       {
         "@type": "HowToStep",
@@ -291,7 +291,7 @@ export function aliPersonSchema() {
     name: "Ali Hassan",
     jobTitle: "Direct Bookings Lead",
     worksFor: { "@id": "https://staylio.london#organization" },
-    telephone: "+44 7304 353 640",
+    telephone: "+44 7375 621453",
     email: "hello@staylio.london",
     knowsLanguage: ["en-GB", "en"],
     knowsAbout: [
@@ -426,7 +426,7 @@ export function listingFAQs(listing: import("./listings").Listing) {
     },
     {
       question: `How does the direct rate compare to Booking.com or Airbnb?`,
-      answer: `The Staylio direct rate is always at least 10% lower than the same apartment listed on Booking.com or Airbnb, because we don't pay platform commission. WhatsApp Ali Hassan on +44 7304 353 640 for your exact quote based on dates.`,
+      answer: `The Staylio direct rate is always at least 10% lower than the same apartment listed on Booking.com or Airbnb, because we don't pay platform commission. WhatsApp Ali Hassan on +44 7375 621453 for your exact quote based on dates.`,
     },
   ];
 }
@@ -460,7 +460,7 @@ export function locationFAQs(
     },
     {
       question: `Can I book direct for ${loc.label} without going through Booking.com or Airbnb?`,
-      answer: `Yes. The Staylio direct rate is always at least 10% lower than Booking.com or Airbnb because there is no platform commission. WhatsApp Ali Hassan on +44 7304 353 640 for availability and your direct rate.`,
+      answer: `Yes. The Staylio direct rate is always at least 10% lower than Booking.com or Airbnb because there is no platform commission. WhatsApp Ali Hassan on +44 7375 621453 for availability and your direct rate.`,
     },
   ];
 }

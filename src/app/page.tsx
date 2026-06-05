@@ -319,12 +319,12 @@ export default function Home() {
             </Link>
             , or WhatsApp Ali on{" "}
             <a
-              href="https://wa.me/447304353640"
+              href="https://wa.me/447375621453"
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium text-stone-900 underline underline-offset-4"
             >
-              +44 7304 353 640
+              +44 7375 621453
             </a>
             .
           </p>

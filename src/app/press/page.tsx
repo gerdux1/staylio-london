@@ -152,8 +152,8 @@ export default function PressPage() {
         </p>
         <p className="mt-1 text-stone-700">
           WhatsApp:{" "}
-          <a className="underline underline-offset-4" href="https://wa.me/447304353640">
-            +44 7304 353 640
+          <a className="underline underline-offset-4" href="https://wa.me/447375621453">
+            +44 7375 621453
           </a>
         </p>
         <p className="mt-4 text-xs text-stone-500">
