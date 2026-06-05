@@ -24,6 +24,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/about`,                 lastModified: ABOUT_REVIEW,     changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/contact`,               lastModified: buildTime,        changeFrequency: "monthly", priority: 0.85 },
     { url: `${base}/preferred-source`,      lastModified: SITE_LAUNCH,      changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/accessibility`,         lastModified: new Date("2026-06-05"), changeFrequency: "yearly", priority: 0.3 },
+    { url: `${base}/modern-slavery`,        lastModified: new Date("2026-06-05"), changeFrequency: "yearly", priority: 0.3 },
   ];
 
   const locationPages: MetadataRoute.Sitemap = LOCATIONS.map((l) => ({

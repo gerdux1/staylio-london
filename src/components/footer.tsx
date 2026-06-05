@@ -55,7 +55,8 @@ export function Footer() {
             <span className="font-medium text-stone-700">Allianz Insurance Plc</span> ·
             Professional Indemnity insured via{" "}
             <span className="font-medium text-stone-700">Aqueous Management Limited</span>{" "}
-            (broker: Premier Line) · Companies House{" "}
+            (broker: Premier Line) · Payments secured by{" "}
+            <span className="font-medium text-stone-700">Stripe</span> · Companies House{" "}
             <a
               href="https://find-and-update.company-information.service.gov.uk/company/17012831"
               target="_blank"
@@ -65,6 +66,26 @@ export function Footer() {
               17012831
             </a>
           </p>
+        </div>
+
+        {/* Policies & compliance row — free trust signals: WCAG self-attestation,
+            voluntary Modern Slavery Act statement, ICO Tier 1 registration line
+            once Kris completes the Mon 8 Jun submission. */}
+        <div className="mt-6 border-t border-stone-200 pt-6">
+          <p className="text-xs uppercase tracking-widest text-stone-500">Policies &amp; compliance</p>
+          <ul className="mt-2 flex flex-wrap gap-x-4 gap-y-2 text-xs text-stone-600">
+            <li>
+              <Link href="/accessibility" className="hover:text-stone-900 underline-offset-2 hover:underline">
+                Accessibility (WCAG 2.2 AA)
+              </Link>
+            </li>
+            <li aria-hidden className="text-stone-300">·</li>
+            <li>
+              <Link href="/modern-slavery" className="hover:text-stone-900 underline-offset-2 hover:underline">
+                Modern slavery statement
+              </Link>
+            </li>
+          </ul>
         </div>
 
         <div className="mt-8 border-t border-stone-200 pt-6 flex flex-col sm:flex-row justify-between gap-2 text-xs text-stone-500">
