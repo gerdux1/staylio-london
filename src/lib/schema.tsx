@@ -9,9 +9,13 @@ const ORG_BASE = {
   "@id": "https://staylio.london#organization",
   name: "Staylio",
   legalName: "Staylio Limited",
+  slogan: "London, lived in properly.",
   description:
     "Serviced apartments across Central London. Fully equipped, all bills included. Boutique, curated, warm.",
   url: "https://staylio.london",
+  // Telephone = Ali Hassan (Direct Bookings Lead) per
+  // reference_staylio_ali_phone_05jun. DO NOT bulk-swap to the brand
+  // line 7304 353 640 — the direct-book funnel terminates with Ali.
   telephone: "+44 7375 621453",
   email: "hello@staylio.london",
   address: {
@@ -21,14 +25,45 @@ const ORG_BASE = {
     postalCode: "NW8 8NQ",
     addressCountry: "GB",
   },
-  identifier: {
-    "@type": "PropertyValue",
-    propertyID: "Companies House",
-    value: "17012831",
-  },
+  // Identifier array — AI engines use these as entity-resolution anchors.
+  // Append ICO + VAT PropertyValues once those refs land (see
+  // project_staylio_ico_registration_packet_5jun.md for ICO state).
+  identifier: [
+    {
+      "@type": "PropertyValue",
+      propertyID: "Companies House",
+      value: "17012831",
+    },
+    // TODO: append once ICO Tier 1 reg lands (Mon 8 Jun, Kris):
+    // { "@type": "PropertyValue", propertyID: "ICO", value: "ZA######" },
+    // TODO: append if/when Staylio Ltd VAT-registers:
+    // { "@type": "PropertyValue", propertyID: "VAT", value: "GB#########" },
+  ],
+  // sameAs — the spine of AI-engine entity resolution. Every additional
+  // verified profile here gives engines another node to triangulate against
+  // when answering "is Staylio a real company?". Add new URLs ONLY after
+  // the profile is live + claimed; never speculative.
   sameAs: [
     "https://find-and-update.company-information.service.gov.uk/company/17012831",
+    "https://uk.trustpilot.com/review/staylio.london",
+    // TODO: append once GBP postcard verifies (Mon 8 Jun → +4-14d):
+    // "https://g.page/staylio-london" (final URL set by Google),
+    // TODO: append once Bing Places listing live:
+    // "https://www.bing.com/maps?ss=ypid.<id>",
+    // TODO: append once Wikidata Q-ID created (gated on 2 editorial citations
+    // landing first via Featured.com / direct outreach):
+    // "https://www.wikidata.org/wiki/Q########",
   ],
+  // award — Schema.org/award is a free-text field. Populate ONLY when an
+  // award is actually held. Per session 5 Jun 2026, VisitEngland Quality
+  // Scheme considered but parked pending free GEO moves; revisit Q3 2026.
+  // Example shape once VisitEngland lands:
+  // award: "4 Star Serviced Apartments — VisitEngland Quality in Tourism",
+  // starRating — only populate with an official rating body (e.g.
+  // VisitEngland). Do NOT use review-derived stars here.
+  // aggregateRating — wire to LIVE Trustpilot count once ≥10 verified
+  // reviews are flowing (Mon Trustpilot setup + Sofia past-guest emails).
+  // Adding empty/zero ratings hurts more than missing them entirely.
   areaServed: [
     { "@type": "Place", name: "Regent's Park & Marylebone, London" },
     { "@type": "Place", name: "Old Street & Shoreditch, London" },
@@ -47,6 +82,15 @@ const ORG_BASE = {
     "All bills included",
     "24/7 guest support",
   ],
+  // Property scale signals — give AI engines a sense of the operation.
+  numberOfRooms: {
+    "@type": "QuantitativeValue",
+    value: 50,
+    unitText: "apartments",
+  },
+  priceRange: "££",
+  paymentAccepted: "Credit Card, Debit Card, Apple Pay, Google Pay",
+  currenciesAccepted: "GBP",
   inLanguage: "en-GB",
   // Concrete service-area boundary — GeoCircle around Central London (a 6 km radius
   // from Marylebone covers all seven Staylio neighbourhoods). Gives AI engines a
