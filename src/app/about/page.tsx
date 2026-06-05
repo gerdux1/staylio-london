@@ -54,10 +54,19 @@ export default function AboutPage() {
         </div>
         <div>
           <dt className="font-medium text-stone-900">Companies House</dt>
-          <dd>17012831</dd>
+          <dd>
+            <a
+              href="https://find-and-update.company-information.service.gov.uk/company/17012831"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-4"
+            >
+              17012831
+            </a>
+          </dd>
         </div>
         <div>
-          <dt className="font-medium text-stone-900">Address</dt>
+          <dt className="font-medium text-stone-900">Registered office</dt>
           <dd>85 Frampton Street, London NW8 8NQ</dd>
         </div>
         <div>
@@ -65,6 +74,39 @@ export default function AboutPage() {
           <dd>hello@staylio.london</dd>
         </div>
       </dl>
+
+      {/* Insurance & compliance — source: Entity Registry "Compliance & Memberships" tab.
+          Only credentials Staylio Limited specifically holds — no cross-entity stuff from EPL/LERM. */}
+      <h2 className="mt-20 font-serif text-3xl text-stone-900">Insurance &amp; compliance</h2>
+      <p className="mt-3 text-sm text-stone-600">
+        Staylio Limited carries the insurance and registration cover you&rsquo;d expect from a
+        professional London accommodation operator. Every credential below is verifiable against
+        the issuer.
+      </p>
+      <dl className="mt-8 grid gap-x-8 gap-y-6 sm:grid-cols-2 text-sm text-stone-700">
+        <div>
+          <dt className="font-medium text-stone-900">Public Liability insurance</dt>
+          <dd>Allianz Insurance Plc · Trades &amp; Professions package · policy 296603665 · valid to 18 May 2027</dd>
+        </div>
+        <div>
+          <dt className="font-medium text-stone-900">Employers Liability insurance</dt>
+          <dd>Allianz Insurance Plc · included in the same Trades &amp; Professions package · valid to 18 May 2027</dd>
+        </div>
+        <div>
+          <dt className="font-medium text-stone-900">Professional Indemnity insurance</dt>
+          <dd>Aqueous Management Limited · broker policy 894553533 via Premier Line · valid to 18 May 2027</dd>
+        </div>
+        <div>
+          <dt className="font-medium text-stone-900">Insurance broker</dt>
+          <dd>Premier Line Insurance Brokers · Megan Aitken</dd>
+        </div>
+      </dl>
+      <p className="mt-6 text-xs text-stone-500">
+        Policy references shown for transparency. If you need a copy of any certificate for
+        corporate procurement, email{" "}
+        <a className="underline underline-offset-4" href="mailto:hello@staylio.london">hello@staylio.london</a>{" "}
+        and we&rsquo;ll send it over the same business day.
+      </p>
 
       <div className="mt-16">
         <Link

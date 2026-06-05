@@ -46,7 +46,28 @@ export function Footer() {
             </ul>
           </div>
         </div>
-        <div className="mt-12 border-t border-stone-200 pt-6 flex flex-col sm:flex-row justify-between gap-2 text-xs text-stone-500">
+        {/* Insured & registered trust strip — credentials Staylio Limited actually holds.
+            Source: Compliance & Memberships tab in Entity Registry sheet. */}
+        <div className="mt-12 border-t border-stone-200 pt-6">
+          <p className="text-xs uppercase tracking-widest text-stone-500">Insured &amp; registered</p>
+          <p className="mt-2 text-xs text-stone-600 leading-relaxed">
+            Public Liability and Employers Liability insured via{" "}
+            <span className="font-medium text-stone-700">Allianz Insurance Plc</span> ·
+            Professional Indemnity insured via{" "}
+            <span className="font-medium text-stone-700">Aqueous Management Limited</span>{" "}
+            (broker: Premier Line) · Companies House{" "}
+            <a
+              href="https://find-and-update.company-information.service.gov.uk/company/17012831"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-stone-700 underline underline-offset-4 hover:text-stone-900"
+            >
+              17012831
+            </a>
+          </p>
+        </div>
+
+        <div className="mt-8 border-t border-stone-200 pt-6 flex flex-col sm:flex-row justify-between gap-2 text-xs text-stone-500">
           <p>&copy; {new Date().getFullYear()} Staylio Limited. All rights reserved.</p>
           <p>
             <Link href="/preferred-source" className="hover:text-stone-900 underline-offset-2 hover:underline">
