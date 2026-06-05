@@ -15,7 +15,7 @@ const ROWS: [string, string, string][] = [
   ["Guest support", "Named team members", "Reception desk"],
   ["Family suitability", "Excellent, multi-bedroom", "Limited"],
   ["All bills included", "Yes", "Yes"],
-  ["Self check-in", "Yes, smart lock", "Limited"],
+  ["Self check-in", "Yes (smart lock or key handover)", "Limited"],
   ["Direct rate vs Booking.com / Airbnb", "Always 10% lower (no commission)", "Identical, plus fees"],
 ];
 
@@ -28,7 +28,7 @@ const FAQ = [
   {
     question: "What's included in the price of a Staylio apartment?",
     answer:
-      "Every Staylio booking includes electricity, water, heating, Wi-Fi, council tax, fresh linens, full toiletries, and fortnightly housekeeping. There are no surprise fees on top of the nightly rate.",
+      "Every Staylio booking includes electricity, water, heating, Wi-Fi, council tax, fresh linens, and full toiletries. Housekeeping is available on request and included on long stays. There are no surprise fees on top of the nightly rate.",
   },
   {
     question: "Are Staylio direct rates lower than Booking.com and Airbnb?",

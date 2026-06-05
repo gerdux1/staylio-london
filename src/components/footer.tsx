@@ -9,7 +9,7 @@ export function Footer() {
           <div>
             <p className="font-serif text-2xl text-stone-900">Staylio</p>
             <p className="mt-3 text-sm text-stone-600">
-              Serviced apartments across Central London. Fully equipped, all bills included, fortnightly housekeeping. Boutique, curated, warm.
+              Serviced apartments across Central London. Fully equipped, all bills included. Boutique, curated, warm.
             </p>
             <p className="mt-4 text-xs text-stone-500">
               Staylio Limited · Company No. 17012831<br />

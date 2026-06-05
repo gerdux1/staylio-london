@@ -10,7 +10,7 @@ const ORG_BASE = {
   name: "Staylio",
   legalName: "Staylio Limited",
   description:
-    "Serviced apartments across Central London. Fully equipped, all bills included, fortnightly housekeeping. Boutique, curated, warm.",
+    "Serviced apartments across Central London. Fully equipped, all bills included. Boutique, curated, warm.",
   url: "https://staylio.london",
   telephone: "+44 7375 621453",
   email: "hello@staylio.london",
@@ -43,7 +43,7 @@ const ORG_BASE = {
     "Wi-Fi",
     "Smart TV",
     "In-unit washer-dryer",
-    "Smart lock keyless entry",
+    "Self check-in",
     "All bills included",
     "24/7 guest support",
   ],
@@ -123,7 +123,7 @@ export function serviceSchemas() {
       "@id": `${base}/short-stays#service`,
       name: "Short-break serviced apartments in Central London",
       description:
-        "3–7 night stays in fully equipped Central London serviced apartments. Smart-lock keyless entry, all bills included, fortnightly housekeeping. Best direct rate, at least 10% lower than Booking.com or Airbnb.",
+        "3–7 night stays in fully equipped Central London serviced apartments. Self check-in, all bills included, housekeeping on request. Best direct rate, at least 10% lower than Booking.com or Airbnb.",
       serviceType: "Short-Stay Accommodation",
       provider,
       areaServed,
@@ -217,8 +217,8 @@ export function bookDirectHowToSchema() {
       {
         "@type": "HowToStep",
         position: 5,
-        name: "Receive smart-lock code by WhatsApp",
-        text: "Closer to check-in, Ali sends your smart-lock access code by WhatsApp. Arrive at any hour, day or night — no front desk, no waiting.",
+        name: "Receive check-in details by WhatsApp",
+        text: "Closer to check-in, Ali sends your check-in details by WhatsApp — smart-lock code on most apartments, key handover instructions on the rest. Arrive at a time that works for you.",
       },
     ],
   };
@@ -418,11 +418,11 @@ export function listingFAQs(listing: import("./listings").Listing) {
     },
     {
       question: `What is included at ${listing.title}?`,
-      answer: `Every nightly rate includes electricity, water, heating, Wi-Fi, council tax, fortnightly housekeeping, fresh linens and towels, fitted kitchen, smart TV with streaming, and smart-lock keyless entry. No surprise charges on departure.`,
+      answer: `Every nightly rate includes electricity, water, heating, Wi-Fi, council tax, fresh linens and towels, fitted kitchen, and smart TV with streaming. Housekeeping available on request. Self check-in (smart lock on most apartments, key handover on the rest). No surprise charges on departure.`,
     },
     {
       question: `How do I check in to ${listing.title}?`,
-      answer: `Self check-in via smart lock. You receive your access code by WhatsApp before arrival, so you can arrive at any hour — no front desk, no waiting.`,
+      answer: `Self check-in. Most apartments use a smart lock (code by WhatsApp before arrival); a few use in-person key handover at a convenient time. Either way you can arrive without a reception desk.`,
     },
     {
       question: `How does the direct rate compare to Booking.com or Airbnb?`,

@@ -13,12 +13,12 @@ const HOMEPAGE_FAQS = [
   {
     question: "What is included in the price?",
     answer:
-      "Every nightly rate includes electricity, water, heating, Wi-Fi, council tax, fortnightly housekeeping, fresh linens and towels, fitted kitchen, smart TV with streaming, and smart-lock keyless entry. No surprise charges on departure.",
+      "Every nightly rate includes electricity, water, heating, Wi-Fi, council tax, fresh linens and towels, fitted kitchen, and smart TV with streaming. Housekeeping available on request; included on long stays. Self check-in (smart lock on most apartments, in-person key handover on the rest). No surprise charges on departure.",
   },
   {
     question: "How does check-in work?",
     answer:
-      "Self check-in via smart lock. You receive your access code by WhatsApp before arrival, so you can arrive at any hour — no front desk, no waiting.",
+      "Self check-in. Most apartments use a smart lock — you receive your access code by WhatsApp before arrival so you can arrive any hour. A few use in-person key handover at a convenient time. Either way, no reception-desk wait.",
   },
   {
     question: "Are families and groups welcome?",
@@ -66,7 +66,7 @@ const USPS = [
   {
     title: "Self check-in",
     body:
-      "Arrive on your schedule. Smart lock and keyless entry mean you can check in any time, day or night.",
+      "Arrive on your schedule. Smart lock on most apartments lets you check in any time; the rest use in-person key handover at a time that works for you.",
   },
 ];
 

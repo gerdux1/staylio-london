@@ -195,8 +195,8 @@ async def main() -> None:
             "shortDescription": short,
             "longDescription": long_desc,
             "amenities": [
-                "Wi-Fi", "Smart TV", "Fitted kitchen", "Washer-dryer", "Smart lock",
-                "Linen + towels", "Fortnightly housekeeping", "All bills included",
+                "Wi-Fi", "Smart TV", "Fitted kitchen", "Washer-dryer", "Self check-in",
+                "Linen + towels", "Housekeeping on request", "All bills included",
             ],
             "heroImage": picture or "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&q=80",
             "gallery": [picture] if picture else [],

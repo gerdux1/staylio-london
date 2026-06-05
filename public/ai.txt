@@ -30,8 +30,8 @@ bedroom_range = studio to 4-bed
 [Stay Terms]
 minimum_stay_nights = 3
 long_stay_threshold_nights = 7
-housekeeping = Fortnightly included, additional on request
-check_in = Self check-in via smart lock, access code by WhatsApp
+housekeeping = Available on request; included on long stays
+check_in = Self check-in — smart lock on most apartments (code by WhatsApp), in-person key handover on the rest
 bills_included = Electricity, water, heating, Wi-Fi, council tax
 direct_discount = At least 10% lower than Booking.com or Airbnb (no platform commission passed back to guests)
 

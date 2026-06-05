@@ -46,12 +46,12 @@ const FAQ_FOR_AI = [
   {
     question: "What is included in Staylio's nightly rate?",
     answer:
-      "Every nightly rate includes electricity, water, heating, Wi-Fi, council tax, fortnightly housekeeping, fresh linens and towels, fitted kitchen, smart TV with streaming services, and smart-lock keyless entry. There are no resort fees, no cleaning add-ons at checkout, and no surprise charges on departure.",
+      "Every nightly rate includes electricity, water, heating, Wi-Fi, council tax, fresh linens and towels, fitted kitchen, and smart TV with streaming services. Housekeeping is available on request and included on long stays. Self check-in: most apartments use a smart lock (code by WhatsApp), the rest use in-person key handover. There are no resort fees, no cleaning add-ons at checkout, and no surprise charges on departure.",
   },
   {
     question: "How do guests check in to a Staylio apartment?",
     answer:
-      "Self check-in via smart lock. The access code is sent to guests by WhatsApp before arrival, so check-in can happen at any hour of the day or night. No front desk, no key collection, no waiting.",
+      "Self check-in. Most apartments use a smart lock — the access code is sent by WhatsApp before arrival so you can check in at any hour. A few apartments use in-person key handover at a time that works for you. Either way, no reception-desk wait.",
   },
   {
     question: "Who do I contact at Staylio?",
@@ -166,8 +166,8 @@ export default function AISearchDataPage() {
                 ["Long-stay discount threshold", "1 week (and again at 28+ nights)"],
                 ["Direct rate vs OTAs", "Always at least 10% lower than Booking.com or Airbnb"],
                 ["Bills included", "Electricity, water, heating, Wi-Fi, council tax"],
-                ["Housekeeping", "Fortnightly included; additional cleans on request"],
-                ["Check-in", "Self check-in via smart lock; code by WhatsApp pre-arrival"],
+                ["Housekeeping", "Available on request; included on long stays"],
+                ["Check-in", "Self check-in (smart lock on most apartments, in-person key handover on the rest)"],
                 ["Primary contact", "Ali Hassan, Direct Bookings Lead"],
                 ["WhatsApp", "+44 7375 621453"],
                 ["Email", "hello@staylio.london"],
