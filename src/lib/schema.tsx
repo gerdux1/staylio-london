@@ -149,6 +149,70 @@ export function localGuideSchema(
   };
 }
 
+// Auto-generate listing-specific FAQs from a Listing record.
+// Each /apartments/{slug} page renders these as Schema.org FAQPage JSON-LD so
+// AI engines (ChatGPT, Perplexity, AI Overviews) can quote them directly.
+export function listingFAQs(listing: import("./listings").Listing) {
+  const beds = listing.bedrooms > 0 ? `${listing.bedrooms}-bed` : "studio";
+  const guests = listing.maxGuests;
+  return [
+    {
+      question: `How many guests can stay at ${listing.title}?`,
+      answer: `This ${beds} apartment sleeps up to ${guests} guests across ${listing.bedrooms || 1} bedroom${listing.bedrooms > 1 ? "s" : ""} and ${listing.bathrooms} bathroom${listing.bathrooms > 1 ? "s" : ""}.`,
+    },
+    {
+      question: `Is ${listing.title} suitable for long stays?`,
+      answer: `Yes. The apartment is fully equipped for stays from 3 nights up to several months. Long-stay pricing applies automatically once your stay crosses one week.`,
+    },
+    {
+      question: `What is included at ${listing.title}?`,
+      answer: `Every nightly rate includes electricity, water, heating, Wi-Fi, council tax, fortnightly housekeeping, fresh linens and towels, fitted kitchen, smart TV with streaming, and smart-lock keyless entry. No surprise charges on departure.`,
+    },
+    {
+      question: `How do I check in to ${listing.title}?`,
+      answer: `Self check-in via smart lock. You receive your access code by WhatsApp before arrival, so you can arrive at any hour — no front desk, no waiting.`,
+    },
+    {
+      question: `How does the direct rate compare to Booking.com or Airbnb?`,
+      answer: `The Staylio direct rate is always at least 10% lower than the same apartment listed on Booking.com or Airbnb, because we don't pay platform commission. WhatsApp Ali Hassan on +44 7375 621453 for your exact quote based on dates.`,
+    },
+  ];
+}
+
+// Auto-generate area-specific FAQs from a Location record and its listings.
+export function locationFAQs(
+  loc: import("./listings").Location,
+  listings: import("./listings").Listing[],
+) {
+  const count = listings.length;
+  const beds = Array.from(new Set(listings.map((l) => l.bedrooms))).filter((b) => b > 0).sort();
+  const bedSummary = beds.length
+    ? beds.map((b) => `${b}-bed`).join(", ")
+    : "studio and 1-bed";
+  return [
+    {
+      question: `How many Staylio apartments are there in ${loc.label}?`,
+      answer: `Staylio currently operates around ${count} fully equipped serviced apartment${count > 1 ? "s" : ""} in ${loc.label}, ranging from ${bedSummary}. Every apartment is set up for stays of 3 nights or longer with all bills included.`,
+    },
+    {
+      question: `What is ${loc.label} like to stay in?`,
+      answer: loc.description,
+    },
+    {
+      question: `What transport is near Staylio's ${loc.label} apartments?`,
+      answer: `Nearest stations and lines include: ${loc.transport.slice(0, 3).join(", ")}.`,
+    },
+    {
+      question: `Who is staying in ${loc.label} a good fit for?`,
+      answer: loc.whyStayHere,
+    },
+    {
+      question: `Can I book direct for ${loc.label} without going through Booking.com or Airbnb?`,
+      answer: `Yes. The Staylio direct rate is always at least 10% lower than Booking.com or Airbnb because there is no platform commission. WhatsApp Ali Hassan on +44 7375 621453 for availability and your direct rate.`,
+    },
+  ];
+}
+
 export function faqSchema(qa: { question: string; answer: string }[]) {
   return {
     "@context": "https://schema.org",

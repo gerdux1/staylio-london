@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LOCATIONS, listingsByArea, getLocation, type AreaSlug } from "@/lib/listings";
 import { getLocalGuide } from "@/lib/local-recommendations";
-import { JsonLd, breadcrumb, localGuideSchema } from "@/lib/schema";
+import { JsonLd, breadcrumb, localGuideSchema, faqSchema, locationFAQs } from "@/lib/schema";
 
 const GUIDE_SECTIONS = [
   { key: "eat", label: "Where to eat", kicker: "Food", schemaType: "Restaurant" },
@@ -66,6 +66,7 @@ export default async function LocationPage({
             { name: loc.label, url: `https://staylio.london/locations/${loc.slug}` },
           ]),
           ...(guideSchemaItems.length ? [localGuideSchema(loc.label, guideSchemaItems)] : []),
+          faqSchema(locationFAQs(loc, listings)),
         ]}
       />
 

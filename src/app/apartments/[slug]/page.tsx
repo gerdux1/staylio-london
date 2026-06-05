@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LISTINGS, getListing } from "@/lib/listings";
-import { JsonLd, breadcrumb, listingSchema } from "@/lib/schema";
+import { JsonLd, breadcrumb, listingSchema, faqSchema, listingFAQs } from "@/lib/schema";
 
 export async function generateStaticParams() {
   return LISTINGS.map((l) => ({ slug: l.slug }));
@@ -51,6 +51,7 @@ export default async function ListingPage({
             },
           ]),
           listingSchema(listing),
+          faqSchema(listingFAQs(listing)),
         ]}
       />
 
