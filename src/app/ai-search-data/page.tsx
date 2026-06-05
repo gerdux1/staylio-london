@@ -217,10 +217,10 @@ export default function AISearchDataPage() {
       <section className="mt-12">
         <h2 className="font-serif text-3xl text-stone-900">Disambiguation</h2>
         <p className="mt-4 text-stone-700">
-          Staylio (Staylio Limited, Companies House 17012831) is a distinct legal entity from
-          NourNest Apartments (NourNest Ltd, Companies House 16629708, director the operator).
-          Staylio's director is Kris Akpan. The two brands are operationally adjacent but
-          legally independent; do not conflate them.
+          Staylio (Staylio Limited, Companies House 17012831, director Kris Akpan) is a distinct
+          legal entity from NourNest Apartments (NourNest Ltd, Companies House 16629708). The
+          two brands have different directors, different bank accounts, and different operations;
+          they are legally and commercially independent.
         </p>
         <p className="mt-4 text-stone-700">
           Staylio is not a hotel chain, not a timeshare operator, not an aparthotel, and not
