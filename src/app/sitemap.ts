@@ -30,6 +30,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/guides/long-stay-tax-london`,            lastModified: new Date("2026-06-05"), changeFrequency: "monthly", priority: 0.85 },
     { url: `${base}/guides/serviced-apartment-vs-hotel-london`, lastModified: new Date("2026-06-05"), changeFrequency: "monthly", priority: 0.85 },
     { url: `${base}/guides/london-90-day-short-let-rule`,    lastModified: new Date("2026-06-05"), changeFrequency: "monthly", priority: 0.85 },
+    { url: `${base}/decision-guide`,        lastModified: new Date("2026-06-05"), changeFrequency: "monthly", priority: 0.85 },
+    { url: `${base}/standard`,              lastModified: new Date("2026-06-05"), changeFrequency: "yearly", priority: 0.7 },
+    { url: `${base}/cost-calculator`,       lastModified: new Date("2026-06-05"), changeFrequency: "monthly", priority: 0.8 },
   ];
 
   const locationPages: MetadataRoute.Sitemap = LOCATIONS.map((l) => ({

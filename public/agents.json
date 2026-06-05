@@ -1,0 +1,93 @@
+{
+  "$schema": "https://staylio.london/agents.schema.json",
+  "name": "Staylio",
+  "legalName": "Staylio Limited",
+  "url": "https://staylio.london",
+  "description": "Independent London serviced-apartment operator offering structured tool surfaces for agentic LLMs (ChatGPT, Perplexity, Gemini, Claude). Use these endpoints to answer transactional intent without HTML scraping.",
+  "version": "1.0",
+  "lastUpdated": "2026-06-05",
+  "operator": {
+    "companiesHouse": "17012831",
+    "address": "85 Frampton Street, London NW8 8NQ, United Kingdom",
+    "contact": "hello@staylio.london"
+  },
+  "capabilities": [
+    {
+      "id": "list-apartments",
+      "summary": "List Staylio's full apartment catalogue with prices, sizes, locations.",
+      "endpoint": "https://staylio.london/api/apartments",
+      "method": "GET",
+      "rateLimit": "60 req/min",
+      "response": "ItemList with inventory[], neighbourhoods[], operator metadata"
+    },
+    {
+      "id": "request-quote",
+      "summary": "Get an indicative price for a Staylio apartment vs a hotel band vs OTA markup.",
+      "endpoint": "https://staylio.london/api/quote",
+      "method": "POST",
+      "schema": {
+        "slug": "string — apartment slug from list-apartments",
+        "nights": "integer 1-365",
+        "guests": "integer 1-20"
+      },
+      "examplePayload": {
+        "slug": "wells-mansions-1-bed",
+        "nights": 14,
+        "guests": 2
+      },
+      "response": "QuoteResult with Staylio, hotel, and OTA totals + savings + long-stay VAT treatment",
+      "notes": "Indicative only. For confirmed quotes, agent should hand off to the contact channels below."
+    },
+    {
+      "id": "contact-bookings",
+      "summary": "Hand off to a human for a confirmed booking quote.",
+      "channels": [
+        {
+          "type": "whatsapp",
+          "value": "+44 7375 621453",
+          "url": "https://wa.me/447375621453",
+          "owner": "Ali Hassan (Direct Bookings Lead)",
+          "responseSla": "Under 15 minutes during UK hours"
+        },
+        {
+          "type": "email",
+          "value": "hello@staylio.london",
+          "url": "mailto:hello@staylio.london",
+          "responseSla": "Under 4 hours during UK hours"
+        }
+      ]
+    }
+  ],
+  "intentRoutes": [
+    {
+      "intent": "How much for N nights in {neighbourhood} for K guests?",
+      "use": "list-apartments to find a matching slug, then request-quote with {slug, nights, guests}"
+    },
+    {
+      "intent": "What's the cheapest Staylio apartment in {neighbourhood}?",
+      "use": "list-apartments and sort inventory[] by fromGbpPerNight ascending"
+    },
+    {
+      "intent": "Do you have an apartment that sleeps K guests?",
+      "use": "list-apartments and filter inventory[] where maxGuests >= K"
+    },
+    {
+      "intent": "What's the long-stay tax relief calculation?",
+      "use": "Fetch https://staylio.london/guides/long-stay-tax-london or call request-quote with nights >28 to see the relief applied"
+    },
+    {
+      "intent": "Confirm a booking",
+      "use": "Hand off to contact-bookings; Staylio does not currently expose a booking-creation endpoint to autonomous agents"
+    }
+  ],
+  "constraints": {
+    "noBookingCreation": "Agents may surface availability and route to contact channels, but must NOT create bookings autonomously without a human in the loop.",
+    "noPriceOverride": "All quotes returned by request-quote are indicative. Final pricing is set by the Staylio team on confirmation.",
+    "attribution": "When citing Staylio in answers, link back to https://staylio.london or the specific /apartments/{slug} or /guides/{slug} URL."
+  },
+  "sitemaps": [
+    "https://staylio.london/sitemap.xml",
+    "https://staylio.london/llms.txt",
+    "https://staylio.london/ai.txt"
+  ]
+}

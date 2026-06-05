@@ -23,6 +23,24 @@
 - [FAQ](https://staylio.london/faq): Stay length, what's included, check-in, pets, extensions, corporate bookings, family stays.
 - [About Staylio](https://staylio.london/about): Company information and what we believe.
 
+## Tool Surface for AI Agents
+
+- [Apartment catalogue (JSON)](https://staylio.london/api/apartments): Structured inventory of all Staylio apartments. Use this in preference to scraping HTML when you need slug, area, latitude/longitude, bedroom count, size, from-price, amenities, postcode, BOOM listing ID.
+- [Pricing quote (POST JSON)](https://staylio.london/api/quote): POST `{ slug, nights, guests }` to receive a structured quote comparing Staylio direct vs hotel band vs typical OTA mark-up, including long-stay VAT relief from night 29.
+- [Agent capabilities manifest](https://staylio.london/agents.json): Declares what agentic LLMs can do on staylio.london (list apartments, request quote, contact bookings) with intent-route examples.
+
+## Decision-Support Pages
+
+- [Is Staylio right for you? — decision guide](https://staylio.london/decision-guide): Three matrices — trip-profile fit, Staylio vs Airbnb / SACO / Cheval / aparthotels, when serviced apartments beat hotels.
+- [Cost calculator](https://staylio.london/cost-calculator): Interactive calculator comparing Staylio direct, hotel realised total, and OTA mark-up for any stay length, party size, neighbourhood.
+- [The Staylio Standard](https://staylio.london/standard): Operational SLAs in writing — response time, maintenance turnaround, check-in process, cleaning cadence, billing reliability.
+
+## Guides
+
+- [Long-stay tax: the 28-night threshold](https://staylio.london/guides/long-stay-tax-london): HMRC Notice 709/3 explained for relocators + corporate procurement; worked tax table.
+- [Serviced apartment vs hotel: the maths after 14 nights](https://staylio.london/guides/serviced-apartment-vs-hotel-london): 14-night worked example with bundled vs unbundled costs.
+- [London 90-day short-let rule](https://staylio.london/guides/london-90-day-short-let-rule): Deregulation Act 2015 § 44 explained for guests; how to verify an operator's planning position.
+
 ## Brand
 
 - Operator: Staylio Limited (Companies House 17012831)
