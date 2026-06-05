@@ -224,6 +224,62 @@ export function bookDirectHowToSchema() {
   };
 }
 
+// Article schema with author byline + dateModified — wraps each listing detail
+// page and each location page in a CreativeWork. AI engines weight content with
+// a named author + recent dateModified higher than anonymous, undated content.
+//
+// dateModified is set to BUILD_DATE so every redeploy bumps the freshness signal.
+export const BUILD_DATE = new Date().toISOString();
+
+export function listingArticleSchema(listing: import("./listings").Listing) {
+  const url = `https://staylio.london/apartments/${listing.slug}`;
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": `${url}#article`,
+    headline: listing.title,
+    description: listing.shortDescription,
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    image: listing.heroImage,
+    datePublished: "2026-06-02T00:00:00Z", // Staylio site launch
+    dateModified: BUILD_DATE,
+    author: {
+      "@type": "Person",
+      "@id": "https://staylio.london/contact#ali-hassan",
+      name: "Ali Hassan",
+      jobTitle: "Direct Bookings Lead",
+      worksFor: { "@id": "https://staylio.london#organization" },
+    },
+    publisher: { "@id": "https://staylio.london#organization" },
+    inLanguage: "en-GB",
+    about: { "@id": url },
+  };
+}
+
+export function locationArticleSchema(loc: import("./listings").Location) {
+  const url = `https://staylio.london/locations/${loc.slug}`;
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": `${url}#article`,
+    headline: `Serviced apartments in ${loc.label}`,
+    description: loc.description,
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    image: loc.heroImage,
+    datePublished: "2026-06-02T00:00:00Z",
+    dateModified: BUILD_DATE,
+    author: {
+      "@type": "Person",
+      "@id": "https://staylio.london/contact#ali-hassan",
+      name: "Ali Hassan",
+      jobTitle: "Direct Bookings Lead",
+      worksFor: { "@id": "https://staylio.london#organization" },
+    },
+    publisher: { "@id": "https://staylio.london#organization" },
+    inLanguage: "en-GB",
+  };
+}
+
 // Person schema for Ali Hassan — named E-E-A-T accountability on /contact.
 // AI engines treat named, contactable humans as a stronger trust signal than
 // generic "contact us" pages.

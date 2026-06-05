@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LOCATIONS, listingsByArea, getLocation, type AreaSlug } from "@/lib/listings";
 import { getLocalGuide } from "@/lib/local-recommendations";
-import { JsonLd, breadcrumb, localGuideSchema, faqSchema, locationFAQs } from "@/lib/schema";
+import { JsonLd, breadcrumb, localGuideSchema, faqSchema, locationFAQs, locationArticleSchema, BUILD_DATE } from "@/lib/schema";
 
 const GUIDE_SECTIONS = [
   { key: "eat", label: "Where to eat", kicker: "Food", schemaType: "Restaurant" },
@@ -67,6 +67,7 @@ export default async function LocationPage({
           ]),
           ...(guideSchemaItems.length ? [localGuideSchema(loc.label, guideSchemaItems)] : []),
           faqSchema(locationFAQs(loc, listings)),
+          locationArticleSchema(loc),
         ]}
       />
 
@@ -86,6 +87,20 @@ export default async function LocationPage({
           <h1 className="mt-3 font-serif text-5xl sm:text-7xl leading-[1.05]">{loc.label}</h1>
           <p className="mt-4 max-w-2xl text-stone-100 text-lg">{loc.description}</p>
         </div>
+      </section>
+
+      {/* Author byline + last-reviewed timestamp · E-E-A-T signal */}
+      <section className="mx-auto max-w-4xl px-6 pt-10">
+        <p className="text-xs text-stone-500">
+          Reviewed by{" "}
+          <a href="/contact#ali-hassan" className="font-medium text-stone-700 underline underline-offset-4">
+            Ali Hassan
+          </a>
+          {", "}Direct Bookings Lead · Updated{" "}
+          <time dateTime={BUILD_DATE}>
+            {new Date(BUILD_DATE).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}
+          </time>
+        </p>
       </section>
 
       {/* Why stay here */}

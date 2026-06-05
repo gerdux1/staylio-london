@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LISTINGS, getListing } from "@/lib/listings";
-import { JsonLd, breadcrumb, listingSchema, faqSchema, listingFAQs } from "@/lib/schema";
+import { JsonLd, breadcrumb, listingSchema, faqSchema, listingFAQs, listingArticleSchema, BUILD_DATE } from "@/lib/schema";
 
 export async function generateStaticParams() {
   return LISTINGS.map((l) => ({ slug: l.slug }));
@@ -52,12 +52,25 @@ export default async function ListingPage({
           ]),
           listingSchema(listing),
           faqSchema(listingFAQs(listing)),
+          listingArticleSchema(listing),
         ]}
       />
 
       <article className="mx-auto max-w-5xl px-6 py-16">
         <p className="text-sm uppercase tracking-widest text-stone-500">{listing.areaLabel}</p>
         <h1 className="mt-3 font-serif text-5xl sm:text-6xl text-stone-900">{listing.title}</h1>
+
+        {/* Author byline + last-reviewed timestamp · E-E-A-T signal */}
+        <p className="mt-4 text-xs text-stone-500">
+          Reviewed by{" "}
+          <a href="/contact#ali-hassan" className="font-medium text-stone-700 underline underline-offset-4">
+            Ali Hassan
+          </a>
+          {", "}Direct Bookings Lead · Updated{" "}
+          <time dateTime={BUILD_DATE}>
+            {new Date(BUILD_DATE).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}
+          </time>
+        </p>
 
         {/* Visual property summary chips · audit feedback */}
         <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm text-stone-800">
