@@ -67,6 +67,11 @@ export default function RootLayout({
           src="https://plausible.io/js/script.outbound-links.tagged-events.js"
           strategy="afterInteractive"
         />
+        {/* Trustpilot TrustBox bootstrap — renders <div class="trustpilot-widget"> elements anywhere on the page */}
+        <Script
+          src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );

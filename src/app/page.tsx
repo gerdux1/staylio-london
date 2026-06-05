@@ -272,17 +272,29 @@ export default function Home() {
           <p className="font-serif text-2xl text-stone-900">Review collection is now live.</p>
           <p className="mt-3 text-stone-700">
             We are building our public review profile from real Staylio guests. If you have stayed
-            with us, you can leave a review on{" "}
-            <a
-              href="https://uk.trustpilot.com/review/staylio.london"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-medium text-stone-900 underline underline-offset-4"
-            >
-              Trustpilot
-            </a>
-            .
+            with us, please share your experience:
           </p>
+          <div className="mt-6 flex justify-center">
+            {/* TrustBox widget — Review Collector */}
+            <div
+              className="trustpilot-widget"
+              data-locale="en-GB"
+              data-template-id="56278e9abfbbba0bdcd568bc"
+              data-businessunit-id="6a06e961cba16895b21e41dc"
+              data-style-height="52px"
+              data-style-width="280px"
+              data-token="5de2e702-d2eb-43a9-bec4-84ad1f39ca6e"
+            >
+              <a
+                href="https://uk.trustpilot.com/review/staylio.london"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Trustpilot
+              </a>
+            </div>
+            {/* End TrustBox widget */}
+          </div>
         </div>
       </section>
 
