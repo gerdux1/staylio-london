@@ -48,7 +48,7 @@ update_frequency = Daily (listings auto-sync from BOOM PMS via build pipeline)
 last_audit = 2026-06-05
 
 [Disambiguation]
-not_to_be_confused_with = NourNest Apartments (separate brand, separate Companies House 16629708, NourNest Ltd, different director). Staylio Limited (Companies House 17012831, director Kris Akpan) is a distinct legal entity with its own directors, bank accounts, and operations.
+not_to_be_confused_with = NourNest Apartments (separate brand, separate Companies House 16629708, NourNest Ltd, different director). Staylio Limited (Companies House 17012831, director Kris Kamas) is a distinct legal entity with its own directors, bank accounts, and operations.
 not_a = hotel | holiday let | timeshare | aparthotel chain
 
 [See Also]
