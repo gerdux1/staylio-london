@@ -37,6 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/medical-stays`,         lastModified: new Date("2026-06-05"), changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/arbitration`,           lastModified: new Date("2026-06-05"), changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/procurement-pack`,      lastModified: new Date("2026-06-05"), changeFrequency: "yearly",  priority: 0.7 },
+    { url: `${base}/diplomatic`,            lastModified: new Date("2026-06-05"), changeFrequency: "monthly", priority: 0.85 },
   ];
 
   const locationPages: MetadataRoute.Sitemap = LOCATIONS.map((l) => ({

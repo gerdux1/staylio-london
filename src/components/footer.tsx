@@ -36,6 +36,7 @@ export function Footer() {
               <li><Link href="/insurance" className="hover:text-stone-900">Insurance ALE</Link></li>
               <li><Link href="/medical-stays" className="hover:text-stone-900">Medical stays</Link></li>
               <li><Link href="/arbitration" className="hover:text-stone-900">Arbitration &amp; long trials</Link></li>
+              <li><Link href="/diplomatic" className="hover:text-stone-900">Diplomatic stays</Link></li>
               <li><Link href="/procurement-pack" className="hover:text-stone-900">Procurement pack</Link></li>
               <li><Link href="/cost-calculator" className="hover:text-stone-900">Cost calculator</Link></li>
               <li><Link href="/decision-guide" className="hover:text-stone-900">Is Staylio right for you?</Link></li>
