@@ -251,16 +251,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Trust signals + reviews */}
+      {/* Trust signals — real, no fabricated ratings (CMA fake-review compliance) */}
       <section className="mx-auto max-w-7xl px-6 py-24">
         <div className="grid gap-12 md:grid-cols-3 text-center">
           <div>
-            <p className="font-serif text-5xl text-stone-900">4.9</p>
-            <p className="mt-2 text-sm text-stone-600">Guest review average</p>
+            <p className="font-serif text-5xl text-stone-900">7</p>
+            <p className="mt-2 text-sm text-stone-600">Central London neighbourhoods</p>
           </div>
           <div>
             <p className="font-serif text-5xl text-stone-900">40+</p>
-            <p className="mt-2 text-sm text-stone-600">Central London apartments</p>
+            <p className="mt-2 text-sm text-stone-600">Apartments under one operator</p>
           </div>
           <div>
             <p className="font-serif text-5xl text-stone-900">15 min</p>
@@ -268,28 +268,21 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mt-20 grid gap-8 md:grid-cols-2">
-          {[
-            {
-              quote:
-                "Staylio's apartment near Regent's Park made my three-month relocation smooth and comfortable. Felt like home from day one. The team replied to every WhatsApp within minutes.",
-              author: "Marie L.",
-              context: "3-month relocation, Kensington",
-            },
-            {
-              quote:
-                "We've used Staylio for two project deployments now. Same operator, same team, single monthly invoice. Saves us hours every cycle compared to chasing hotel block-bookings.",
-              author: "James R.",
-              context: "Corporate, Old Street",
-            },
-          ].map((t) => (
-            <blockquote key={t.author} className="rounded-2xl border border-stone-200 bg-white p-8">
-              <p className="font-serif text-xl text-stone-900 leading-relaxed">&ldquo;{t.quote}&rdquo;</p>
-              <footer className="mt-6 text-sm text-stone-600">
-                <span className="font-medium text-stone-900">{t.author}</span> · {t.context}
-              </footer>
-            </blockquote>
-          ))}
+        <div className="mt-16 rounded-2xl border border-stone-200 bg-stone-50 p-8 text-center">
+          <p className="font-serif text-2xl text-stone-900">Review collection is now live.</p>
+          <p className="mt-3 text-stone-700">
+            We are building our public review profile from real Staylio guests. If you have stayed
+            with us, you can leave a review on{" "}
+            <a
+              href="https://uk.trustpilot.com/review/staylio.london"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-stone-900 underline underline-offset-4"
+            >
+              Trustpilot
+            </a>
+            .
+          </p>
         </div>
       </section>
 
@@ -326,12 +319,12 @@ export default function Home() {
             </Link>
             , or WhatsApp Ali on{" "}
             <a
-              href="https://wa.me/447375621453"
+              href="https://wa.me/447304353640"
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium text-stone-900 underline underline-offset-4"
             >
-              +44 7375 621453
+              +44 7304 353 640
             </a>
             .
           </p>

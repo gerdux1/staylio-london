@@ -113,7 +113,7 @@ export function Header() {
             Enquire
           </Link>
           <a
-            href="https://wa.me/447375621453?text=Hi%20Ali%2C%20I%27d%20like%20to%20enquire%20about%20a%20Staylio%20stay."
+            href="https://wa.me/447304353640?text=Hi%20Ali%2C%20I%27d%20like%20to%20enquire%20about%20a%20Staylio%20stay."
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setOpen(false)}
