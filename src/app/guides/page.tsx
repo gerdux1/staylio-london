@@ -17,6 +17,14 @@ const GUIDES = [
     minRead: 7,
   },
   {
+    slug: "boutique-serviced-apartments-london",
+    pillar: "Brand",
+    title: "Boutique serviced apartments in Central London",
+    summary:
+      "What 'boutique' actually means for a London serviced apartment, an honest comparison with the corporate chains (SACO, Edyn, Native, Cheval, Sonder, Locke), and three example units across Marylebone, Maida Vale, and Shoreditch.",
+    minRead: 8,
+  },
+  {
     slug: "long-stay-tax-london",
     pillar: "Cost",
     title: "Long-stay accommodation tax: the 28-night threshold",

@@ -29,6 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/modern-slavery`,        lastModified: new Date("2026-06-05"), changeFrequency: "yearly", priority: 0.3 },
     { url: `${base}/guides`,                lastModified: new Date("2026-06-06"), changeFrequency: "monthly", priority: 0.85 },
     { url: `${base}/guides/what-is-a-serviced-apartment`,    lastModified: new Date("2026-06-06"), changeFrequency: "monthly", priority: 0.9 },
+    { url: `${base}/guides/boutique-serviced-apartments-london`, lastModified: new Date("2026-06-06"), changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/guides/long-stay-tax-london`,            lastModified: new Date("2026-06-05"), changeFrequency: "monthly", priority: 0.85 },
     { url: `${base}/guides/serviced-apartment-vs-hotel-london`, lastModified: new Date("2026-06-05"), changeFrequency: "monthly", priority: 0.85 },
     { url: `${base}/guides/london-90-day-short-let-rule`,    lastModified: new Date("2026-06-05"), changeFrequency: "monthly", priority: 0.85 },
