@@ -53,7 +53,7 @@ The 12 existing posts are **off-brand** vs the locked Staylio identity:
 
 1. Open https://www.instagram.com/accounts/login/
 2. Try `stayliolondon@gmail.com` + `Property2021!`. If that fails, try the Apple ID flow (`staylio.london@gmail.com` + `Leader2028!`).
-3. If both fail: from Instagram → Get help logging in → enter `stayliolondon@gmail.com` → password reset link arrives in Gmail (which you/the operations team can access). Save the new password into the Drive Login doc.
+3. If both fail: from Instagram → Get help logging in → enter `stayliolondon@gmail.com` → password reset link arrives in Gmail (which the operations team can access). Save the new password into the Drive Login doc.
 4. **Find out who has been managing it.** Settings → Account → Personal information → check the connected phone + 2FA device. Add `+44 7304 353 640` and the operations team's authenticator app as backup so the account doesn't get locked behind one person.
 
 ## Step 2 — Switch to Professional / Business account
@@ -118,7 +118,7 @@ Audience opens a new profile and judges by the top 9 in 2 seconds. Push these in
 | 6 | Apartment hero (Little Venice) | Canalside, soft light | "Little Venice. Canal at the door. 4 mansion-block flats." |
 | 7 | Direct rate USP | Text-on-image: "Direct is always 10% lower than Booking.com or Airbnb." | "We don't pay platform commission. We pass it back." |
 | 8 | Apartment hero (Kensington) | Wide interior | "Kensington. Museum mile. Direct Piccadilly to Heathrow." |
-| 9 | Real person | Ali on WhatsApp (or Operations + Kris) candid shot | "Real people. WhatsApp Ali for direct rates and answers — average reply 15 minutes." |
+| 9 | Real person | Ali on WhatsApp (or the operations team) candid shot | "Real people. WhatsApp Ali for direct rates and answers — average reply 15 minutes." |
 
 Then mix: 50% apartment interiors (rotate the 43 listings) · 25% neighbourhood content (reuse `src/lib/local-recommendations.ts` curated venues) · 15% guest stories (anonymised + permission) · 10% behind-the-scenes.
 
@@ -166,9 +166,9 @@ Once bio + 9 cornerstone tiles live, add Instagram URL to:
 1. `src/lib/schema.tsx` Organization `sameAs` (sits alongside Trustpilot per `KRIS_REVIEW_SETUP.md`):
 ```ts
 sameAs: [
-  "https://find-and-update.company-information.service.gov.uk/company/17012831",
-  "https://uk.trustpilot.com/review/staylio.london",
-  "https://www.instagram.com/staylio.london/",
+ "https://find-and-update.company-information.service.gov.uk/company/17012831",
+ "https://uk.trustpilot.com/review/staylio.london",
+ "https://www.instagram.com/staylio.london/",
 ],
 ```
 

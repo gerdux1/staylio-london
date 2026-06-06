@@ -1,6 +1,6 @@
 # OpenStreetMap action plan for Staylio
 
-_Built 5 Jun 2026 by this session. Owner: the operator (account creation + edits via openstreetmap.org). Goal: surface Staylio brand + neighbourhood signals on OSM for AI engines that train on / cite OSM data._
+_Built 5 Jun 2026 by this session. Owner: Operations (account creation + edits via openstreetmap.org). Goal: surface Staylio brand + neighbourhood signals on OSM for AI engines that train on / cite OSM data._
 
 ## Why OSM
 
@@ -76,7 +76,7 @@ This is community goodwill work. Direct AI lift: minimal. Indirect AI lift via "
 
 **AI lift:** SMALL-MEDIUM. Below Reddit (HUGE) and Featured.com (HUGE) but free, fast, and stacks. Pairs naturally with Wikidata work later — they're symbiotic data sources.
 
-**Not worth doing if:** operations time is short on time. Bigger wins exist (Reddit, Featured). Do OSM as a "ship one small thing on a quiet day" task, not as a priority.
+**Not worth doing if:** operations time is short. Bigger wins exist (Reddit, Featured). Do OSM as a "ship one small thing on a quiet day" task, not as a priority.
 
 ## Step-by-step (when ready to do it)
 

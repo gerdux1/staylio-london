@@ -76,7 +76,7 @@ These are framings, not full answers. When a Featured.com query arrives, Ali pic
 - ❌ Direct competitors (Sonder, Native, SACO, SilverDoor, Cheval) — sharp-elbow comparisons get edited out
 - ❌ Specific rate quotes — they date the article fast
 - ❌ Anything that contradicts the locked brand voice ("flexible", "innovative", "disruptor" — all banned per `decision_staylio_brochure_voice_14may`)
-- ❌ Anything that names the operator — Ali is the public Staylio face, Kris is the legal director, no one else (`feedback_never_sign_as_staylio_director`)
+- ❌ Anything that names the parent-entity owner — Ali is the public Staylio face, Kris is the legal director, no one else (`feedback_never_sign_as_staylio_director`)
 
 ## Metrics to track (Kris reviews monthly)
 
@@ -97,9 +97,9 @@ These are framings, not full answers. When a Featured.com query arrives, Ali pic
 Once Ali has 2+ editorial citations:
 1. **Submit Wikidata Q-ID** for "Staylio" (London serviced apartment operator). Independent secondary sources = the citations Featured.com unlocked. Process: ~1 day to draft, 2-8 weeks to propagate to Google Knowledge Graph + Siri/Alexa.
 2. **Update Staylio schema** in `src/lib/schema.tsx`:
-   - Append Wikidata URL to `sameAs` array
-   - Append article URLs to `subjectOf` array (NEW field — link Article schemas to news mentions)
-   - Add Ali's `hasCredential` array with named credential entries (e.g. "Quoted in Forbes 2026", "Quoted in BusinessTraveller 2026")
+ - Append Wikidata URL to `sameAs` array
+ - Append article URLs to `subjectOf` array (NEW field — link Article schemas to news mentions)
+ - Add Ali's `hasCredential` array with named credential entries (e.g. "Quoted in Forbes 2026", "Quoted in BusinessTraveller 2026")
 
 ## What Kris needs to do
 
