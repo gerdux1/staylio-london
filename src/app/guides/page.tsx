@@ -49,6 +49,30 @@ const GUIDES = [
     minRead: 4,
   },
   {
+    slug: "serviced-apartment-vs-aparthotel",
+    pillar: "Choice",
+    title: "Serviced apartment vs aparthotel: the actual difference",
+    summary:
+      "An aparthotel adds a reception, a bar, and a lounge to the building. A pure serviced apartment skips all of that and gives you a residential flat. Which one your trip actually needs.",
+    minRead: 6,
+  },
+  {
+    slug: "serviced-apartment-council-tax",
+    pillar: "Legal",
+    title: "Council tax on a serviced apartment: who actually pays it?",
+    summary:
+      "The operator pays. You don't. Here's the legal basis (Local Government Finance Act 1992), the under-90-night holiday-let route, and why long stays stay tax-efficient.",
+    minRead: 5,
+  },
+  {
+    slug: "best-area-to-stay-london-business",
+    pillar: "Location",
+    title: "Best area to stay in London for a business trip",
+    summary:
+      "Tech goes Shoreditch. Finance goes Barbican / Farringdon. Pharma goes Kensington. PE / VC / legal go Mayfair. Government goes Pimlico. Heathrow-heavy travel goes Maida Vale. Industry-by-industry area picker.",
+    minRead: 6,
+  },
+  {
     slug: "long-stay-tax-london",
     pillar: "Cost",
     title: "Long-stay accommodation tax: the 28-night threshold",

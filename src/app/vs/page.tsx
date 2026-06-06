@@ -17,6 +17,14 @@ const COMPARISONS = [
       "Sonder is the design-led app-led short-stay chain. Staylio is the boutique-curated 40-apartment operator with a human on WhatsApp. Side-by-side on price, contact, neighbourhoods, and check-in.",
     minRead: 7,
   },
+  {
+    slug: "native-vs-staylio",
+    competitor: "Native Places",
+    pillar: "Aparthotel",
+    summary:
+      "Native is the design-led aparthotel — reception, bar, lounge, kitchenette unit. Staylio is the pure serviced apartment — full kitchen, no front desk, residential block. Honest side-by-side.",
+    minRead: 7,
+  },
 ];
 
 export default function VsIndexPage() {
