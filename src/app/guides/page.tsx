@@ -81,6 +81,54 @@ const GUIDES = [
     minRead: 6,
   },
   {
+    slug: "long-stay-old-street-shoreditch",
+    pillar: "Neighbourhood",
+    title: "Long-stay serviced apartments in Old Street & Shoreditch",
+    summary:
+      "The tech and founder corridor. Warehouse conversions on residential side streets, 7-minute walk to Liverpool Street, Elizabeth line to Canary Wharf in 9 minutes. Who picks Shoreditch for 1-3 month engagements.",
+    minRead: 6,
+  },
+  {
+    slug: "long-stay-kensington-hammersmith",
+    pillar: "Neighbourhood",
+    title: "Long-stay serviced apartments in Kensington & Hammersmith",
+    summary:
+      "Family relocations, pharma and healthcare consultants, Imperial College visitors. More 2-3 bed inventory than central London plus direct Piccadilly line to Heathrow.",
+    minRead: 6,
+  },
+  {
+    slug: "long-stay-fitzrovia-mayfair",
+    pillar: "Neighbourhood",
+    title: "Long-stay serviced apartments in Fitzrovia & Mayfair",
+    summary:
+      "The premium corridor — PE, VC, prestige legal, luxury brands. 25-40% above Marylebone for similar 1-bed quality. Honest take on when the premium is worth it and when Marylebone is the smarter long-stay call.",
+    minRead: 6,
+  },
+  {
+    slug: "long-stay-barbican-farringdon",
+    pillar: "Neighbourhood",
+    title: "Long-stay serviced apartments in Barbican & Farringdon",
+    summary:
+      "Best transport-to-cost ratio in the portfolio. Elizabeth line to Heathrow + Canary Wharf, walking to the City, ~30% cheaper than Mayfair. Right call for 1-12 week finance and audit engagements.",
+    minRead: 5,
+  },
+  {
+    slug: "long-stay-borough-pimlico",
+    pillar: "Neighbourhood",
+    title: "Long-stay serviced apartments in Borough & Pimlico",
+    summary:
+      "South Bank food culture plus Pimlico's underpriced Regency streets. Government and civil-service access via Westminster, Borough Market weekends. The quieter, slightly cheaper alternative to Marylebone.",
+    minRead: 5,
+  },
+  {
+    slug: "long-stay-little-venice-maida-vale",
+    pillar: "Neighbourhood",
+    title: "Long-stay serviced apartments in Little Venice & Maida Vale",
+    summary:
+      "Quietest neighbourhood in the portfolio — Edwardian mansion blocks, canal towpath, Heathrow Express from Paddington in 15 minutes. For writers, longer stays, and Heathrow-heavy travellers.",
+    minRead: 5,
+  },
+  {
     slug: "airbnb-monthly-stay-london",
     pillar: "Cost",
     title: "Airbnb monthly stay in London: how the maths actually works",
