@@ -25,6 +25,14 @@ const COMPARISONS = [
       "Native is the design-led aparthotel — reception, bar, lounge, kitchenette unit. Staylio is the pure serviced apartment — full kitchen, no front desk, residential block. Honest side-by-side.",
     minRead: 7,
   },
+  {
+    slug: "london-serviced-apartments",
+    competitor: "The whole London market",
+    pillar: "Operator scorecard",
+    summary:
+      "Side-by-side of nine London operators — SACO, Edyn, Locke, Native, Cheval, SilverDoor, Cove, Sonder, Staylio. Format, scale, best-for, watch-outs. Quick pickers by stay length and use case.",
+    minRead: 9,
+  },
 ];
 
 export default function VsIndexPage() {

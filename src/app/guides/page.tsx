@@ -73,6 +73,30 @@ const GUIDES = [
     minRead: 6,
   },
   {
+    slug: "long-stay-regents-park-marylebone",
+    pillar: "Neighbourhood",
+    title: "Long-stay serviced apartments in Regent's Park & Marylebone",
+    summary:
+      "The flagship Staylio neighbourhood — about a dozen apartments across Georgian townhouses and mansion blocks. The long-stay price step-down, the HMRC VAT relief maths, and who picks Marylebone for one to six months.",
+    minRead: 6,
+  },
+  {
+    slug: "airbnb-monthly-stay-london",
+    pillar: "Cost",
+    title: "Airbnb monthly stay in London: how the maths actually works",
+    summary:
+      "The headline 30-50% Airbnb monthly discount versus the all-in serviced apartment rate. Worked 28-night example with service fees, cleaning, council tax, and HMRC VAT relief. When Airbnb wins, when Staylio wins.",
+    minRead: 7,
+  },
+  {
+    slug: "what-is-included-serviced-apartment",
+    pillar: "Basics",
+    title: "What is included in a serviced apartment? The full Staylio list",
+    summary:
+      "Twelve-category inclusion checklist from kitchen and pantry through laundry, connectivity, climate, and safety. The items most guests don't think to ask about until night three.",
+    minRead: 5,
+  },
+  {
     slug: "long-stay-tax-london",
     pillar: "Cost",
     title: "Long-stay accommodation tax: the 28-night threshold",
