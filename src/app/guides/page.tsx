@@ -9,6 +9,14 @@ export const metadata: Metadata = {
 
 const GUIDES = [
   {
+    slug: "what-is-a-serviced-apartment",
+    pillar: "Basics",
+    title: "What is a serviced apartment? A plain-English definition",
+    summary:
+      "A serviced apartment is a fully equipped private flat let on a short or long stay, with hotel-style housekeeping and all bills included. Honest definition, full inclusion checklist, and when it makes sense vs a hotel, Airbnb, or rental.",
+    minRead: 7,
+  },
+  {
     slug: "long-stay-tax-london",
     pillar: "Cost",
     title: "Long-stay accommodation tax: the 28-night threshold",
