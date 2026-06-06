@@ -25,6 +25,30 @@ const GUIDES = [
     minRead: 8,
   },
   {
+    slug: "how-do-serviced-apartments-work",
+    pillar: "Basics",
+    title: "How do serviced apartments work? The full process, end to end",
+    summary:
+      "The six-step flow from catalogue to check-out, the legal framework (licence not tenancy), how payment works, late check-in, in-stay support, and extensions.",
+    minRead: 6,
+  },
+  {
+    slug: "are-bills-included-serviced-apartments",
+    pillar: "Cost",
+    title: "Are bills included in a serviced apartment?",
+    summary:
+      "Yes — at Staylio, every nightly rate bundles electricity, water, heating, Wi-Fi, and council tax. Here's exactly what's in and out, the per-night value, and how procurement teams handle it.",
+    minRead: 5,
+  },
+  {
+    slug: "serviced-apartments-with-washing-machine-london",
+    pillar: "Amenities",
+    title: "Serviced apartments with a washing machine in London",
+    summary:
+      "Every Staylio apartment has an in-unit washer-dryer with detergent supplied. Why it matters more than guests expect beyond four nights, and the operators that don't bundle one.",
+    minRead: 4,
+  },
+  {
     slug: "long-stay-tax-london",
     pillar: "Cost",
     title: "Long-stay accommodation tax: the 28-night threshold",
