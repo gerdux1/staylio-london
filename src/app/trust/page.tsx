@@ -184,6 +184,12 @@ const CREDENTIALS = [
         sourceLabel: "Open Trustpilot profile",
       },
       {
+        label: "Trustpilot — leave a review",
+        value: "Direct review form for past Staylio guests",
+        source: "https://uk.trustpilot.com/evaluate/staylio.london",
+        sourceLabel: "Leave a review",
+      },
+      {
         label: "Google Business Profile",
         value: "Verification in progress",
         source: null,

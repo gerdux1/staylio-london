@@ -269,13 +269,34 @@ export default function Home() {
         </div>
 
         <div className="mt-16 rounded-2xl border border-stone-200 bg-stone-50 p-8 text-center">
-          <p className="font-serif text-2xl text-stone-900">Review collection is now live.</p>
+          <p className="font-serif text-2xl text-stone-900">Help us build the review profile.</p>
           <p className="mt-3 text-stone-700">
-            We are building our public review profile from real Staylio guests. If you have stayed
-            with us, please share your experience:
+            We are building our public Trustpilot profile from real Staylio guests. If you have
+            stayed with us, a 60-second review is the single biggest help you can give us.
           </p>
-          <div className="mt-6 flex justify-center">
-            {/* TrustBox widget — Review Collector */}
+
+          {/* Direct review CTAs — primary "leave a review" + secondary "see existing profile". */}
+          <div className="mt-6 flex flex-wrap justify-center gap-3">
+            <a
+              href="https://uk.trustpilot.com/evaluate/staylio.london"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-stone-900 px-6 py-3 text-sm font-medium text-white transition hover:bg-stone-700"
+            >
+              Leave a review on Trustpilot
+            </a>
+            <a
+              href="https://uk.trustpilot.com/review/staylio.london"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-stone-300 bg-white px-6 py-3 text-sm font-medium text-stone-900 transition hover:border-stone-900"
+            >
+              See our public profile
+            </a>
+          </div>
+
+          {/* TrustBox widget — Review Collector (embedded form rendered by Trustpilot JS) */}
+          <div className="mt-8 flex justify-center">
             <div
               className="trustpilot-widget"
               data-locale="en-GB"
@@ -293,7 +314,6 @@ export default function Home() {
                 Trustpilot
               </a>
             </div>
-            {/* End TrustBox widget */}
           </div>
         </div>
       </section>
